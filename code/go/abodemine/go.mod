@@ -39,7 +39,7 @@ require (
 	github.com/valkey-io/valkey-go v1.0.60
 	github.com/zeebo/xxh3 v1.0.2
 	go.katupy.org/fixture v0.6.0
-	golang.org/x/sync v0.15.0
+	golang.org/x/sync v0.16.0
 	golang.org/x/text v0.25.0
 	gonum.org/v1/gonum v0.16.0
 	gopkg.in/yaml.v3 v3.0.1
