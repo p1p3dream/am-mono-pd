@@ -1,0 +1,62 @@
+# Obsidian.
+/.obsidian/
+/.trash/
+
+# macOS
+._*
+.DS_Store
+
+# vim temporary files
+*~
+*.*~
+*.swp
+
+# windows system folders
+\$RECYCLE.BIN/
+Config.Msi/
+System\ Volume\ Information/
+
+# local and tmp files
+.local/
+.tmp/
+
+# exe files
+*.exe
+
+# Logs
+*.log
+
+# env
+.env
+.env.*
+!.env.example
+!.env.gotmpl
+
+# JetBrains.
+.idea/
+
+# VSCode
+.vscode/
+
+# protobuf
+*.pb.go
+*.pb.gw.go
+*_pb2.py
+*_pb2_grpc.py
+*_pb.js
+*_pb.d.ts
+*Pb.ts
+*_grpc_web_pb.d.ts
+*_grpc_web_pb.js
+
+# Python.
+*.pyc
+__pycache__/
+.mypy_cache/
+.ruff_cache/
+
+
+# Newman
+*_output.html
+*_output.xml
+

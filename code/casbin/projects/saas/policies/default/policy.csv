@@ -1,0 +1,23 @@
+################################################################################
+# Roles.
+################################################################################
+
+# Root.
+g, root, wheel
+
+# Api whitelabel user.
+g, api_whitelabel_user, token_validate
+
+# System auth check.
+g, system_auth_check_user, system_auth_check
+
+################################################################################
+# Permissions.
+################################################################################
+
+# System auth check.
+p, system_auth_check, /auth/session, read
+p, system_auth_check, /auth/session, write
+
+# Token validate.
+p, token_validate, /auth/token/validate, write

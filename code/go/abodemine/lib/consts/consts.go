@@ -1,0 +1,60 @@
+package consts
+
+import (
+	"sync"
+
+	"github.com/google/uuid"
+)
+
+////////////////////////////////////////////////////////////////////////////////
+// Cookie names.
+////////////////////////////////////////////////////////////////////////////////
+
+const (
+	CookieAbodeMineSaasWebSession = "am-sws"
+)
+
+////////////////////////////////////////////////////////////////////////////////
+// Ids.
+////////////////////////////////////////////////////////////////////////////////
+
+var abodeMineOrganizationId uuid.UUID
+var abodeMineOrganizationIdOnce sync.Once
+
+func AbodeMineOrganizationId() uuid.UUID {
+	abodeMineOrganizationIdOnce.Do(func() {
+		abodeMineOrganizationId = uuid.MustParse("019543c8-8fc8-7ab2-9d6b-982e4ccb11f5")
+	})
+
+	return abodeMineOrganizationId
+}
+
+var abodeMineBotUserId uuid.UUID
+var abodeMineBotUserIdOnce sync.Once
+
+func AbodeMineBotUserId() uuid.UUID {
+	abodeMineBotUserIdOnce.Do(func() {
+		abodeMineBotUserId = uuid.MustParse("019543cc-1893-746f-a0de-b7410f281e5e")
+	})
+
+	return abodeMineBotUserId
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Roles.
+////////////////////////////////////////////////////////////////////////////////
+
+const (
+	RoleSaasWhitelabelUser  = "saas_whitelabel_user"
+	RoleSystemAuthCheckUser = "system_auth_check_user"
+)
+
+////////////////////////////////////////////////////////////////////////////////
+// Time.
+////////////////////////////////////////////////////////////////////////////////
+
+const (
+	IntegerDate = "20060102"
+	RFC3339Date = "2006-01-02"
+	USSlashDate = "01/02/2006"
+)

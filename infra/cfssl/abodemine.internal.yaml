@@ -1,0 +1,21 @@
+# sh ${ABODEMINE_WORKSPACE}/infra/cfssl/gen-cert.sh abodemine-ca peer abodemine.internal
+
+CN: abodemine.internal
+
+hosts:
+  - "0.0.0.0"
+  - "::0"
+  - "abodemine.internal"
+  - "*.abodemine.internal"
+  - "client@abodemine.internal"
+
+key:
+  algo: rsa
+  size: 2048
+
+names:
+  - C: US
+    ST: CO
+    L: Longmont
+    O: AbodeMine
+    OU: abodemine.internal

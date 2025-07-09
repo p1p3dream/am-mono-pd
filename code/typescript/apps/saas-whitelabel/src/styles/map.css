@@ -1,0 +1,94 @@
+/* Map control styles for dark theme */
+.mapboxgl-ctrl-group {
+	background-color: rgba(30, 30, 40, 0.8) !important;
+	border-radius: 4px !important;
+}
+
+.mapboxgl-ctrl-group button {
+	background-color: transparent !important;
+	border: none !important;
+}
+
+.mapboxgl-ctrl-group button span {
+	filter: invert(1) !important;
+}
+
+.mapboxgl-ctrl-icon {
+	filter: invert(1) !important;
+}
+
+.mapboxgl-ctrl-group button:hover {
+	background-color: rgba(60, 60, 70, 0.8) !important;
+}
+
+.mapboxgl-ctrl-group button.active {
+	background-color: rgba(80, 80, 90, 0.8) !important;
+}
+
+.mapboxgl-ctrl-attrib {
+	background-color: rgba(30, 30, 40, 0.8) !important;
+	color: white !important;
+}
+
+.mapboxgl-ctrl-attrib a {
+	color: #aaa !important;
+}
+
+/* Fixed map container styles */
+#map-container {
+	height: 550px !important;
+	min-height: 550px !important;
+	width: 100% !important;
+	position: relative !important;
+	z-index: 1;
+	display: block !important;
+	overflow: visible !important;
+}
+
+#map-container .mapboxgl-canvas-container {
+	height: 100% !important;
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 100% !important;
+}
+
+#map-container .mapboxgl-canvas {
+	outline: none !important;
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+/* Fix for map container in flex layouts */
+.map-wrapper {
+	height: 550px !important;
+	min-height: 550px !important;
+	flex-shrink: 0 !important;
+	position: relative !important;
+	display: block !important;
+	width: 100% !important;
+	overflow: visible !important;
+}
+
+/* Ensure map loads properly across different browsers */
+.mapboxgl-map {
+	height: 100% !important;
+	width: 100% !important;
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+}
+
+/* Fix for Safari */
+@media not all and (min-resolution: 0.001dpcm) {
+	@supports (-webkit-appearance: none) {
+		#map-container,
+		.map-wrapper,
+		.mapboxgl-map {
+			transform: translateZ(0);
+		}
+	}
+}

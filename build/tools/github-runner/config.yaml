@@ -1,0 +1,35 @@
+containers:
+  main:
+    # https://hub.docker.com/_/debian/tags
+    # Use the regular, non-slim, image to have docs and language packs.
+    image: "docker.io/debian:12.10"
+
+    maintainer: "Rodrigo Bahiense <rbahiense@abodemine.com>"
+
+    python:
+      version: "3.11"
+
+    user:
+      # Use GH Actions default uid and gid.
+      user: abodeminebot
+      group: abodemine
+      uid: 1001
+      gid: 1001
+
+    vars:
+      arch: arm64
+
+      dirs:
+        cache: /works/cache
+        opt: /opt/abodemine
+        src: /works/src
+        tmp: /tmp/abodemine
+        works: /works
+
+      docker:
+        # Use GH Actions default gid for docker.
+        group: docker
+        gid: 116
+
+      packer:
+        profiles: default,github-runner

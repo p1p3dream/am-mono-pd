@@ -1,0 +1,7 @@
+config_dir:
+  production: /works/cache/sql-migrate/api/etc/production
+  testing: /works/cache/sql-migrate/api/etc/testing
+
+migrations_dir:
+  production: /works/cache/sql-migrate/api/migrations/production
+  testing: /works/cache/sql-migrate/api/migrations/testing

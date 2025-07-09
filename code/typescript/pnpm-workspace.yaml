@@ -1,0 +1,7 @@
+# https://pnpm.io/pnpm-workspace_yaml
+
+# Also update ${ABODEMINE_WORKSPACE}/.github/dependabot.yml.
+packages:
+  - "apps/*"
+  - "packages/*"
+  - "www/*"

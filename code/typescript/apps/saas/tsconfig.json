@@ -1,0 +1,13 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"esModuleInterop": true,
+		"baseUrl": ".",
+		"paths": {
+			"@am/commons": ["../../packages/commons/src/index"],
+			"@/*": ["src/*"]
+		}
+	},
+	"include": ["src/**/*", "jest.setup.ts"]
+}

@@ -1,0 +1,539 @@
+packages:
+  # https://github.com/actions/runner/releases.
+  - name: actions-runner
+    profiles:
+      - am-env
+      - on-demand-runner
+    version: "2.324.0"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/actions/runner/releases/download/v{{package_version}}/actions-runner-osx-arm64-{{package_version}}.tar.gz"
+            # Runner shouldn't be on the general path.
+            paths: []
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/actions/runner/releases/download/v{{package_version}}/actions-runner-linux-arm64-{{package_version}}.tar.gz"
+            # Runner shouldn't be on the general path.
+            paths: []
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/actions/runner/releases/download/v{{package_version}}/actions-runner-linux-x64-{{package_version}}.tar.gz"
+            # Runner shouldn't be on the general path.
+            paths: []
+
+  # https://github.com/awslabs/amazon-ecr-credential-helper/releases.
+  - name: amazon-ecr-credential-helper
+    version: "0.9.1"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://amazon-ecr-credential-helper-releases.s3.us-east-2.amazonaws.com/{{package_version}}/darwin-arm64/docker-credential-ecr-login"
+            bin: "docker-credential-ecr-login"
+
+      linux_aarch64:
+        sources:
+          - url: "https://amazon-ecr-credential-helper-releases.s3.us-east-2.amazonaws.com/{{package_version}}/linux-arm64/docker-credential-ecr-login"
+            bin: "docker-credential-ecr-login"
+
+      linux_x86_64:
+        sources:
+          - url: "https://amazon-ecr-credential-helper-releases.s3.us-east-2.amazonaws.com/{{package_version}}/linux-amd64/docker-credential-ecr-login"
+            bin: "docker-credential-ecr-login"
+
+  # https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html.
+  - name: aws
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://awscli.amazonaws.com/AWSCLIV2.pkg"
+            transient: true
+            do_not_copy_archive: true
+            commands:
+              - "sudo installer -pkg {{package_dir}}/AWSCLIV2.pkg -target /"
+
+      linux_aarch64:
+        sources:
+          - url: "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip"
+            transient: true
+            do_not_copy_archive: true
+            commands:
+              - "cd {{archive_dir}} && ./install --bin-dir {{package_dir}} --install-dir {{package_dir}}"
+
+      linux_x86_64:
+        sources:
+          - url: "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip"
+            transient: true
+            do_not_copy_archive: true
+            commands:
+              - "cd {{archive_dir}} && ./install --bin-dir {{package_dir}} --install-dir {{package_dir}}"
+
+  # https://github.com/sharkdp/bat/releases.
+  - name: bat
+    profiles:
+      - am-env
+    version: "0.25.0"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/sharkdp/bat/releases/download/v{{package_version}}/bat-v{{package_version}}-aarch64-apple-darwin.tar.gz"
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/sharkdp/bat/releases/download/v{{package_version}}/bat-v{{package_version}}-aarch64-unknown-linux-gnu.tar.gz"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/sharkdp/bat/releases/download/v{{package_version}}/bat-v{{package_version}}-x86_64-unknown-linux-gnu.tar.gz"
+
+  # https://github.com/cloudflare/cfssl/releases.
+  - name: cfssl
+    version: "1.6.5"
+    targets:
+      # ARM targets will have to run through Rosetta.
+      darwin_aarch64:
+        paths:
+          - "."
+        sources:
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl-bundle_{{package_version}}_darwin_amd64"
+            bin: "cfssl-bundle"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl-certinfo_{{package_version}}_darwin_amd64"
+            bin: "cfssl-certinfo"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl-newkey_{{package_version}}_darwin_amd64"
+            bin: "cfssl-newkey"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl-scan_{{package_version}}_darwin_amd64"
+            bin: "cfssl-scan"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssljson_{{package_version}}_darwin_amd64"
+            bin: "cfssljson"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl_{{package_version}}_darwin_amd64"
+            bin: "cfssl"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/mkbundle_{{package_version}}_darwin_amd64"
+            bin: "mkbundle"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/multirootca_{{package_version}}_darwin_amd64"
+            bin: "multirootca"
+            paths: []
+
+      linux_aarch64:
+        paths:
+          - "."
+        sources:
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl-bundle_{{package_version}}_linux_arm64"
+            bin: "cfssl-bundle"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl-certinfo_{{package_version}}_linux_arm64"
+            bin: "cfssl-certinfo"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl-newkey_{{package_version}}_linux_arm64"
+            bin: "cfssl-newkey"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl-scan_{{package_version}}_linux_arm64"
+            bin: "cfssl-scan"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssljson_{{package_version}}_linux_arm64"
+            bin: "cfssljson"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl_{{package_version}}_linux_arm64"
+            bin: "cfssl"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/mkbundle_{{package_version}}_linux_arm64"
+            bin: "mkbundle"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/multirootca_{{package_version}}_linux_arm64"
+            bin: "multirootca"
+            paths: []
+
+      linux_x86_64:
+        paths:
+          - "."
+        sources:
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl-bundle_{{package_version}}_linux_amd64"
+            bin: "cfssl-bundle"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl-certinfo_{{package_version}}_linux_amd64"
+            bin: "cfssl-certinfo"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl-newkey_{{package_version}}_linux_amd64"
+            bin: "cfssl-newkey"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl-scan_{{package_version}}_linux_amd64"
+            bin: "cfssl-scan"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssljson_{{package_version}}_linux_amd64"
+            bin: "cfssljson"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/cfssl_{{package_version}}_linux_amd64"
+            bin: "cfssl"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/mkbundle_{{package_version}}_linux_amd64"
+            bin: "mkbundle"
+            paths: []
+          - url: "https://github.com/cloudflare/cfssl/releases/download/v{{package_version}}/multirootca_{{package_version}}_linux_amd64"
+            bin: "multirootca"
+            paths: []
+
+  # https://dotnet.microsoft.com/en-us/download/dotnet.
+  - name: dotnet
+    version: "9.0.203"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://builds.dotnet.microsoft.com/dotnet/Sdk/{{package_version}}/dotnet-sdk-{{package_version}}-osx-arm64.tar.gz"
+
+      linux_aarch64:
+        sources:
+          - url: "https://builds.dotnet.microsoft.com/dotnet/Sdk/{{package_version}}/dotnet-sdk-{{package_version}}-linux-arm64.tar.gz"
+
+      linux_x86_64:
+        sources:
+          - url: "https://builds.dotnet.microsoft.com/dotnet/Sdk/{{package_version}}/dotnet-sdk-{{package_version}}-linux-x64.tar.gz"
+
+  # https://github.com/sharkdp/fd/releases.
+  - name: fd
+    version: "10.2.0"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/sharkdp/fd/releases/download/v{{package_version}}/fd-v{{package_version}}-aarch64-apple-darwin.tar.gz"
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/sharkdp/fd/releases/download/v{{package_version}}/fd-v{{package_version}}-aarch64-unknown-linux-gnu.tar.gz"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/sharkdp/fd/releases/download/v{{package_version}}/fd-v{{package_version}}-x86_64-unknown-linux-gnu.tar.gz"
+
+  # https://github.com/junegunn/fzf/releases.
+  - name: fzf
+    version: "0.62.0"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/junegunn/fzf/releases/download/v{{package_version}}/fzf-{{package_version}}-darwin_arm64.tar.gz"
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/junegunn/fzf/releases/download/v{{package_version}}/fzf-{{package_version}}-linux_arm64.tar.gz"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/junegunn/fzf/releases/download/v{{package_version}}/fzf-{{package_version}}-linux_amd64.tar.gz"
+
+  # https://github.com/extrawurst/gitui/releases.
+  - name: gitui
+    profiles:
+      - am-env
+    version: "0.27.0"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/gitui-org/gitui/releases/download/v{{package_version}}/gitui-mac.tar.gz"
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/extrawurst/gitui/releases/download/v{{package_version}}/gitui-linux-aarch64.tar.gz"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/extrawurst/gitui/releases/download/v{{package_version}}/gitui-linux-x86_64.tar.gz"
+
+  # https://go.dev/dl/.
+  - name: go
+    version: "1.23.9"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://go.dev/dl/go{{package_version}}.darwin-arm64.pkg"
+            paths:
+              - "bin"
+              - "${HOME}/go/bin"
+
+      linux_aarch64:
+        sources:
+          - url: "https://go.dev/dl/go{{package_version}}.linux-arm64.tar.gz"
+            paths:
+              - "bin"
+              - "${HOME}/go/bin"
+
+      linux_x86_64:
+        sources:
+          - url: "https://go.dev/dl/go{{package_version}}.linux-amd64.tar.gz"
+            paths:
+              - "bin"
+              - "${HOME}/go/bin"
+
+  # https://github.com/hairyhenderson/gomplate/releases.
+  - name: gomplate
+    version: "4.3.2"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/hairyhenderson/gomplate/releases/download/v{{package_version}}/gomplate_darwin-arm64"
+            bin: "gomplate"
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/hairyhenderson/gomplate/releases/download/v{{package_version}}/gomplate_linux-arm64"
+            bin: "gomplate"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/hairyhenderson/gomplate/releases/download/v{{package_version}}/gomplate_linux-amd64"
+            bin: "gomplate"
+
+  # https://github.com/go-acme/lego/releases.
+  - name: lego
+    version: "4.23.1"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/go-acme/lego/releases/download/v{{package_version}}/lego_v{{package_version}}_darwin_arm64.tar.gz"
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/go-acme/lego/releases/download/v{{package_version}}/lego_v{{package_version}}_linux_arm64.tar.gz"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/go-acme/lego/releases/download/v{{package_version}}/lego_v{{package_version}}_linux_amd64.tar.gz"
+
+  # https://github.com/ninja-build/ninja/releases.
+  - name: ninja
+    version: "1.12.1"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/ninja-build/ninja/releases/download/v{{package_version}}/ninja-mac.zip"
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/ninja-build/ninja/releases/download/v{{package_version}}/ninja-linux-aarch64.zip"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/ninja-build/ninja/releases/download/v{{package_version}}/ninja-linux.zip"
+
+  # https://nodejs.org/en/download/.
+  - name: node
+    version: "22.15.1"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://nodejs.org/dist/v{{package_version}}/node-v{{package_version}}-darwin-arm64.tar.gz"
+            paths:
+              - "bin"
+            commands:
+              - "ln -s node {{package_dir}}/bin/nodejs"
+              - "rm -f {{package_dir}}/bin/corepack && ln -s ../lib/node_modules/corepack/dist/corepack.js {{package_dir}}/bin/corepack"
+              - "rm -f {{package_dir}}/bin/npm && ln -s ../lib/node_modules/npm/bin/npm-cli.js {{package_dir}}/bin/npm"
+              - "rm -f {{package_dir}}/bin/npx && ln -s ../lib/node_modules/npm/bin/npx-cli.js {{package_dir}}/bin/npx"
+
+      linux_aarch64:
+        sources:
+          - url: "https://nodejs.org/dist/v{{package_version}}/node-v{{package_version}}-linux-arm64.tar.xz"
+            paths:
+              - "bin"
+            commands:
+              - "ln -s node {{package_dir}}/bin/nodejs"
+              - "rm -f {{package_dir}}/bin/corepack && ln -s ../lib/node_modules/corepack/dist/corepack.js {{package_dir}}/bin/corepack"
+              - "rm -f {{package_dir}}/bin/npm && ln -s ../lib/node_modules/npm/bin/npm-cli.js {{package_dir}}/bin/npm"
+              - "rm -f {{package_dir}}/bin/npx && ln -s ../lib/node_modules/npm/bin/npx-cli.js {{package_dir}}/bin/npx"
+
+      linux_x86_64:
+        sources:
+          - url: "https://nodejs.org/dist/v{{package_version}}/node-v{{package_version}}-linux-x64.tar.xz"
+            paths:
+              - "bin"
+            commands:
+              - "ln -s node {{package_dir}}/bin/nodejs"
+              - "rm -f {{package_dir}}/bin/corepack && ln -s ../lib/node_modules/corepack/dist/corepack.js {{package_dir}}/bin/corepack"
+              - "rm -f {{package_dir}}/bin/npm && ln -s ../lib/node_modules/npm/bin/npm-cli.js {{package_dir}}/bin/npm"
+              - "rm -f {{package_dir}}/bin/npx && ln -s ../lib/node_modules/npm/bin/npx-cli.js {{package_dir}}/bin/npx"
+
+  # https://github.com/opentofu/opentofu/releases.
+  - name: opentofu
+    version: "1.9.1"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/opentofu/opentofu/releases/download/v{{package_version}}/tofu_{{package_version}}_darwin_arm64.tar.gz"
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/opentofu/opentofu/releases/download/v{{package_version}}/tofu_{{package_version}}_linux_arm64.tar.gz"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/opentofu/opentofu/releases/download/v{{package_version}}/tofu_{{package_version}}_linux_amd64.tar.gz"
+
+  # https://github.com/rclone/rclone/releases.
+  - name: rclone
+    version: "1.69.2"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/rclone/rclone/releases/download/v{{package_version}}/rclone-v{{package_version}}-osx-arm64.zip"
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/rclone/rclone/releases/download/v{{package_version}}/rclone-v{{package_version}}-linux-arm64.zip"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/rclone/rclone/releases/download/v{{package_version}}/rclone-v{{package_version}}-linux-amd64.zip"
+
+  # https://github.com/BurntSushi/ripgrep/releases.
+  - name: ripgrep
+    version: "14.1.1"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/BurntSushi/ripgrep/releases/download/{{package_version}}/ripgrep-{{package_version}}-aarch64-apple-darwin.tar.gz"
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/BurntSushi/ripgrep/releases/download/{{package_version}}/ripgrep-{{package_version}}-aarch64-unknown-linux-gnu.tar.gz"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/BurntSushi/ripgrep/releases/download/{{package_version}}/ripgrep-{{package_version}}-x86_64-unknown-linux-musl.tar.gz"
+
+  # https://github.com/astral-sh/ruff/releases.
+  - name: ruff
+    version: "0.11.10"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/astral-sh/ruff/releases/download/{{package_version}}/ruff-aarch64-apple-darwin.tar.gz"
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/astral-sh/ruff/releases/download/{{package_version}}/ruff-aarch64-unknown-linux-gnu.tar.gz"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/astral-sh/ruff/releases/download/{{package_version}}/ruff-x86_64-unknown-linux-gnu.tar.gz"
+
+  # https://github.com/upx/upx/releases.
+  - name: upx
+    version: "5.0.1"
+    targets:
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/upx/upx/releases/download/v{{package_version}}/upx-{{package_version}}-arm64_linux.tar.xz"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/upx/upx/releases/download/v{{package_version}}/upx-{{package_version}}-amd64_linux.tar.xz"
+
+  # https://github.com/astral-sh/uv/releases.
+  - name: uv
+    version: "0.7.5"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/astral-sh/uv/releases/download/{{package_version}}/uv-aarch64-apple-darwin.tar.gz"
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/astral-sh/uv/releases/download/{{package_version}}/uv-aarch64-unknown-linux-gnu.tar.gz"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/astral-sh/uv/releases/download/{{package_version}}/uv-x86_64-unknown-linux-gnu.tar.gz"
+
+  # https://github.com/watchexec/watchexec/releases.
+  - name: watchexec
+    profiles:
+      - am-env
+    version: "2.3.2"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/watchexec/watchexec/releases/download/v{{package_version}}/watchexec-{{package_version}}-aarch64-apple-darwin.tar.xz"
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/watchexec/watchexec/releases/download/v{{package_version}}/watchexec-{{package_version}}-aarch64-unknown-linux-musl.tar.xz"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/watchexec/watchexec/releases/download/v{{package_version}}/watchexec-{{package_version}}-x86_64-unknown-linux-musl.tar.xz"
+
+  # https://github.com/mikefarah/yq/releases.
+  - name: yq
+    version: "4.45.4"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://github.com/mikefarah/yq/releases/download/v{{package_version}}/yq_darwin_arm64"
+            bin: "yq"
+
+      linux_aarch64:
+        sources:
+          - url: "https://github.com/mikefarah/yq/releases/download/v{{package_version}}/yq_linux_arm64"
+            bin: "yq"
+
+      linux_x86_64:
+        sources:
+          - url: "https://github.com/mikefarah/yq/releases/download/v{{package_version}}/yq_linux_amd64"
+            bin: "yq"
+
+  # https://ziglang.org/download/.
+  - name: zig
+    version: "0.14.0"
+    targets:
+      darwin_aarch64:
+        sources:
+          - url: "https://ziglang.org/download/{{package_version}}/zig-macos-aarch64-{{package_version}}.tar.xz"
+
+      linux_aarch64:
+        sources:
+          - url: "https://ziglang.org/download/{{package_version}}/zig-linux-aarch64-{{package_version}}.tar.xz"
+
+      linux_x86_64:
+        sources:
+          - url: "https://ziglang.org/download/{{package_version}}/zig-linux-x86_64-{{package_version}}.tar.xz"
+
+  # BEGIN: Go installs.
+
+  # https://github.com/rubenv/sql-migrate.
+  - name: sql-migrate
+    targets:
+      linux_aarch64:
+        sources:
+          - go_install: "github.com/rubenv/sql-migrate/sql-migrate@latest"
+            commands:
+              - "mv {{home}}/go/bin/sql-migrate {{package_dir}}/sql-migrate"
+
+      linux_x86_64:
+        sources:
+          - go_install: "github.com/rubenv/sql-migrate/sql-migrate@latest"
+            commands:
+              - "mv {{home}}/go/bin/sql-migrate {{package_dir}}/sql-migrate"
+
+  # https://github.com/katupy/go-ugen.
+  - name: ugen
+    targets:
+      linux_aarch64:
+        sources:
+          - go_install: "go.katupy.io/ugen/cmd/ugen@latest"
+            commands:
+              - "mv {{home}}/go/bin/ugen {{package_dir}}/ugen"
+
+      linux_x86_64:
+        sources:
+          - go_install: "go.katupy.io/ugen/cmd/ugen@latest"
+            commands:
+              - "mv {{home}}/go/bin/ugen {{package_dir}}/ugen"
+
+  # END: Go installs.

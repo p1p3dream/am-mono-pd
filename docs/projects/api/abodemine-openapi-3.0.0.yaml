@@ -1,0 +1,1522 @@
+openapi: 3.0.0
+info:
+  title: AbodeMine API
+  version: 3.0.0
+  description: API for retrieving real estate data with various filter options and address search capabilities.
+servers:
+  - url: https://api.abodemine.com/api/v3
+    description: Production API
+security:
+  - bearerAuth: []
+paths:
+  /listings:
+    post:
+      summary: Get listings based on filter criteria
+      description: >
+        Retrieve real estate listings based on various filtering options.
+
+
+        ## Authentication
+
+        All requests require API authentication using a Bearer token with the API key in the header.
+
+
+        ## Filter Parameters
+
+        This endpoint supports extensive filtering capabilities to narrow down your search results. You can filter by:
+
+
+        - **Property characteristics** (bedrooms, bathrooms, square footage)
+
+        - **Price range** (minimum and maximum listing price)
+
+        - **Listing details** (status, year built)
+
+        - **Location** (geographic coordinates, ZIP codes)
+
+        - **Specific listings** (MLS numbers with OUID)
+
+
+        All parameters are optional but providing more specific filters will yield more targeted results.
+
+
+        ## Search Methods
+
+        ### Polygon Search
+
+        Define a polygon by providing an array of latitude/longitude points within the geoPolygon object. The search will return properties located within this polygon. For accurate results, ensure the polygon is closed by making the first and last points identical.
+
+
+        **Note:** The polygon search has a maximum area limit of 30.0k miles.
+
+
+        **Example usage polygon:**
+
+        ```json
+
+        {
+          "geoFilter": {
+            "geoPolygon": {
+              "points": [
+                {
+                  "lat": 42.151677,
+                  "lon": -88.279575
+                },
+                {
+                  "lat": 42.150677,
+                  "lon": -88.281268
+                },
+                {
+                  "lat": 42.149691,
+                  "lon": -88.278443
+                },
+                {
+                  "lat": 42.151677,
+                  "lon": -88.279575
+                }
+              ]
+            }
+          },
+          "minBeds": 3,
+          "maxPrice": 750000
+        }
+
+        ```
+
+
+        ### Radius Search
+
+        Define a central point and radius to search within a circular area. The search will return properties located within the specified distance from the central point.
+
+
+        **Note:** The radius is measured in miles, with a maximum limit of 100.0 miles.
+
+
+        **Example usage radius by lat/lon:**
+
+        ```json
+
+        {
+          "geoFilter": {
+            "geoDistance": {
+              "location": {
+                "lat": 34.045009,
+                "lon": -118.452457
+              },
+              "radius": 5
+            }
+          }
+        }
+
+        ```
+
+
+        **Example usage radius by address:**
+
+        ```json
+
+        {
+          "geoFilter": {
+            "address": {
+              "fullStreetAddress": "10656 DRAKEWOOD AVE",
+              "city": "Culver City",
+              "state": "CA"
+            },
+            "geoDistance": {
+              "radius": 5
+            }
+          },
+          "minYearBuilt": 1980,
+          "statuses": ["Active"]
+        }
+
+        ```
+
+          
+        **Example usage radius by aupid:**
+
+        ```json
+
+        {
+          "geoFilter": {
+            "aupid": "400f91c0-4ca0-4295-a2c3-8ebd59560b87",
+            "geoDistance": {
+              "radius": 5
+            }
+          }
+        }
+
+        ```
+
+
+        ### MLS Number Search
+
+        Search for specific MLS listings by providing both the OUID (Originating MLS Unique Identifier) and one or more MLS numbers.
+
+
+        **Note:** When searching by MLS numbers, you must provide both the ouid and at least one MLS number. You can find the appropriate OUID for each MLS using the [MLS Sources lookup table](https://docs.abodemine.com/docs/mls-sources).
+
+        **Example usage:**
+
+        ```json
+
+        {
+          "ouid": "M00000650",
+          "mlsNumbers": [
+            "2333737",
+            "2330147",
+            "1772422"
+          ]
+        }
+
+        ```
+
+
+        ### Basic Property Filter
+
+        Filter listings based on property characteristics, price range, and listing status.
+
+        **Example usage:**
+
+        ```json
+
+        {
+          "minBeds": 2,
+          "maxBeds": 4,
+          "minPrice": 200000,
+          "maxPrice": 500000,
+          "zip5Codes": ["98102", "98103"],
+          "statuses": ["Active", "Pending"],
+          "pageLimit": 100,
+          "pageNumber": 0
+        }
+
+        ```
+
+        ### Assessor Property Subtype Filter
+
+        Filter listings based on [assessor property subtypes](https://docs.abodemine.com/docs/assessor-property-sub-types).
+
+        **Example usage:**
+
+        ```json
+
+        {
+          "minBeds": 2,
+          "maxBeds": 4,
+          "minPrice": 200000,
+          "maxPrice": 500000,
+          "zip5Codes": ["98102", "98103"],
+          "statuses": ["Active", "Pending"],
+          "asrPropertySubType": "Single Family Residence",
+          "pageLimit": 100,
+          "pageNumber": 0
+        }
+
+        ```
+
+
+        ## Photo URL Construction
+
+        To access listing photos, construct the URL using this pattern:
+
+
+        ```
+        {photoUrlPrefix}/{photoKey}/photo_{index}.jpg
+        ```
+
+
+        Where:
+
+
+        `photoUrlPrefix`: The base URL prefix from the listing response
+        
+        `photoKey`: The unique photo key identifier from the listing
+        
+        `index`: Photo number starting from 1 up to `photosCount`
+
+
+        Example:
+
+        ```
+
+        https://d2sa73fkuaa019.cloudfront.net/listings/nwmls/NWM119125689/photo_1.jpg
+
+        ```
+      operationId: getListings
+      security:
+        - bearerAuth: []
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                aupid:
+                  type: string
+                  description: AbodeMine Data's unique parcel identifier
+                  example: "7e9aa888-e1fd-4cc1-9b20-ba47269f90cf"
+                minBeds:
+                  type: integer
+                  description: Minimum number of bedrooms
+                  example: 2
+                maxBeds:
+                  type: integer
+                  description: Maximum number of bedrooms
+                  example: 4
+                minBaths:
+                  type: integer
+                  description: Minimum number of full bathrooms
+                  example: 1
+                maxBaths:
+                  type: integer
+                  description: Maximum number of full bathrooms
+                  example: 3
+                minSqFt:
+                  type: integer
+                  description: Minimum living area square footage
+                  example: 1000
+                maxSqFt:
+                  type: integer
+                  description: Maximum living area square footage
+                  example: 3000
+                minPrice:
+                  type: integer
+                  description: Minimum listing price in dollars
+                  example: 200000
+                maxPrice:
+                  type: integer
+                  description: Maximum listing price in dollars
+                  example: 500000
+                minYearBuilt:
+                  type: integer
+                  description: Minimum year built
+                  example: 1980
+                maxYearBuilt:
+                  type: integer
+                  description: Maximum year built
+                  example: 2023
+                minStatusChangeDate:
+                  type: string
+                  format: date
+                  description: Minimum status change date in ISO 8601 format
+                  example: "2023-01-01"
+                statuses:
+                  type: array
+                  description: Filter results by listing statuses (e.g., "Active", "Pending", "Sold")
+                  items:
+                    type: string
+                  example: ["Active", "Pending"]
+                zip5Codes:
+                  type: array
+                  description: Filter results by one or more 5-digit ZIP codes
+                  items:
+                    type: string
+                  example: ["98102", "98103"]
+                ouid:
+                  type: string
+                  description: Originating MLS unique identifier.
+                  example: "M00000650"
+                mlsNumbers:
+                  type: array
+                  description: Array of MLS listing numbers to retrieve
+                  items:
+                    type: string
+                  example: ["2333737", "2330147", "1772422"]                  
+                pageLimit:
+                  type: integer
+                  description: Maximum number of results to return per page (default 10, max 100)
+                  default: 10
+                  maximum: 100
+                  example: 100
+                pageNumber:
+                  type: integer
+                  description: Page number for paginated results (starts at 0)
+                  default: 0
+                  example: 0
+                geoFilter:
+                  type: object
+                  description: Filter results by geographic area using either polygon coordinates or a radius search. See the Search Methods section for detailed examples.
+                  oneOf:
+                    - type: object
+                      required:
+                        - geoPolygon
+                      properties:
+                        geoPolygon:
+                          type: object
+                          description: Polygon shape definition for geographic filtering
+                          properties:
+                            points:
+                              type: array
+                              description: Array of geographic coordinates that define a polygon shape
+                              items:
+                                type: object
+                                required:
+                                  - lat
+                                  - lon
+                                properties:
+                                  lat:
+                                    type: number
+                                    description: Latitude coordinate in decimal degrees
+                                    example: 42.151677
+                                  lon:
+                                    type: number
+                                    description: Longitude coordinate in decimal degrees
+                                    example: -88.279575
+                    - type: object
+                      required:
+                        - geoDistance
+                      properties:
+                        geoDistance:
+                          type: object
+                          description: Circular radius search definition for geographic filtering
+                          required:
+                            - radius
+                          properties:
+                            radius:
+                              type: number
+                              description: Search radius in miles (max 100.0)
+                              example: 5.0
+                              maximum: 100.0
+                        address:
+                          type: object
+                          description: Address object for radius search center point
+                          properties:
+                            fullStreetAddress:
+                              type: string
+                              description: Full street address
+                              example: "10656 DRAKEWOOD AVE"
+                            houseNumber:
+                              type: string
+                              description: House number component
+                              example: "10656"
+                            streetPreDirection:
+                              type: string
+                              description: Street pre-direction component (NE, SW, etc.)
+                              example: "NE"
+                            streetName:
+                              type: string
+                              description: Street name component
+                              example: "DRAKEWOOD"
+                            streetSuffix:
+                              type: string
+                              description: Street suffix component (Ave, St, Blvd, etc.)
+                              example: "Ave"
+                            streetPostDirection:
+                              type: string
+                              description: Street post-direction component if exists
+                              example: "SW"
+                            unitType:
+                              type: string
+                              description: Unit type component if exists
+                              example: "Apt"
+                            unitNumber:
+                              type: string
+                              description: Unit number component if exists
+                              example: "2B"
+                            city:
+                              type: string
+                              description: City name
+                              example: "Culver City"
+                            state:
+                              type: string
+                              description: State code (two-letter)
+                              example: "CA"
+                            zip5:
+                              type: string
+                              description: ZIP code
+                              example: "90230"
+                        aupid:
+                          type: string
+                          description: AbodeMine Data's unique parcel identifier for radius search center point
+                          example: "400f91c0-4ca0-4295-a2c3-8ebd59560b87"
+                        location:
+                          type: object
+                          description: Latitude/longitude coordinates for radius search center point
+                          properties:
+                            lat:
+                              type: number
+                              description: Latitude coordinate of the center point
+                              example: 34.052235
+                            lon:
+                              type: number
+                              description: Longitude coordinate of the center point
+                              example: -118.243683      
+      responses:
+        "200":
+          description: >
+            # Successful Response
+
+
+            The response includes an array of listing objects and pagination information.
+
+
+            ## Example Response
+
+
+            ```json
+
+            {
+              "listings": [
+                {
+                  "statusChangeDate": "2024-11-22T00:00:00Z",
+                  "propertyAddressFull": "1330 MEGHAN AVE",
+                  "propertyAddressCity": "ALGONQUIN",
+                  "propertyAddressState": "IL",
+                  "propertyAddressZip": "60102",
+                  "listingStatus": "Sold",
+                  "mlsSoldPrice": 340000,
+                  "yearBuilt": 1984,
+                  "livingAreaSquareFeet": 1194,
+                  "bedroomsTotal": 3,
+                  "bathroomsFull": "1",
+                  "bathroomsHalf": 1
+                }
+              ],
+              "pagination": {
+                "pageNumber": 1,
+                "pageLimit": 10,
+                "totalResults": 150
+              }
+            }
+
+            ```
+
+
+            ## Response Fields
+
+
+            See the Listing schema below for detailed field descriptions.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  listings:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Listing"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+        "400":
+          description: Bad Request - Invalid parameters
+        "401":
+          description: Unauthorized - Authentication required
+        "500":
+          description: Internal Server Error
+  /search:
+    post:
+      summary: Search for properties by address
+      description: >
+        Retrieve property information by searching with an address. Returns detailed property data according to the requested layouts.
+
+
+        ## Authentication
+
+        All requests require API authentication using a Bearer token with the API key in the header.
+
+
+        ## Search Parameters
+
+        This endpoint requires an address to search for and allows specifying which data layouts to include in the response:
+
+
+        - **Address information** (full address or components)
+
+        - **Layouts** (specify which data sections to include in the response)
+
+
+        The address parameter is required, and layouts are optional with defaults.
+
+
+        ## Search Examples
+
+        ### Example 1: Complete address with all layouts
+
+        ```json
+
+        {
+            "fullStreetAddress": "4342 NE 36th Ave",
+            "city": "Portland",
+            "state": "OR",
+            "zip5": "97211",
+            "layouts": [
+                "address",
+                "assessor",
+                "listing",
+                "recorder",
+                "rentEstimate",
+                "saleEstimate"
+            ]
+        }
+
+        ```
+
+        ### Example 2: Search using address components
+
+        ```json
+
+        {
+            "houseNumber": "4342",
+            "streetPreDirection": "NE",
+            "streetName": "36th",
+            "streetSuffix": "Ave",
+            "city": "Portland",
+            "state": "OR",
+            "zip5": "97211",
+            "layouts": [
+                "address",
+                "assessor"
+            ]
+        }
+
+        ```
+
+        ### Example 3: Minimum required for search (address components with ZIP)
+
+        ```json
+
+        {
+          "fullStreetAddress": "4342 NE 36th Ave",
+          "zip5": "97211",
+          "layouts": ["address"]
+        }
+
+        ```
+
+        ### Example 4: Address with potential city discrepancy
+
+        ```json
+
+        {
+          "fullStreetAddress": "3040 Spotted Owl Dr",
+          "zip5": "76244",
+          "layouts": ["listing"]
+        }
+
+        ```
+
+        **Note:** When city discrepancies exist (e.g., a property at "3040 Spotted Owl Dr" may be listed as "Fort Worth" in our database but locally known as "Keller"), searching without the city parameter and using ZIP code and full address is recommended for best results.
+        
+        ### Example 5: Apartment/Unit search
+
+        ```json
+
+        {
+            "fullStreetAddress": "309 SW 4th Ave",
+            "unitType": "Unit",
+            "unitNumber": "201",
+            "city": "Portland",
+            "state": "OR",
+            "zip5": "97204",
+            "layouts": [
+                "address",
+                "listing"
+            ]
+        }
+
+        ```
+      operationId: searchProperties
+      security:
+        - bearerAuth: []
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                fullStreetAddress:
+                  type: string
+                  description: Complete address to search for
+                  example: 4342 NE 36th Ave
+                houseNumber:
+                  type: string
+                  description: House number component
+                  example: "4342"
+                streetPreDirection:
+                  type: string
+                  description: Street pre-direction component (NE, SW, etc.)
+                  example: NE
+                streetName:
+                  type: string
+                  description: Street name component
+                  example: 36th
+                streetSuffix:
+                  type: string
+                  description: Street suffix component (Ave, St, Blvd, etc.)
+                  example: Ave
+                streetPostDirection:
+                  type: string
+                  description: Street post-direction component if exists
+                  example: string
+                unitType:
+                  type: string
+                  description: Unit type component if exists (Apt, Unit, Suite, etc.)
+                  example: Apt
+                unitNumber:
+                  type: string
+                  description: Unit number component if exists
+                  example: "101"
+                city:
+                  type: string
+                  description: City name
+                  example: Portland
+                state:
+                  type: string
+                  description: State code (two letter)
+                  example: OR
+                zip5:
+                  type: string
+                  description: ZIP code
+                  example: "97211"
+                layouts:
+                  type: array
+                  description: >
+                    Array of data layouts to include in the response. Each layout returns a specific set of property data:
+
+
+                    - **address**: Basic property address information including full address, components, city, state, and ZIP code
+
+                    - **assessor**: Property assessment data including year built, bedroom/bathroom count, square footage, and county assessment information
+
+                    - **listing**: Current or historical listing information if the property has been listed for sale
+
+                    - **recorder**: Property ownership and transaction history, including deed transfers and mortgages
+
+                    - **saleEstimate**: Estimated property value, confidence score, and valuation date based on market analysis
+
+                    - **rentEstimate**: Estimated rental value, minimum and maximum, and valuation date of the property based on market analysis
+
+
+                    If not specified, no layouts will be included.
+                  items:
+                    type: string
+                    enum:
+                      - address
+                      - assessor
+                      - listing
+                      - recorder
+                      - rentEstimate
+                      - saleEstimate
+                  example:
+                    - address
+                    - assessor
+                    - listing
+                    - recorder
+                    - rentEstimate
+                    - saleEstimate
+      responses:
+        "200":
+          description: >
+            # Successful Response
+
+
+            The response includes an array of data objects containing the requested property information.
+
+
+            ## Example Response
+
+
+            ```json
+
+            {
+              "data": [
+                {
+                  "aupid": "7e9aa888-e1fd-4cc1-9b20-ba47269f90cf",
+                  "address": {
+                    "fullStreetAddress": "4342 NE 36th Ave",
+                    "state": "OR",
+                    "county": "Multnomah",
+                    "zip5": "97211",
+                    "streetPreDirection": "NE",
+                    "houseNumber": "4342",
+                    "streetName": "36th",
+                    "streetSuffix": "Ave"
+                  },
+                  "assessor": {
+                    "situsCounty": "Multnomah",
+                    "yearBuilt": 1910,
+                    "bedrooms": "2",
+                    "bathFull": "1"
+                  },
+                  "rentEstimate": {
+                    "estimatedRentalValue": 2508,
+                    "estimatedMinRentalValue": 2020,
+                    "estimatedMaxRentalValue": 3022,
+                    "valuationDate": "2025-03-24T00:00:00Z"
+                  },
+                  "saleEstimate": {
+                      "finalValue": "569000",
+                      "highValue": "602000",
+                      "lowValue": "537000",
+                      "confidenceScore": "86",
+                      "standardDeviation": "1",
+                      "valuationDate": "2025-04-18T00:00:00Z",
+                      "comps": [
+                          "e61c0c77-d195-4e3e-9640-dfee7db9921b",
+                          "01cb4128-6f7d-4b2d-94a5-191797c07684",
+                          "6d7ed9ee-cee1-4478-8daa-d4a8d72beea9",
+                          "2f561d91-e069-4454-a021-78d716f6d9db",
+                          "18a8208c-7243-4bb3-a5d3-4e21dd9d2dee",
+                          "1706538a-5ad6-4d54-9e45-9d3bed9f7efd",
+                          "889b686c-e362-4263-b7e9-9053d1be16a6"
+                      ]
+                  }
+                }
+              ]
+            }
+
+            ```
+
+
+            ## Response Fields
+
+
+            See the Property schema below for detailed field descriptions.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Property"
+        "400":
+          description: Bad Request - Invalid parameters or address not found
+        "401":
+          description: Unauthorized - Authentication required
+        "500":
+          description: Internal Server Error
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+  schemas:
+    Listing:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the listing
+        statusChangeDate:
+          type: string
+          format: date-time
+          description: The transactional timestamp documenting the date and time for every record change
+        propertyAddressFull:
+          type: string
+          description: Full standardized site address line (e.g., '123 1/2 N Main St')
+        propertyAddressHouseNumber:
+          type: string
+          description: Standardized site address house number and fraction
+        propertyAddressStreetName:
+          type: string
+          description: Standardized site address street name
+        propertyAddressStreetSuffix:
+          type: string
+          description: Standardized site address street name suffix
+        propertyAddressCity:
+          type: string
+          description: Standardized site address city name
+        propertyAddressState:
+          type: string
+          description: Standardized site address state
+        propertyAddressZip:
+          type: string
+          description: Standardized site address ZIP Code
+        propertyAddressZip4:
+          type: string
+          description: Standardized site address ZIP Plus 4 code
+        situsCounty:
+          type: string
+          description: County where the property is situated
+        township:
+          type: string
+          description: A subdivision of the county
+        mlsListingAddress:
+          type: string
+          description: The full listing address, unparsed, including street name, number and direction
+        mlsListingCity:
+          type: string
+          description: The city in the listing address
+        mlsListingState:
+          type: string
+          description: The state in the listing address
+        mlsListingZip:
+          type: string
+          description: The postal ZIP code in the listing address
+        mlsListingCountyFips:
+          type: string
+          description: The county, parish or other regional authority where the listing address is located
+        mlsNumber:
+          type: string
+          description: The number used to identify a listing during its contract period as sourced by the MLS
+        mlsSource:
+          type: string
+          description: The name of the Originating record provider, most commonly the name of the MLS
+        listingStatus:
+          type: string
+          description: >-
+            The status of the listing (Active, Active Under Contract, Canceled, Closed, Coming Soon, Delete, Expired, Hold, Incomplete, Pending, Withdrawn, Sold)
+          enum:
+            - Active
+            - Active Under Contract
+            - Canceled
+            - Closed
+            - Coming Soon
+            - Delete
+            - Expired
+            - Hold
+            - Incomplete
+            - Pending
+            - Withdrawn
+            - Sold
+        mlsSoldDate:
+          type: string
+          format: date-time
+          description: With for-sale listings, the date the purchase agreement was fulfilled
+        mlsSoldPrice:
+          type: integer
+          description: The amount of money paid by the purchaser to the seller for the property under the agreement
+        assessorLastSaleDate:
+          type: string
+          format: date-time
+          description: Date which the primary owner acquired the property as provided by the assessor
+        assessorLastSaleAmount:
+          type: string
+          description: Amount paid by primary owner as provided by the assessor
+        avgMarketPricePerSqFt:
+          type: integer
+          description: The average market price per square foot for residential properties
+        listingDate:
+          type: string
+          format: date-time
+          description: The date the listing was placed on market
+        latestListingPrice:
+          type: integer
+          description: The most recent listing price for the property
+        previousListingPrice:
+          type: integer
+          description: The most recent previous ListingPrice of the listing
+        specialListingConditions:
+          type: string
+          description: A list of options that describe the type of sale (Standard, REO, Short Sale, Probate, Auction, NOD, etc.)
+        originalListingDate:
+          type: string
+          format: date-time
+          description: The transactional timestamp when the listing was entered and made visible to members of the MLS
+        originalListingPrice:
+          type: integer
+          description: The original price of the property on the initial agreement between the seller and the broker
+        concessions:
+          type: string
+          description: Indicates if there are any seller concessions agreed upon between the Buyer and Seller
+        mlsPropertyType:
+          type: string
+          description: A list of types of properties such as Residential, Lease, Income, Land, Mobile, Commercial Sale, etc.
+        mlsPropertySubType:
+          type: string
+          description: A list of types of residential and residential lease properties, i.e. SFR, Condo, etc.
+        propertyType:
+          type: string
+          description: Standardized value to describe property use, derived from jurisdiction-specific zoned use
+        propertySubType:
+          type: string
+          description: General property type description (residential, commercial, other, etc.) as derived from the assessor
+        ownerOccupied:
+          type: boolean
+          description: Whether the property is owner-occupied
+        assdTotalValue:
+          type: integer
+          description: Assessed total value
+        marketTotalValue:
+          type: integer
+          description: Market total value
+        marketValueLand:
+          type: integer
+          description: Market value of the land
+        marketValueImprovement:
+          type: integer
+          description: Market value of improvements
+        taxAmt:
+          type: integer
+          description: Tax amount
+        taxYear:
+          type: integer
+          description: Tax year
+        marketYear:
+          type: integer
+          description: Market valuation year
+        sumLivingAreaSqFt:
+          type: integer
+          description: Total living area in square feet
+        sumBasementSqFt:
+          type: integer
+          description: Total basement area in square feet
+        basementFinishedSqFt:
+          type: integer
+          description: Finished basement area in square feet
+        sumGarageSqFt:
+          type: integer
+          description: Total garage area in square feet
+        yearBuilt:
+          type: integer
+          description: Year the property was built
+        bedrooms:
+          type: string
+          description: Number of bedrooms
+        totalRooms:
+          type: string
+          description: Total number of rooms
+        bathTotalCalc:
+          type: string
+          description: Calculated total bathrooms
+        bathFull:
+          type: string
+          description: Number of full bathrooms
+        bathsPartialNbr:
+          type: string
+          description: Number of partial bathrooms
+        shipDescription:
+          type: string
+          description: Identifies the ownership/interest rights to the property (e.g. Fee Simple, Condominium, Cooperative)
+        latitude:
+          type: number
+          format: double
+          description: The geographic latitude of a reference point on the property, specified in degrees
+        longitude:
+          type: number
+          format: double
+          description: The geographic longitude of a reference point on the property, specified in degrees
+        apnFormatted:
+          type: string
+          description: Primary Parcel Number and unique identifier within the county/jurisdiction
+        legalDescription:
+          type: string
+          description: Legal description of the property
+        legalSubdivision:
+          type: string
+          description: The name of the legal subdivision for the property, typically a neighborhood or community
+        daysOnMarket:
+          type: integer
+          description: The number of days the listing is on market
+        listingAgentFullName:
+          type: string
+          description: The full name of the listing agent
+        listingAgentMlsId:
+          type: string
+          description: The local, well-known identifier for the listing agent
+        listingAgentPreferredPhone:
+          type: string
+          description: Preferred phone number for contacting the listing agent
+        listingAgentEmail:
+          type: string
+          description: The email address of the Listing Agent
+        listingOfficeName:
+          type: string
+          description: The legal name of the brokerage representing the seller
+        listingOfficeMlsId:
+          type: string
+          description: The local, well-known identifier for the listing office
+        listingOfficePhone:
+          type: string
+          description: The primary phone number for the listing agent's office
+        listingOfficeEmail:
+          type: string
+          description: The email address of the Listing Office
+        buyerAgentFullName:
+          type: string
+          description: The full name of the buyer's agent
+        buyerAgentMlsId:
+          type: string
+          description: The local, well-known identifier for the buyer's agent
+        buyerAgentPreferredPhone:
+          type: string
+          description: Preferred contact phone number for the buyer agent involved in the transaction
+        buyerAgentEmail:
+          type: string
+          description: The email address of the Buyer's Agent
+        buyerOfficeName:
+          type: string
+          description: The legal name of the brokerage representing the buyer
+        buyerOfficeMlsId:
+          type: string
+          description: The local, well-known identifier for the buyer's office
+        buyerOfficePhone:
+          type: string
+          description: The primary phone number for the buyer agent's office
+        buyerOfficeEmail:
+          type: string
+          description: The email address of the Buyer's Office
+        publicListingRemarks:
+          type: string
+          description: Public remarks about the listing that describe the property features and amenities
+        taxYearAssessed:
+          type: integer
+          description: The tax year for which the property was last assessed
+        taxAmount:
+          type: integer
+          description: The amount of property taxes assessed
+        ownerName:
+          type: string
+          description: Name of the property owner
+        ownerVesting:
+          type: string
+          description: How the owner holds title to the property
+        lotDimensions:
+          type: string
+          description: Dimensions of the property lot
+        lotFeatureList:
+          type: string
+          description: List of features of the property lot
+        livingAreaSquareFeet:
+          type: integer
+          description: Total living area of the property in square feet
+        livingAreaSource:
+          type: string
+          description: Source of the living area measurement
+        roomsTotal:
+          type: integer
+          description: Total number of rooms in the property
+        bedroomsTotal:
+          type: integer
+          description: Total number of bedrooms in the property
+        bathroomsFull:
+          type: string
+          description: Number of full bathrooms in the property
+        bathroomsHalf:
+          type: integer
+          description: Number of half bathrooms in the property
+        basementFeatures:
+          type: string
+          description: Description of the basement features
+        repairs:
+          type: boolean
+          description: Indicates if repairs are needed for the property
+        garageSpaces:
+          type: string
+          description: Number of garage spaces available
+        parkingTotal:
+          type: integer
+          description: Total number of parking spaces available
+        heatingFeatures:
+          type: string
+          description: Features of the heating system
+        cooling:
+          type: string
+          description: Type of cooling system in the property
+        fireplace:
+          type: string
+          description: Type of fireplace in the property
+        fireplaceNumber:
+          type: integer
+          description: Number of fireplaces in the property
+        architecturalStyleFeatures:
+          type: string
+          description: Architectural style of the property
+        waterSource:
+          type: string
+          description: Source of water for the property
+        sewer:
+          type: string
+          description: Type of sewer system for the property
+        otherEquipmentIncluded:
+          type: string
+          description: Other equipment included with the property
+        laundryFeatures:
+          type: string
+          description: Features of the laundry facilities
+        appliances:
+          type: string
+          description: Appliances included with the property
+        interiorFeatures:
+          type: string
+          description: Features of the interior of the property
+        exteriorFeatures:
+          type: string
+          description: Features of the exterior of the property
+        association1FeeFrequency:
+          type: string
+          description: Frequency of HOA or condo association fees
+        associationFeeIncludes:
+          type: string
+          description: What is included in the association fees
+        schoolElementary:
+          type: string
+          description: Name of the elementary school for the property
+        schoolElementaryDistrict:
+          type: string
+          description: School district for the elementary school
+        schoolMiddle:
+          type: string
+          description: Name of the middle school for the property
+        schoolMiddleDistrict:
+          type: string
+          description: School district for the middle school
+        schoolHigh:
+          type: string
+          description: Name of the high school for the property
+        schoolHighDistrict:
+          type: string
+          description: School district for the high school
+        listingMarketingUrl:
+          type: string
+          description: URL for marketing materials related to the listing
+        photosCount:
+          type: integer
+          description: Number of photos available for the listing
+        photoKey:
+          type: string
+          description: Key used to access photos of the listing
+        photoUrlPrefix:
+          type: string
+          description: URL prefix for accessing listing photos
+        aupid:
+          type: string
+          nullable: true
+          description: AbodeMine Data's unique parcel identifier
+        relationToSubject:
+          type: string
+          description: Relation of the listing to the subject property
+    Pagination:
+      type: object
+      properties:
+        pageNumber:
+          type: integer
+          description: Current page number
+        pageLimit:
+          type: integer
+          description: Number of results per page
+        totalResults:
+          type: integer
+          description: Total number of results matching the query
+    Property:
+      type: object
+      properties:
+        aupid:
+          type: string
+          description: AbodeMine Data's unique parcel identifier
+        address:
+          $ref: "#/components/schemas/Address"
+        assessor:
+          $ref: "#/components/schemas/Assessor"
+        rentEstimate:
+          $ref: "#/components/schemas/RentEstimate"  
+        saleEstimate:
+          $ref: "#/components/schemas/SaleEstimate"
+        comps:
+          type: array
+          description: Comparable properties in the area with their sale estimates
+          items:
+            $ref: "#/components/schemas/Comp"
+        listing:
+          type: array
+          description: MLS listing history for the property
+          items:
+            $ref: "#/components/schemas/Listing"
+        recorder:
+          type: array
+          description: Property transaction and deed history
+          items:
+            $ref: "#/components/schemas/Recorder"
+    Address:
+      type: object
+      description: Property address details
+      properties:
+        fullStreetAddress:
+          type: string
+          description: Full street address without city/state or zip
+        state:
+          type: string
+          description: State code
+        county:
+          type: string
+          description: County name
+        zip5:
+          type: string
+          description: 5-digit ZIP code
+        streetPreDirection:
+          type: string
+          description: Street pre-direction (NE, SW, etc.)
+        houseNumber:
+          type: string
+          description: House number
+        streetName:
+          type: string
+          description: Street name
+        streetSuffix:
+          type: string
+          description: Street suffix (Ave, St, Blvd, etc.)
+    Assessor:
+      type: object
+      description: County assessor's property details and tax information
+      properties:
+        situsCounty:
+          type: string
+          description: County where the property is situated
+        propertyJurisdictionName:
+          type: string
+          description: Name of the property jurisdiction
+        apn:
+          type: string
+          description: Assessor's Parcel Number
+        taxAccountNumber:
+          type: string
+          description: Tax account number
+        situsLatitude:
+          type: number
+          description: Property latitude
+        situsLongitude:
+          type: number
+          description: Property longitude
+        landUseCode:
+          type: string
+          description: Land use code
+        zoning:
+          type: string
+          description: Property zoning
+        lotSizeAcres:
+          type: string
+          description: Lot size in acres
+        lotSizeSqFt:
+          type: integer
+          description: Lot size in square feet
+        ownerName1Full:
+          type: string
+          description: Full name of the primary owner
+        ownerOccupied:
+          type: boolean
+          description: Whether the property is owner-occupied
+        assdTotalValue:
+          type: integer
+          description: Assessed total value
+        marketTotalValue:
+          type: integer
+          description: Market total value
+        marketValueLand:
+          type: integer
+          description: Market value of the land
+        marketValueImprovement:
+          type: integer
+          description: Market value of improvements
+        taxAmt:
+          type: integer
+          description: Tax amount
+        taxYear:
+          type: integer
+          description: Tax year
+        marketYear:
+          type: integer
+          description: Market valuation year
+        sumLivingAreaSqFt:
+          type: integer
+          description: Total living area in square feet
+        sumBasementSqFt:
+          type: integer
+          description: Total basement area in square feet
+        basementFinishedSqFt:
+          type: integer
+          description: Finished basement area in square feet
+        sumGarageSqFt:
+          type: integer
+          description: Total garage area in square feet
+        yearBuilt:
+          type: integer
+          description: Year the property was built
+        bedrooms:
+          type: string
+          description: Number of bedrooms
+        totalRooms:
+          type: string
+          description: Total number of rooms
+        bathTotalCalc:
+          type: string
+          description: Calculated total bathrooms
+        bathFull:
+          type: string
+          description: Number of full bathrooms
+        bathsPartialNbr:
+          type: string
+          description: Number of partial bathrooms
+        assessorLastSaleDate:
+          type: string
+          format: date-time
+          description: Date of the last sale according to assessor records
+        assessorLastSaleAmount:
+          type: integer
+          description: Amount of the last sale according to assessor records
+        legalDescription:
+          type: string
+          description: Legal description of the property
+    RentEstimate:
+      type: object
+      description: Estimated rental value and related data based on market analysis
+      properties:
+        estimatedRentalValue:
+          type: string
+          description: Estimated rental value in USD
+          example: "2508"
+        estimatedMinRentalValue:
+          type: string
+          description: Minimum estimated rental value in USD
+          example: "2020"
+        estimatedMaxRentalValue:
+          type: string
+          description: Maximum estimated rental value in USD
+          example: "3022"
+        valuationDate:
+          type: string
+          format: date-time
+          description: Date and time when the valuation was calculated
+          example: "2025-03-24T00:00:00Z"      
+    SaleEstimate:
+      type: object
+      description: Estimated property value and related data based on market analysis
+      properties:
+        fips:
+          type: string
+          description: Federal Information Processing Standards (FIPS) code for the county
+          example: "41051"
+        apn:
+          type: string
+          description: Assessor's Parcel Number (APN) for the property
+          example: R306992
+        situsFullStreetAddress:
+          type: string
+          description: Full street address of the property
+          example: 4342 NE 36TH AVE
+        situsHouseNbr:
+          type: string
+          description: House number component of the address
+          example: "4342"
+        situsDirectionLeft:
+          type: string
+          description: Street direction prefix (e.g., NE, SW)
+          example: NE
+        situsStreet:
+          type: string
+          description: Street name component of the address
+          example: 36TH
+        situsMode:
+          type: string
+          description: Street suffix (e.g., AVE, ST, BLVD)
+          example: AVE
+        situsCity:
+          type: string
+          description: City name
+          example: PORTLAND
+        situsState:
+          type: string
+          description: State code (two-letter)
+          example: OR
+        situsZip5:
+          type: string
+          description: 5-digit ZIP code
+          example: "97211"
+        situsZip4:
+          type: string
+          description: 4-digit ZIP code extension
+          example: "8202"
+        situsCarrierCode:
+          type: string
+          description: USPS carrier route code
+          example: C016
+        finalValue:
+          type: string
+          description: Final estimated property value in USD
+          example: "570000"
+        highValue:
+          type: string
+          description: Upper bound of estimated property value range in USD
+          example: "603672.63"
+        lowValue:
+          type: string
+          description: Lower bound of estimated property value range in USD
+          example: "538536.0436"
+        confidenceScore:
+          type: integer
+          format: int32
+          description: Confidence score for the valuation (0-100)
+          minimum: 0
+          maximum: 100
+          example: 86
+        standardDeviation:
+          type: integer
+          format: int32
+          description: Standard deviation percentage for the valuation
+          example: 5
+        valuationDate:
+          type: string
+          format: date-time
+          description: Date and time when the valuation was calculated
+          example: "2025-03-21T00:00:00Z"
+        comps:
+          type: array
+          description: Array of unique identifiers for comparable properties used in the valuation
+          items:
+            type: string
+            format: uuid
+          example:
+            - e61c0c77-d195-4e3e-9640-dfee7db9921b
+            - 01cb4128-6f7d-4b2d-94a5-191797c07684
+    Comp:
+      type: object
+      description: Comparable property with sale estimate information
+      properties:
+        aupid:
+          type: string
+          description: AbodeMine Data's unique parcel identifier for the comparable property
+        saleEstimate:
+          $ref: "#/components/schemas/SaleEstimate"
+    Recorder:
+      type: object
+      description: Property transaction and deed history
+      properties:
+        transactionId:
+          type: integer
+          description: Transaction identifier
+        documentTypeCode:
+          type: string
+          description: Type of document recorded
+        documentNumberFormatted:
+          type: string
+          description: Formatted document number
+        recordingDate:
+          type: string
+          format: date-time
+          description: Date the document was recorded
+        transferAmount:
+          type: string
+          description: Amount of the property transfer
+        transferTaxTotal:
+          type: string
+          description: Total transfer tax
+        grantor1NameFull:
+          type: string
+          description: Full name of the primary grantor
+        grantee1NameFull:
+          type: string
+          description: Full name of the primary grantee
+        granteeMailAddressFull:
+          type: string
+          description: Full mailing address of the grantee
+        legalDescription:
+          type: string
+          description: Legal description of the property
+        mortgage1Amount:
+          type: integer
+          description: Amount of the primary mortgage
+        mortgage1LenderNameFullStandardized:
+          type: string
+          description: Standardized name of the primary mortgage lender
+        transferInfoPurchaseDownPayment:
+          type: integer
+          description: Down payment amount for the purchase
+        transferInfoPurchaseLoanToValue:
+          type: string
+          description: Loan-to-value ratio for the purchase

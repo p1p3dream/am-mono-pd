@@ -1,0 +1,6 @@
+# DO NOT COPY the contents of this file if you don't need/want
+# to override the default values. This is just an example.
+
+services:
+  dc-root:
+    enabled: false

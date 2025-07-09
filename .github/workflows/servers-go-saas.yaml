@@ -1,0 +1,73 @@
+name: "Servers: go-saas"
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: The environment to use.
+        type: environment
+        default: testing
+        required: true
+      ABODEMINE_SAAS_FLAGS:
+        description: Use this value for ABODEMINE_SAAS_FLAGS.
+        type: string
+        default: ""
+        required: false
+
+permissions:
+  id-token: write
+  contents: read
+  packages: read
+
+jobs:
+  main:
+    runs-on: linux-default
+    environment: ${{ inputs.environment }}
+    container:
+      image: ${{ vars.ABODEMINE_BUILD_RUNNER_IMAGE }}
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Configure runner environment.
+        run: |
+          # 2025-01-15: Export HOME and USER because GitHub Actions override them.
+          #
+          # References:
+          # - https://github.com/actions/runner/issues/863.
+          # - https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#defaultsrunshell.
+
+          USER=abodeminebot
+
+          echo HOME=/home/${USER} | sudo tee -a ${GITHUB_ENV}
+          echo USER=${USER} | sudo tee -a ${GITHUB_ENV}
+
+          echo ABODEMINE_NAMESPACE=${{ vars.ABODEMINE_NAMESPACE }} | sudo tee -a ${GITHUB_ENV}
+          echo ABODEMINE_WORKSPACE=${GITHUB_WORKSPACE} | sudo tee -a ${GITHUB_ENV}
+
+      - name: Configure AWS credentials.
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_GITHUB_ACTIONS_ROLE }}
+
+      # https://github.com/actions/checkout.
+      - name: Checkout repository.
+        uses: actions/checkout@v4
+
+      - name: Build.
+        shell: zsh -eo pipefail {0}
+        run: |
+          # Ensure the docker socket is accessible.
+          sudo chmod 666 /var/run/docker.sock
+
+          source ~/.zshrc
+
+          ABODEMINE_SAAS_FLAGS=${{ inputs.ABODEMINE_SAAS_FLAGS }} \
+          make -C build/servers/go-saas build package configure release
+
+      - name: Wait deployment.
+        shell: zsh -eo pipefail {0}
+        run: |
+          source ~/.zshrc
+          make -C build/servers/go-saas wait-deployment

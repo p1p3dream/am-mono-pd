@@ -1,0 +1,5 @@
+go_out
+
+# Local config files (generated).
+local.yaml
+local-ci.yaml

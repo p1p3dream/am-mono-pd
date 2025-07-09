@@ -1,0 +1,352 @@
+[
+	{
+		"column_id": 1,
+		"column_name": "[ATTOM ID]",
+		"type": "int64",
+		"nulls": false,
+		"nonnulls": 249999,
+		"unique": 249999,
+		"min": 5018.0,
+		"max": 154388755.0,
+		"sum": 13207626730056.0,
+		"mean": 52830718.24309697,
+		"median": 35009467.0,
+		"stdev": 50625919.94974113,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 153395897.0, "count": 1 },
+			{ "value": 36269280.0, "count": 1 },
+			{ "value": 33021126.0, "count": 1 },
+			{ "value": 146869606.0, "count": 1 },
+			{ "value": 146869607.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 2,
+		"column_name": "PropertyAddressFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249725,
+		"unique": 249511,
+		"len": 43.0,
+		"freq": [
+			{ "value": null, "count": 274 },
+			{ "value": "209 JEFFERSON ST", "count": 3 },
+			{ "value": "8008 NW 8TH TER", "count": 3 },
+			{ "value": "803 SPRUCE ST", "count": 3 },
+			{ "value": "7 AZALEA DR", "count": 3 }
+		]
+	},
+	{
+		"column_id": 3,
+		"column_name": "PropertyAddressHouseNumber",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249671,
+		"unique": 22604,
+		"len": 10.0,
+		"freq": [
+			{ "value": "2", "count": 522 },
+			{ "value": "3", "count": 467 },
+			{ "value": "5", "count": 452 },
+			{ "value": "4", "count": 439 },
+			{ "value": "1", "count": 411 }
+		]
+	},
+	{
+		"column_id": 4,
+		"column_name": "PropertyAddressStreetDirection",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 75348,
+		"unique": 9,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 174651 },
+			{ "value": "E", "count": 13370 },
+			{ "value": "N", "count": 12885 },
+			{ "value": "S", "count": 12583 },
+			{ "value": "W", "count": 12559 }
+		]
+	},
+	{
+		"column_id": 5,
+		"column_name": "PropertyAddressStreetName",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249725,
+		"unique": 44182,
+		"len": 27.0,
+		"freq": [
+			{ "value": "ATLANTIC", "count": 961 },
+			{ "value": "4TH", "count": 699 },
+			{ "value": "PINE", "count": 610 },
+			{ "value": "3RD", "count": 582 },
+			{ "value": "2ND", "count": 570 }
+		]
+	},
+	{
+		"column_id": 6,
+		"column_name": "PropertyAddressStreetSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 245171,
+		"unique": 117,
+		"len": 4.0,
+		"freq": [
+			{ "value": "DR", "count": 54769 },
+			{ "value": "ST", "count": 51254 },
+			{ "value": "AVE", "count": 35139 },
+			{ "value": "RD", "count": 27397 },
+			{ "value": "LN", "count": 19072 }
+		]
+	},
+	{
+		"column_id": 7,
+		"column_name": "PropertyAddressStreetPostDirection",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 15174,
+		"unique": 9,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 234825 },
+			{ "value": "W", "count": 2748 },
+			{ "value": "SE", "count": 2557 },
+			{ "value": "E", "count": 2029 },
+			{ "value": "N", "count": 1731 }
+		]
+	},
+	{
+		"column_id": 8,
+		"column_name": "PropertyAddressUnitPrefix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 16434,
+		"unique": 23,
+		"len": 8.0,
+		"freq": [
+			{ "value": null, "count": 233565 },
+			{ "value": "APT", "count": 8631 },
+			{ "value": "UNIT", "count": 4647 },
+			{ "value": "#", "count": 3055 },
+			{ "value": "STE", "count": 65 }
+		]
+	},
+	{
+		"column_id": 9,
+		"column_name": "PropertyAddressUnitValue",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 16455,
+		"unique": 3622,
+		"len": 8.0,
+		"freq": [
+			{ "value": null, "count": 233544 },
+			{ "value": "102", "count": 263 },
+			{ "value": "A", "count": 251 },
+			{ "value": "201", "count": 244 },
+			{ "value": "101", "count": 234 }
+		]
+	},
+	{
+		"column_id": 10,
+		"column_name": "PropertyAddressCity",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249968,
+		"unique": 2613,
+		"len": 26.0,
+		"freq": [
+			{ "value": "PHILADELPHIA", "count": 15028 },
+			{ "value": "JACKSONVILLE", "count": 12945 },
+			{ "value": "PORTLAND", "count": 8519 },
+			{ "value": "TUCSON", "count": 7293 },
+			{ "value": "LOUISVILLE", "count": 6323 }
+		]
+	},
+	{
+		"column_id": 11,
+		"column_name": "PropertyAddressState",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 49,
+		"len": 2.0,
+		"freq": [
+			{ "value": "FL", "count": 49565 },
+			{ "value": "OR", "count": 24153 },
+			{ "value": "AZ", "count": 20082 },
+			{ "value": "PA", "count": 19732 },
+			{ "value": "AR", "count": 14174 }
+		]
+	},
+	{
+		"column_id": 12,
+		"column_name": "PropertyAddressZIP",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249963,
+		"unique": 4667,
+		"len": 5.0,
+		"freq": [
+			{ "value": "55124", "count": 1352 },
+			{ "value": "72756", "count": 1334 },
+			{ "value": "32225", "count": 1326 },
+			{ "value": "72758", "count": 1326 },
+			{ "value": "72034", "count": 1199 }
+		]
+	},
+	{
+		"column_id": 13,
+		"column_name": "PropertyAddressZIP4",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 247978,
+		"unique": 9549,
+		"len": 4.0,
+		"freq": [
+			{ "value": null, "count": 2021 },
+			{ "value": "3022", "count": 214 },
+			{ "value": "3005", "count": 117 },
+			{ "value": "1701", "count": 103 },
+			{ "value": "1910", "count": 93 }
+		]
+	},
+	{
+		"column_id": 14,
+		"column_name": "PropertyAddressCRRT",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 246679,
+		"unique": 524,
+		"len": 4.0,
+		"freq": [
+			{ "value": "C002", "count": 5455 },
+			{ "value": "C001", "count": 5288 },
+			{ "value": "C003", "count": 4972 },
+			{ "value": "R001", "count": 4886 },
+			{ "value": "R002", "count": 4835 }
+		]
+	},
+	{
+		"column_id": 15,
+		"column_name": "PropertyUseGroup",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 1,
+		"len": 11.0,
+		"freq": [{ "value": "Residential", "count": 249999 }]
+	},
+	{
+		"column_id": 16,
+		"column_name": "PropertyUseStandardized",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 9,
+		"min": 181.0,
+		"max": 386.0,
+		"sum": 94811531.0,
+		"mean": 379.247640990564,
+		"median": 385.0,
+		"stdev": 28.7564027241009,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 385.0, "count": 204254 },
+			{ "value": 366.0, "count": 20114 },
+			{ "value": 382.0, "count": 11684 },
+			{ "value": 386.0, "count": 7178 },
+			{ "value": 181.0, "count": 4987 }
+		]
+	},
+	{
+		"column_id": 17,
+		"column_name": "EstimatedRentalValue",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 8978,
+		"min": 180.0,
+		"max": 149101.0,
+		"sum": 609146641.0,
+		"mean": 2436.5963103852414,
+		"median": 2134.0,
+		"stdev": 1558.8700530583315,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 1595.0, "count": 636 },
+			{ "value": 1895.0, "count": 377 },
+			{ "value": 1600.0, "count": 368 },
+			{ "value": 2200.0, "count": 355 },
+			{ "value": 1666.0, "count": 318 }
+		]
+	},
+	{
+		"column_id": 18,
+		"column_name": "EstimatedMinRentalValue",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 7312,
+		"min": 142.0,
+		"max": 107780.0,
+		"sum": 473764303.0,
+		"mean": 1895.064792259169,
+		"median": 1690.0,
+		"stdev": 1185.922058451992,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 1000.0, "count": 747 },
+			{ "value": 1200.0, "count": 537 },
+			{ "value": 850.0, "count": 512 },
+			{ "value": 1250.0, "count": 482 },
+			{ "value": 1150.0, "count": 445 }
+		]
+	},
+	{
+		"column_id": 19,
+		"column_name": "EstimatedMaxRentalValue",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 11357,
+		"min": 224.0,
+		"max": 236231.0,
+		"sum": 813737812.0,
+		"mean": 3254.9642678570713,
+		"median": 2809.0,
+		"stdev": 2210.197683784333,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 3500.0, "count": 750 },
+			{ "value": 2900.0, "count": 559 },
+			{ "value": 2600.0, "count": 431 },
+			{ "value": 2500.0, "count": 307 },
+			{ "value": 2100.0, "count": 300 }
+		]
+	},
+	{
+		"column_id": 20,
+		"column_name": "ValuationDate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 1,
+		"min": "2024-09-23",
+		"max": "2024-09-23",
+		"freq": [{ "value": "2024-09-23", "count": 249999 }]
+	},
+	{
+		"column_id": 21,
+		"column_name": "PublicationDate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 1,
+		"min": "2024-10-23",
+		"max": "2024-10-23",
+		"freq": [{ "value": "2024-10-23", "count": 249999 }]
+	}
+]

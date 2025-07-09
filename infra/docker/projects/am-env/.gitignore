@@ -1,0 +1,13 @@
+Dockerfile
+
+/compose.yaml
+/config.local.yaml
+/config.yaml
+
+/services/shell/.cache/
+/services/shell/.cargo/config.toml
+/services/shell/.config/rclone/rclone.conf
+/services/shell/home/.gitconfig
+/services/shell/home/.zshrc
+/services/shell/entrypoint.sh
+/services/tools/.cache/

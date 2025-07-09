@@ -1,0 +1,24 @@
+[
+	{
+		"column_id": 1,
+		"column_name": "TransactionID",
+		"type": "int64",
+		"nulls": false,
+		"nonnulls": 249999,
+		"unique": 249999,
+		"min": 1030687671.0,
+		"max": 1046479492.0,
+		"sum": 259511171503579.0,
+		"mean": 1038048838.2096689,
+		"median": 1038007190.0,
+		"stdev": 4066768.1923832702,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 1038805978.0, "count": 1 },
+			{ "value": 1034380888.0, "count": 1 },
+			{ "value": 1038750212.0, "count": 1 },
+			{ "value": 1042948570.0, "count": 1 },
+			{ "value": 1040122269.0, "count": 1 }
+		]
+	}
+]

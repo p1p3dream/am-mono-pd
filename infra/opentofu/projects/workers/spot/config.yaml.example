@@ -1,0 +1,58 @@
+deployment_vars:
+  testing:
+    buckets:
+      mono-build:
+	  secure-download:
+
+vars:
+  block_devices:
+    root:
+      delete_on_termination: "true"
+      volume_type: gp3
+      volume_size: 32
+
+    persistent:
+      delete_on_termination: "false"
+      device_name: "/dev/xvdb"
+      mount_point: "/mnt/persistent"
+      volume_type: gp3
+      volume_size: 512
+
+  debian_version: "12"
+  instance_type: "m8g.4xlarge"
+
+  ssh_port:
+
+  user_data:
+    arch: "arm64"
+
+    dirs:
+      cache: /works/cache
+      opt: /opt/abodemine
+      src: /works/src
+      tmp: /tmp/abodemine
+      works: /works
+
+    docker:
+      group: docker
+
+    file_path: "user_data.bash.gz"
+
+    packer:
+      profiles: default,am-env
+      target: linux-aarch64
+      version: "0.4.0"
+
+    python_version: "3.11"
+
+    ssh:
+      ed25519:
+      public_key:
+
+    user:
+      email: bot@abodemine.com
+      name: AbodeMine Bot
+      user: abodeminebot
+      group: abodemine
+      uid: 5046
+      gid: 5046

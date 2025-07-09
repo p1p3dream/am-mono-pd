@@ -1,0 +1,32 @@
+signing:
+  default:
+    expiry: 168h
+
+  profiles:
+    server:
+      expiry: 8760h
+      usages:
+        - signing
+        - digital signature
+        - data encipherment
+        - key encipherment
+        - server auth
+
+    client:
+      expiry: 8760h
+      usages:
+        - signing
+        - digital signature
+        - data encipherment
+        - key encipherment
+        - client auth
+
+    peer:
+      expiry: 8760h
+      usages:
+        - signing
+        - digital signature
+        - data encipherment
+        - key encipherment
+        - client auth
+        - server auth

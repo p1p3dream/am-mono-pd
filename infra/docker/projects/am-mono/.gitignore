@@ -1,0 +1,15 @@
+Dockerfile
+
+/compose.yaml
+/config.local.yaml
+/config.yaml
+
+/services/envoy/etc/*.yaml
+/services/litellm/etc/*.yaml
+/services/nats/etc/*.conf
+/services/nginx/etc/**/*.conf
+/services/opensearch/certs/*
+/services/servers-go-api/etc/*.yaml
+/services/servers-go-public-api/etc/*.yaml
+/services/servers-python-api/etc/*.yaml
+/services/servers-reporter/etc/*.json

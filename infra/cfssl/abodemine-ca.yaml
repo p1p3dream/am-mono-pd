@@ -1,0 +1,14 @@
+# sh ${ABODEMINE_WORKSPACE}/infra/cfssl/gen-ca.sh abodemine-ca
+
+CN: AbodeMine Root CA
+
+key:
+  algo: rsa
+  size: 2048
+
+names:
+  - C: US
+    ST: CO
+    L: Longmont
+    O: AbodeMine
+    OU: AbodeMine Root CA

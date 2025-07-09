@@ -1,0 +1,34 @@
+name: Validate OpenAPI Specification
+
+on:
+  push:
+    paths:
+      - 'docs/projects/api/**/*.yaml'
+      - 'code/go/validate-openapi/**/*'
+  pull_request:
+    paths:
+      - 'docs/projects/api/**/*.yaml'
+      - 'code/go/validate-openapi/**/*'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Build validator
+        working-directory: ./code/go/validate-openapi
+        run: |
+          go mod tidy
+          go build -o validate-openapi validate.go
+
+      - name: Validate OpenAPI spec
+        working-directory: ./code/go/validate-openapi
+        run: |
+          ./validate-openapi ../../../docs/projects/api/abodemine-openapi-3.0.0.yaml 

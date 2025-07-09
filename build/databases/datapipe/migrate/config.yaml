@@ -1,0 +1,11 @@
+config_dir:
+  production: /works/cache/sql-migrate/datapipe/etc/production
+  testing: /works/cache/sql-migrate/datapipe/etc/testing
+
+migrations_dir:
+  production: /works/cache/sql-migrate/datapipe/migrations/production
+  testing: /works/cache/sql-migrate/datapipe/migrations/testing
+
+scripts_dir:
+  production: /works/cache/sql-migrate/datapipe/scripts/production
+  testing: /works/cache/sql-migrate/datapipe/scripts/testing

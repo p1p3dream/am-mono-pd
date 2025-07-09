@@ -1,0 +1,21 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# DON'T EVER SET "indent_size" WITH "indent_style = tab" ON THIS FILE
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = tab
+
+[*.{dart,js,jsx,md,ninja,tf,tf.gotmpl,tfvars,tfvars.gotmpl,ts,tsx,yaml,yaml.gotmpl,yml,yml.gotmpl}]
+indent_style = space
+indent_size = 2
+
+[*.{bash,bash.gotmpl,ps1,psm1,py,rs,sh,sh.gotmpl,xml,zsh,zsh.gotmpl}]
+indent_style = space
+indent_size = 4

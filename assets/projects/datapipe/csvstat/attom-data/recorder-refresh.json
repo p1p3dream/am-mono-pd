@@ -1,0 +1,3823 @@
+[
+	{
+		"column_id": 1,
+		"column_name": "TransactionID",
+		"type": "int64",
+		"nulls": false,
+		"nonnulls": 249999,
+		"unique": 249999,
+		"min": 1030687671.0,
+		"max": 1046479492.0,
+		"sum": 259511171503579.0,
+		"mean": 1038048838.2096689,
+		"median": 1038007190.0,
+		"stdev": 4066768.1923832702,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 1038805978.0, "count": 1 },
+			{ "value": 1034380888.0, "count": 1 },
+			{ "value": 1038750212.0, "count": 1 },
+			{ "value": 1042948570.0, "count": 1 },
+			{ "value": 1040122269.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 2,
+		"column_name": "[ATTOM ID]",
+		"type": "int64",
+		"nulls": false,
+		"nonnulls": 249999,
+		"unique": 180650,
+		"min": 38.0,
+		"max": 1001899751.0,
+		"sum": 96248143097696.0,
+		"mean": 384994112.36723346,
+		"median": 202997766.0,
+		"stdev": 384871747.0109749,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 999999999.0, "count": 62517 },
+			{ "value": 168445272.0, "count": 41 },
+			{ "value": 50359774.0, "count": 29 },
+			{ "value": 167463396.0, "count": 28 },
+			{ "value": 243553214.0, "count": 23 }
+		]
+	},
+	{
+		"column_id": 3,
+		"column_name": "DocumentRecordingStateCode",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 51,
+		"len": 2.0,
+		"freq": [
+			{ "value": "TX", "count": 23057 },
+			{ "value": "NY", "count": 22963 },
+			{ "value": "CA", "count": 21592 },
+			{ "value": "OH", "count": 11457 },
+			{ "value": "MI", "count": 10946 }
+		]
+	},
+	{
+		"column_id": 4,
+		"column_name": "DocumentRecordingCountyName",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 1452,
+		"len": 33.0,
+		"freq": [
+			{ "value": "Los Angeles", "count": 8747 },
+			{ "value": "Jefferson", "count": 5819 },
+			{ "value": "El Paso", "count": 5635 },
+			{ "value": "Clark", "count": 5480 },
+			{ "value": "Harris", "count": 4100 }
+		]
+	},
+	{
+		"column_id": 5,
+		"column_name": "DocumentRecordingJurisdictionName",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 2354,
+		"len": 22.0,
+		"freq": [
+			{ "value": "LOS ANGELES", "count": 8747 },
+			{ "value": "JEFFERSON", "count": 5820 },
+			{ "value": "EL PASO", "count": 5635 },
+			{ "value": "CLARK", "count": 5480 },
+			{ "value": "HARRIS", "count": 4100 }
+		]
+	},
+	{
+		"column_id": 6,
+		"column_name": "DocumentRecordingCountyFIPs",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 2305,
+		"len": 5.0,
+		"freq": [
+			{ "value": "06037", "count": 8747 },
+			{ "value": "08041", "count": 5303 },
+			{ "value": "32003", "count": 5263 },
+			{ "value": "48201", "count": 4090 },
+			{ "value": "39061", "count": 3624 }
+		]
+	},
+	{
+		"column_id": 7,
+		"column_name": "DocumentTypeCode",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 66,
+		"len": 4.0,
+		"freq": [
+			{ "value": "DTTR", "count": 89083 },
+			{ "value": "DTWD", "count": 50827 },
+			{ "value": "DTIT", "count": 32233 },
+			{ "value": "DTDE", "count": 16906 },
+			{ "value": "DTQC", "count": 13429 }
+		]
+	},
+	{
+		"column_id": 8,
+		"column_name": "DocumentNumberFormatted",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 160916,
+		"unique": 137942,
+		"len": 17.0,
+		"freq": [
+			{ "value": null, "count": 89083 },
+			{ "value": "0002350692", "count": 63 },
+			{ "value": "0197381855", "count": 62 },
+			{ "value": "0000053195", "count": 59 },
+			{ "value": "0003641818", "count": 56 }
+		]
+	},
+	{
+		"column_id": 9,
+		"column_name": "DocumentNumberLegacy",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 160916,
+		"unique": 137942,
+		"len": 17.0,
+		"freq": [
+			{ "value": null, "count": 89083 },
+			{ "value": "0002350692", "count": 63 },
+			{ "value": "0197381855", "count": 62 },
+			{ "value": "0000053195", "count": 59 },
+			{ "value": "0003641818", "count": 56 }
+		]
+	},
+	{
+		"column_id": 10,
+		"column_name": "InstrumentNumber",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 149426,
+		"unique": 136661,
+		"len": 17.0,
+		"freq": [
+			{ "value": null, "count": 100573 },
+			{ "value": "20242350692", "count": 63 },
+			{ "value": "2024052456", "count": 62 },
+			{ "value": "2024-053195", "count": 59 },
+			{ "value": "3641818", "count": 56 }
+		]
+	},
+	{
+		"column_id": 11,
+		"column_name": "Book",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 63936,
+		"unique": 12644,
+		"len": 9.0,
+		"freq": [
+			{ "value": null, "count": 186063 },
+			{ "value": "2024", "count": 3488 },
+			{ "value": "3024", "count": 266 },
+			{ "value": "DEED 2024", "count": 258 },
+			{ "value": "427", "count": 199 }
+		]
+	},
+	{
+		"column_id": 12,
+		"column_name": "Page",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 63936,
+		"unique": 7794,
+		"len": 8.0,
+		"freq": [
+			{ "value": null, "count": 186063 },
+			{ "value": "1", "count": 298 },
+			{ "value": "36", "count": 109 },
+			{ "value": "219", "count": 94 },
+			{ "value": "68", "count": 83 }
+		]
+	},
+	{
+		"column_id": 13,
+		"column_name": "InstrumentDate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 160736,
+		"unique": 1784,
+		"min": "1909-03-31",
+		"max": "2024-12-12",
+		"freq": [
+			{ "value": null, "count": 89263 },
+			{ "value": "2024-06-28", "count": 1849 },
+			{ "value": "2024-06-27", "count": 1637 },
+			{ "value": "2024-04-30", "count": 1623 },
+			{ "value": "2024-05-30", "count": 1591 }
+		]
+	},
+	{
+		"column_id": 14,
+		"column_name": "RecordingDate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 160916,
+		"unique": 200,
+		"min": "2024-04-15",
+		"max": "2024-12-12",
+		"freq": [
+			{ "value": null, "count": 89083 },
+			{ "value": "2024-04-30", "count": 1658 },
+			{ "value": "2024-06-28", "count": 1655 },
+			{ "value": "2024-07-01", "count": 1635 },
+			{ "value": "2024-05-31", "count": 1627 }
+		]
+	},
+	{
+		"column_id": 15,
+		"column_name": "TransactionType",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 16,
+		"column_name": "TransferInfoPurchaseTypeCode",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 246839,
+		"unique": 6,
+		"min": 10.0,
+		"max": 50.0,
+		"sum": 8952410.0,
+		"mean": 36.26821531443573,
+		"median": 40.0,
+		"stdev": 5.6091536953322505,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 40.0, "count": 149653 },
+			{ "value": 30.0, "count": 89083 },
+			{ "value": 50.0, "count": 4701 },
+			{ "value": null, "count": 3160 },
+			{ "value": 20.0, "count": 2473 }
+		]
+	},
+	{
+		"column_id": 17,
+		"column_name": "ForeclosureAuctionSale",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 249682 },
+			{ "value": true, "count": 317 }
+		]
+	},
+	{
+		"column_id": 18,
+		"column_name": "TransferInfoDistressCircumstanceCode",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 5,
+		"min": 0.0,
+		"max": 80.0,
+		"sum": 117250.0,
+		"mean": 0.46900187600750404,
+		"median": 0.0,
+		"stdev": 5.630123596022217,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 248164 },
+			{ "value": 80.0, "count": 765 },
+			{ "value": 40.0, "count": 485 },
+			{ "value": 60.0, "count": 430 },
+			{ "value": 70.0, "count": 155 }
+		]
+	},
+	{
+		"column_id": 19,
+		"column_name": "QuitclaimFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 236570 },
+			{ "value": true, "count": 13429 }
+		]
+	},
+	{
+		"column_id": 20,
+		"column_name": "TransferInfoMultiParcelFlag",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 3,
+		"min": 0.0,
+		"max": 7.0,
+		"sum": 136781.0,
+		"mean": 0.547126188504754,
+		"median": 0.0,
+		"stdev": 1.8773679254006508,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 230351 },
+			{ "value": 7.0, "count": 19497 },
+			{ "value": 2.0, "count": 151 }
+		]
+	},
+	{
+		"column_id": 21,
+		"column_name": "ArmsLengthFlag",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 249953,
+		"unique": 6,
+		"min": 0.0,
+		"max": 4.0,
+		"sum": 325407.0,
+		"mean": 1.3018727520773905,
+		"median": 1.0,
+		"stdev": 1.514033716498147,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 1.0, "count": 98190 },
+			{ "value": 0.0, "count": 93652 },
+			{ "value": 4.0, "count": 55497 },
+			{ "value": 2.0, "count": 2613 },
+			{ "value": null, "count": 46 }
+		]
+	},
+	{
+		"column_id": 22,
+		"column_name": "PartialInterest",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 186,
+		"unique": 2,
+		"min": 103.0,
+		"max": 103.0,
+		"sum": 19158.0,
+		"mean": 103.0,
+		"median": 103.0,
+		"stdev": 0.0,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 249813 },
+			{ "value": 103.0, "count": 186 }
+		]
+	},
+	{
+		"column_id": 23,
+		"column_name": "TransferAmount",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 160916,
+		"unique": 10494,
+		"min": 0.0,
+		"max": 609805000.0,
+		"sum": 43278580958.0,
+		"mean": 268951.384312312,
+		"median": 0.0,
+		"stdev": 2444820.995027229,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 94332 },
+			{ "value": null, "count": 89083 },
+			{ "value": 200000.0, "count": 522 },
+			{ "value": 300000.0, "count": 491 },
+			{ "value": 250000.0, "count": 486 }
+		]
+	},
+	{
+		"column_id": 24,
+		"column_name": "TransferAmountInfoAccuracy",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 128998,
+		"unique": 26,
+		"min": 113.0,
+		"max": 154.0,
+		"sum": 18598532.0,
+		"mean": 144.17690196747236,
+		"median": 149.0,
+		"stdev": 9.79959071801455,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 121001 },
+			{ "value": 154.0, "count": 33401 },
+			{ "value": 135.0, "count": 32555 },
+			{ "value": 149.0, "count": 27729 },
+			{ "value": 147.0, "count": 18667 }
+		]
+	},
+	{
+		"column_id": 25,
+		"column_name": "TransferTaxTotal",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 160916,
+		"unique": 11579,
+		"min": 0.0,
+		"max": 97880.0,
+		"sum": 82369574.6,
+		"mean": 511.87933207387704,
+		"median": 0.0,
+		"stdev": 2658.332687690422,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": 0.0, "count": 118075 },
+			{ "value": null, "count": 89083 },
+			{ "value": 150.0, "count": 149 },
+			{ "value": 300.0, "count": 141 },
+			{ "value": 450.0, "count": 136 }
+		]
+	},
+	{
+		"column_id": 26,
+		"column_name": "TransferTaxCity",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 160916,
+		"unique": 1235,
+		"min": 0.0,
+		"max": 84300.0,
+		"sum": 9691029.15,
+		"mean": 60.224148934847996,
+		"median": 0.0,
+		"stdev": 920.7352862481148,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": 0.0, "count": 159067 },
+			{ "value": null, "count": 89083 },
+			{ "value": 3375.0, "count": 12 },
+			{ "value": 4725.0, "count": 11 },
+			{ "value": 7200.0, "count": 10 }
+		]
+	},
+	{
+		"column_id": 27,
+		"column_name": "TransferTaxCounty",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 160916,
+		"unique": 4973,
+		"min": 0.0,
+		"max": 82072.1,
+		"sum": 22700729.75,
+		"mean": 141.0719241716175,
+		"median": 0.0,
+		"stdev": 1069.5837097726917,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": 0.0, "count": 142611 },
+			{ "value": null, "count": 89083 },
+			{ "value": 440.0, "count": 93 },
+			{ "value": 330.0, "count": 81 },
+			{ "value": 550.0, "count": 74 }
+		]
+	},
+	{
+		"column_id": 28,
+		"column_name": "Grantor1NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 160910,
+		"unique": 138049,
+		"len": 43.0,
+		"freq": [
+			{ "value": null, "count": 89089 },
+			{ "value": "LENNAR HOMES OF TEXAS LAND AND CONS", "count": 486 },
+			{ "value": "D R HORTON INC", "count": 304 },
+			{ "value": "NVR INC", "count": 236 },
+			{ "value": "LENNAR HOMES OF TEXAS SALES AND MKT", "count": 215 }
+		]
+	},
+	{
+		"column_id": 29,
+		"column_name": "Grantor1NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 120476,
+		"unique": 12330,
+		"len": 26.0,
+		"freq": [
+			{ "value": null, "count": 129523 },
+			{ "value": "MICHAEL", "count": 2561 },
+			{ "value": "JAMES", "count": 2505 },
+			{ "value": "JOHN", "count": 2500 },
+			{ "value": "ROBERT", "count": 2398 }
+		]
+	},
+	{
+		"column_id": 30,
+		"column_name": "Grantor1NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 77970,
+		"unique": 5848,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 172029 },
+			{ "value": "A", "count": 6597 },
+			{ "value": "L", "count": 5875 },
+			{ "value": "J", "count": 5644 },
+			{ "value": "M", "count": 5303 }
+		]
+	},
+	{
+		"column_id": 31,
+		"column_name": "Grantor1NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 160907,
+		"unique": 69667,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 89092 },
+			{ "value": "SMITH", "count": 987 },
+			{ "value": "JOHNSON", "count": 725 },
+			{ "value": "MILLER", "count": 535 },
+			{ "value": "WILLIAMS", "count": 528 }
+		]
+	},
+	{
+		"column_id": 32,
+		"column_name": "Grantor1NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 4410,
+		"unique": 13,
+		"len": 7.0,
+		"freq": [
+			{ "value": null, "count": 245589 },
+			{ "value": "JR", "count": 2781 },
+			{ "value": "III", "count": 659 },
+			{ "value": "SR.", "count": 548 },
+			{ "value": "II", "count": 336 }
+		]
+	},
+	{
+		"column_id": 33,
+		"column_name": "Grantor1InfoEntityClassification",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 160913,
+		"unique": 3,
+		"len": 3.0,
+		"freq": [
+			{ "value": "IND", "count": 120478 },
+			{ "value": null, "count": 89086 },
+			{ "value": "NON", "count": 40435 }
+		]
+	},
+	{
+		"column_id": 34,
+		"column_name": "Grantor1InfoOwnerType",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 119203,
+		"unique": 53,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 130796 },
+			{ "value": "ID", "count": 42264 },
+			{ "value": "LC", "count": 21617 },
+			{ "value": "TR", "count": 9860 },
+			{ "value": "SP", "count": 6631 }
+		]
+	},
+	{
+		"column_id": 35,
+		"column_name": "Grantor2NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 76539,
+		"unique": 71367,
+		"len": 38.0,
+		"freq": [
+			{ "value": null, "count": 173460 },
+			{ "value": "FRIENDSWOOD DEVELOPMENT COMPANY", "count": 67 },
+			{ "value": "TRUST NO 202408", "count": 63 },
+			{ "value": "STANLEY MARTIN COMPANIES LLC", "count": 45 },
+			{ "value": "FIRST STREET TRUST", "count": 42 }
+		]
+	},
+	{
+		"column_id": 36,
+		"column_name": "Grantor2NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 63579,
+		"unique": 8641,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 186420 },
+			{ "value": "MARY", "count": 933 },
+			{ "value": "LINDA", "count": 659 },
+			{ "value": "SUSAN", "count": 658 },
+			{ "value": "JENNIFER", "count": 569 }
+		]
+	},
+	{
+		"column_id": 37,
+		"column_name": "Grantor2NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 39455,
+		"unique": 3742,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 210544 },
+			{ "value": "A", "count": 3881 },
+			{ "value": "L", "count": 3747 },
+			{ "value": "M", "count": 3681 },
+			{ "value": "J", "count": 2567 }
+		]
+	},
+	{
+		"column_id": 38,
+		"column_name": "Grantor2NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 76537,
+		"unique": 39471,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 173462 },
+			{ "value": "SMITH", "count": 513 },
+			{ "value": "JOHNSON", "count": 349 },
+			{ "value": "MILLER", "count": 262 },
+			{ "value": "BROWN", "count": 256 }
+		]
+	},
+	{
+		"column_id": 39,
+		"column_name": "Grantor2NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 814,
+		"unique": 12,
+		"len": 7.0,
+		"freq": [
+			{ "value": null, "count": 249185 },
+			{ "value": "JR", "count": 537 },
+			{ "value": "III", "count": 112 },
+			{ "value": "SR.", "count": 94 },
+			{ "value": "II", "count": 54 }
+		]
+	},
+	{
+		"column_id": 40,
+		"column_name": "Grantor2InfoEntityClassification",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 76539,
+		"unique": 3,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 173460 },
+			{ "value": "IND", "count": 63579 },
+			{ "value": "NON", "count": 12960 }
+		]
+	},
+	{
+		"column_id": 41,
+		"column_name": "Grantor2InfoOwnerType",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 36839,
+		"unique": 51,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 213160 },
+			{ "value": "ID", "count": 15878 },
+			{ "value": "TR", "count": 5015 },
+			{ "value": "AK", "count": 2778 },
+			{ "value": "WH", "count": 1829 }
+		]
+	},
+	{
+		"column_id": 42,
+		"column_name": "Grantor3NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 9238,
+		"unique": 8686,
+		"len": 45.0,
+		"freq": [
+			{ "value": null, "count": 240761 },
+			{ "value": "ESTATE OF ARTHUR STUART", "count": 33 },
+			{ "value": "MITCHEM LIVING TRUST", "count": 16 },
+			{ "value": "RANDALL DUANE CARR", "count": 15 },
+			{ "value": "NILSON HOMES", "count": 11 }
+		]
+	},
+	{
+		"column_id": 43,
+		"column_name": "Grantor3NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 5716,
+		"unique": 1837,
+		"len": 22.0,
+		"freq": [
+			{ "value": null, "count": 244283 },
+			{ "value": "JAMES", "count": 76 },
+			{ "value": "DAVID", "count": 76 },
+			{ "value": "JOHN", "count": 75 },
+			{ "value": "MICHAEL", "count": 58 }
+		]
+	},
+	{
+		"column_id": 44,
+		"column_name": "Grantor3NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 3417,
+		"unique": 749,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 246582 },
+			{ "value": "L", "count": 260 },
+			{ "value": "A", "count": 243 },
+			{ "value": "M", "count": 239 },
+			{ "value": "J", "count": 199 }
+		]
+	},
+	{
+		"column_id": 45,
+		"column_name": "Grantor3NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 9236,
+		"unique": 7272,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 240763 },
+			{ "value": "SMITH", "count": 43 },
+			{ "value": "JOHNSON", "count": 34 },
+			{ "value": "ESTATE OF ARTHUR STUART", "count": 33 },
+			{ "value": "MILLER", "count": 32 }
+		]
+	},
+	{
+		"column_id": 46,
+		"column_name": "Grantor3NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 136,
+		"unique": 6,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 249863 },
+			{ "value": "JR", "count": 87 },
+			{ "value": "SR.", "count": 19 },
+			{ "value": "III", "count": 17 },
+			{ "value": "II", "count": 12 }
+		]
+	},
+	{
+		"column_id": 47,
+		"column_name": "Grantor3InfoEntityClassification",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 9238,
+		"unique": 3,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 240761 },
+			{ "value": "IND", "count": 5716 },
+			{ "value": "NON", "count": 3522 }
+		]
+	},
+	{
+		"column_id": 48,
+		"column_name": "Grantor4NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 2635,
+		"unique": 2411,
+		"len": 36.0,
+		"freq": [
+			{ "value": null, "count": 247364 },
+			{ "value": "THE BANK OF NEW YORK MELLON", "count": 33 },
+			{ "value": "LARRY T MITCHEM", "count": 16 },
+			{ "value": "MADELYN LEHR", "count": 8 },
+			{ "value": "KALEEN JANE MORRIS", "count": 7 }
+		]
+	},
+	{
+		"column_id": 49,
+		"column_name": "Grantor4NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 2376,
+		"unique": 944,
+		"len": 18.0,
+		"freq": [
+			{ "value": null, "count": 247623 },
+			{ "value": "JAMES", "count": 40 },
+			{ "value": "JOHN", "count": 38 },
+			{ "value": "MARY", "count": 31 },
+			{ "value": "THOMAS", "count": 29 }
+		]
+	},
+	{
+		"column_id": 50,
+		"column_name": "Grantor4NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1531,
+		"unique": 407,
+		"len": 16.0,
+		"freq": [
+			{ "value": null, "count": 248468 },
+			{ "value": "A", "count": 104 },
+			{ "value": "M", "count": 100 },
+			{ "value": "L", "count": 98 },
+			{ "value": "J", "count": 84 }
+		]
+	},
+	{
+		"column_id": 51,
+		"column_name": "Grantor4NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 2634,
+		"unique": 2020,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 247365 },
+			{ "value": "THE BANK OF NEW YORK MELLON", "count": 33 },
+			{ "value": "WILLIAMS", "count": 16 },
+			{ "value": "MITCHEM", "count": 16 },
+			{ "value": "SMITH", "count": 12 }
+		]
+	},
+	{
+		"column_id": 52,
+		"column_name": "Grantor4NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 75,
+		"unique": 5,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 249924 },
+			{ "value": "JR", "count": 48 },
+			{ "value": "SR.", "count": 13 },
+			{ "value": "III", "count": 11 },
+			{ "value": "II", "count": 3 }
+		]
+	},
+	{
+		"column_id": 53,
+		"column_name": "Grantor4InfoEntityClassification",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 2635,
+		"unique": 3,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 247364 },
+			{ "value": "IND", "count": 2376 },
+			{ "value": "NON", "count": 259 }
+		]
+	},
+	{
+		"column_id": 54,
+		"column_name": "GrantorAddressFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 53517,
+		"unique": 44586,
+		"len": 50.0,
+		"freq": [
+			{ "value": null, "count": 196482 },
+			{ "value": "500 GRISWOLD ST STE 1200", "count": 183 },
+			{ "value": "PO BOX 4090", "count": 122 },
+			{ "value": "1100 PERIMETER PARK DR # DR112", "count": 103 },
+			{ "value": "PO BOX 279", "count": 88 }
+		]
+	},
+	{
+		"column_id": 55,
+		"column_name": "GrantorAddressHouseNumber",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 56,
+		"column_name": "GrantorAddressStreetDirection",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 57,
+		"column_name": "GrantorAddressStreetName",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 58,
+		"column_name": "GrantorAddressStreetSuffix",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 59,
+		"column_name": "GrantorAddressStreetPostDirection",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 60,
+		"column_name": "GrantorAddressUnitPrefix",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 61,
+		"column_name": "GrantorAddressUnitValue",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 6832,
+		"unique": 2199,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 243167 },
+			{ "value": "100", "count": 305 },
+			{ "value": "200", "count": 239 },
+			{ "value": "1200", "count": 187 },
+			{ "value": "300", "count": 127 }
+		]
+	},
+	{
+		"column_id": 62,
+		"column_name": "GrantorAddressCity",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 53519,
+		"unique": 6950,
+		"len": 28.0,
+		"freq": [
+			{ "value": null, "count": 196480 },
+			{ "value": "HOUSTON", "count": 1098 },
+			{ "value": "LAS VEGAS", "count": 1019 },
+			{ "value": "COLORADO SPRINGS", "count": 788 },
+			{ "value": "PENSACOLA", "count": 579 }
+		]
+	},
+	{
+		"column_id": 63,
+		"column_name": "GrantorAddressState",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 54082,
+		"unique": 55,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 195917 },
+			{ "value": "TX", "count": 9423 },
+			{ "value": "MI", "count": 5430 },
+			{ "value": "FL", "count": 4303 },
+			{ "value": "NY", "count": 4109 }
+		]
+	},
+	{
+		"column_id": 64,
+		"column_name": "GrantorAddressZIP",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 53300,
+		"unique": 11945,
+		"len": 5.0,
+		"freq": [
+			{ "value": null, "count": 196699 },
+			{ "value": "48226", "count": 210 },
+			{ "value": "27560", "count": 145 },
+			{ "value": "32504", "count": 130 },
+			{ "value": "85261", "count": 122 }
+		]
+	},
+	{
+		"column_id": 65,
+		"column_name": "GrantorAddressZIP4",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 50929,
+		"unique": 9261,
+		"len": 4.0,
+		"freq": [
+			{ "value": null, "count": 199070 },
+			{ "value": "4463", "count": 195 },
+			{ "value": "4090", "count": 123 },
+			{ "value": "0180", "count": 116 },
+			{ "value": "1472", "count": 101 }
+		]
+	},
+	{
+		"column_id": 66,
+		"column_name": "GrantorAddressCRRT",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 67,
+		"column_name": "GrantorAddressInfoFormat",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 50929,
+		"unique": 6,
+		"len": 1.0,
+		"freq": [
+			{ "value": null, "count": 199070 },
+			{ "value": "S", "count": 40540 },
+			{ "value": "H", "count": 7226 },
+			{ "value": "P", "count": 3151 },
+			{ "value": "R", "count": 11 }
+		]
+	},
+	{
+		"column_id": 68,
+		"column_name": "GrantorAddressInfoPrivacy",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 69,
+		"column_name": "Grantee1NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249996,
+		"unique": 224118,
+		"len": 48.0,
+		"freq": [
+			{ "value": "LENNAR HOMES OF TEXAS SALES AND MKT", "count": 448 },
+			{ "value": "NVR INC", "count": 261 },
+			{ "value": "12-15 BROADWAY ASTORIA, LLC", "count": 141 },
+			{ "value": "D R HORTON INC", "count": 137 },
+			{ "value": "OPENDOOR PROPERTY TRUST I", "count": 107 }
+		]
+	},
+	{
+		"column_id": 70,
+		"column_name": "Grantee1NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 196552,
+		"unique": 19873,
+		"len": 28.0,
+		"freq": [
+			{ "value": null, "count": 53447 },
+			{ "value": "MICHAEL", "count": 4297 },
+			{ "value": "DAVID", "count": 3444 },
+			{ "value": "JOHN", "count": 3337 },
+			{ "value": "JAMES", "count": 3221 }
+		]
+	},
+	{
+		"column_id": 71,
+		"column_name": "Grantee1NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 116183,
+		"unique": 9792,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 133816 },
+			{ "value": "A", "count": 9357 },
+			{ "value": "J", "count": 8257 },
+			{ "value": "M", "count": 7975 },
+			{ "value": "L", "count": 7802 }
+		]
+	},
+	{
+		"column_id": 72,
+		"column_name": "Grantee1NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249988,
+		"unique": 105670,
+		"len": 35.0,
+		"freq": [
+			{ "value": "SMITH", "count": 1499 },
+			{ "value": "JOHNSON", "count": 1167 },
+			{ "value": "BROWN", "count": 829 },
+			{ "value": "MILLER", "count": 827 },
+			{ "value": "WILLIAMS", "count": 823 }
+		]
+	},
+	{
+		"column_id": 73,
+		"column_name": "Grantee1NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 7120,
+		"unique": 21,
+		"len": 9.0,
+		"freq": [
+			{ "value": null, "count": 242879 },
+			{ "value": "JR", "count": 4542 },
+			{ "value": "III", "count": 1058 },
+			{ "value": "II", "count": 667 },
+			{ "value": "SR.", "count": 666 }
+		]
+	},
+	{
+		"column_id": 74,
+		"column_name": "Grantee1InfoEntityClassification",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249998,
+		"unique": 3,
+		"len": 3.0,
+		"freq": [
+			{ "value": "IND", "count": 196554 },
+			{ "value": "NON", "count": 53444 },
+			{ "value": null, "count": 1 }
+		]
+	},
+	{
+		"column_id": 75,
+		"column_name": "Grantee1InfoOwnerType",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 182872,
+		"unique": 54,
+		"len": 2.0,
+		"freq": [
+			{ "value": "ID", "count": 77453 },
+			{ "value": null, "count": 67127 },
+			{ "value": "LC", "count": 31852 },
+			{ "value": "TR", "count": 19139 },
+			{ "value": "SP", "count": 7316 }
+		]
+	},
+	{
+		"column_id": 76,
+		"column_name": "Grantee2NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 127229,
+		"unique": 120515,
+		"len": 44.0,
+		"freq": [
+			{ "value": null, "count": 122770 },
+			{ "value": "615 WARBURTON 2 LLC", "count": 69 },
+			{ "value": "TRUST NO 202415", "count": 63 },
+			{ "value": "MBD BBM HOUSING DEVELOPMENT FUND CO", "count": 53 },
+			{ "value": "WEST MADISON LAND COMPANY LLC", "count": 44 }
+		]
+	},
+	{
+		"column_id": 77,
+		"column_name": "Grantee2NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 115308,
+		"unique": 14741,
+		"len": 26.0,
+		"freq": [
+			{ "value": null, "count": 134691 },
+			{ "value": "JENNIFER", "count": 1362 },
+			{ "value": "MARY", "count": 1159 },
+			{ "value": "MICHAEL", "count": 1049 },
+			{ "value": "LISA", "count": 890 }
+		]
+	},
+	{
+		"column_id": 78,
+		"column_name": "Grantee2NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 65704,
+		"unique": 6959,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 184295 },
+			{ "value": "M", "count": 6056 },
+			{ "value": "L", "count": 5779 },
+			{ "value": "A", "count": 5722 },
+			{ "value": "J", "count": 3920 }
+		]
+	},
+	{
+		"column_id": 79,
+		"column_name": "Grantee2NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 127225,
+		"unique": 57121,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 122774 },
+			{ "value": "SMITH", "count": 854 },
+			{ "value": "JOHNSON", "count": 626 },
+			{ "value": "MILLER", "count": 526 },
+			{ "value": "BROWN", "count": 476 }
+		]
+	},
+	{
+		"column_id": 80,
+		"column_name": "Grantee2NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1510,
+		"unique": 13,
+		"len": 7.0,
+		"freq": [
+			{ "value": null, "count": 248489 },
+			{ "value": "JR", "count": 988 },
+			{ "value": "III", "count": 219 },
+			{ "value": "II", "count": 145 },
+			{ "value": "SR.", "count": 107 }
+		]
+	},
+	{
+		"column_id": 81,
+		"column_name": "Grantee2InfoEntityClassification",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 127229,
+		"unique": 3,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 122770 },
+			{ "value": "IND", "count": 115313 },
+			{ "value": "NON", "count": 11916 }
+		]
+	},
+	{
+		"column_id": 82,
+		"column_name": "GranteeInfoVesting1",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 42324,
+		"unique": 23,
+		"min": 149.0,
+		"max": 228.0,
+		"sum": 7688939.0,
+		"mean": 181.6685332199225,
+		"median": 171.0,
+		"stdev": 26.024452764375084,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 207675 },
+			{ "value": 153.0, "count": 9057 },
+			{ "value": 205.0, "count": 7861 },
+			{ "value": 171.0, "count": 4085 },
+			{ "value": 221.0, "count": 3751 }
+		]
+	},
+	{
+		"column_id": 83,
+		"column_name": "Grantee3NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 11068,
+		"unique": 10437,
+		"len": 37.0,
+		"freq": [
+			{ "value": null, "count": 238931 },
+			{ "value": "JOSEPHINE L HART", "count": 15 },
+			{ "value": "OWEN AND RUTH ANN MELLAND LIVING TR", "count": 15 },
+			{ "value": "LARRY T MITCHEM", "count": 14 },
+			{ "value": "THE JEFFREY R MOORE LEGACY TRUST", "count": 11 }
+		]
+	},
+	{
+		"column_id": 84,
+		"column_name": "Grantee3NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 3905,
+		"unique": 1477,
+		"len": 14.0,
+		"freq": [
+			{ "value": null, "count": 246094 },
+			{ "value": "DAVID", "count": 69 },
+			{ "value": "MICHAEL", "count": 62 },
+			{ "value": "JOHN", "count": 50 },
+			{ "value": "ROBERT", "count": 44 }
+		]
+	},
+	{
+		"column_id": 85,
+		"column_name": "Grantee3NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 2404,
+		"unique": 612,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 247595 },
+			{ "value": "A", "count": 177 },
+			{ "value": "L", "count": 167 },
+			{ "value": "M", "count": 165 },
+			{ "value": "J", "count": 147 }
+		]
+	},
+	{
+		"column_id": 86,
+		"column_name": "Grantee3NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 11068,
+		"unique": 9605,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 238931 },
+			{ "value": "JOHNSON", "count": 33 },
+			{ "value": "SMITH", "count": 24 },
+			{ "value": "BROWN", "count": 20 },
+			{ "value": "HART", "count": 17 }
+		]
+	},
+	{
+		"column_id": 87,
+		"column_name": "Grantee3NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 83,
+		"unique": 7,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 249916 },
+			{ "value": "JR", "count": 52 },
+			{ "value": "III", "count": 16 },
+			{ "value": "II", "count": 6 },
+			{ "value": "SR.", "count": 6 }
+		]
+	},
+	{
+		"column_id": 88,
+		"column_name": "Grantee3InfoEntityClassification",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 11068,
+		"unique": 3,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 238931 },
+			{ "value": "NON", "count": 7163 },
+			{ "value": "IND", "count": 3905 }
+		]
+	},
+	{
+		"column_id": 89,
+		"column_name": "Grantee4NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1760,
+		"unique": 1669,
+		"len": 36.0,
+		"freq": [
+			{ "value": null, "count": 248239 },
+			{ "value": "ROBERT T MITCHEM", "count": 14 },
+			{ "value": "JENNIFER L JOHNSON", "count": 8 },
+			{ "value": "JOAN E FERRIER REVOCABLE TRUST", "count": 6 },
+			{ "value": "MARY B SIMS TRUST", "count": 6 }
+		]
+	},
+	{
+		"column_id": 90,
+		"column_name": "Grantee4NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1535,
+		"unique": 740,
+		"len": 13.0,
+		"freq": [
+			{ "value": null, "count": 248464 },
+			{ "value": "ROBERT", "count": 27 },
+			{ "value": "MICHAEL", "count": 22 },
+			{ "value": "MARK", "count": 20 },
+			{ "value": "JENNIFER", "count": 18 }
+		]
+	},
+	{
+		"column_id": 91,
+		"column_name": "Grantee4NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1013,
+		"unique": 298,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 248986 },
+			{ "value": "L", "count": 79 },
+			{ "value": "A", "count": 78 },
+			{ "value": "J", "count": 73 },
+			{ "value": "M", "count": 64 }
+		]
+	},
+	{
+		"column_id": 92,
+		"column_name": "Grantee4NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1760,
+		"unique": 1450,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 248239 },
+			{ "value": "JOHNSON", "count": 21 },
+			{ "value": "MITCHEM", "count": 14 },
+			{ "value": "SMITH", "count": 9 },
+			{ "value": "MURPHY", "count": 8 }
+		]
+	},
+	{
+		"column_id": 93,
+		"column_name": "Grantee4NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 40,
+		"unique": 6,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 249959 },
+			{ "value": "JR", "count": 28 },
+			{ "value": "II", "count": 5 },
+			{ "value": "III", "count": 5 },
+			{ "value": "IV", "count": 1 }
+		]
+	},
+	{
+		"column_id": 94,
+		"column_name": "Grantee4InfoEntityClassification",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1760,
+		"unique": 3,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 248239 },
+			{ "value": "IND", "count": 1535 },
+			{ "value": "NON", "count": 225 }
+		]
+	},
+	{
+		"column_id": 95,
+		"column_name": "GranteeMailCareOfName",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 499,
+		"unique": 401,
+		"len": 40.0,
+		"freq": [
+			{ "value": null, "count": 249500 },
+			{ "value": "TRICON AMERICAN HOMES LLC", "count": 9 },
+			{ "value": "DAVIDSON COMMUNITIES", "count": 7 },
+			{ "value": "ROGELIO ROSALEZ", "count": 7 },
+			{ "value": "ESSENTIAL HOUSING ASSET MANAGEMENT LLC", "count": 6 }
+		]
+	},
+	{
+		"column_id": 96,
+		"column_name": "GranteeInfoEntityCount",
+		"type": "int",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 1,
+		"freq": [{ "value": false, "count": 249999 }]
+	},
+	{
+		"column_id": 97,
+		"column_name": "GranteeInfoVesting2",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 98,
+		"column_name": "GranteeInvestorFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 234367 },
+			{ "value": true, "count": 15632 }
+		]
+	},
+	{
+		"column_id": 99,
+		"column_name": "GranteeMailAddressFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 190835,
+		"unique": 169728,
+		"len": 63.0,
+		"freq": [
+			{ "value": null, "count": 59164 },
+			{ "value": "681 GREENS PKWY STE 200", "count": 131 },
+			{ "value": "410 N SCOTTSDALE RD STE 1600", "count": 115 },
+			{ "value": "PO BOX 4090", "count": 112 },
+			{ "value": "1707 MARKET PL STE 100", "count": 95 }
+		]
+	},
+	{
+		"column_id": 100,
+		"column_name": "GranteeMailAddressHouseNumber",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 183166,
+		"unique": 23530,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 66833 },
+			{ "value": "1", "count": 575 },
+			{ "value": "100", "count": 518 },
+			{ "value": "5", "count": 469 },
+			{ "value": "2", "count": 433 }
+		]
+	},
+	{
+		"column_id": 101,
+		"column_name": "GranteeMailAddressStreetDirection",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 33908,
+		"unique": 9,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 216091 },
+			{ "value": "W", "count": 8756 },
+			{ "value": "N", "count": 7743 },
+			{ "value": "E", "count": 7650 },
+			{ "value": "S", "count": 7270 }
+		]
+	},
+	{
+		"column_id": 102,
+		"column_name": "GranteeMailAddressStreetName",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 190830,
+		"unique": 60321,
+		"len": 40.0,
+		"freq": [
+			{ "value": null, "count": 59169 },
+			{ "value": "MAIN", "count": 1461 },
+			{ "value": "3RD", "count": 487 },
+			{ "value": "4TH", "count": 487 },
+			{ "value": "2ND", "count": 487 }
+		]
+	},
+	{
+		"column_id": 103,
+		"column_name": "GranteeMailAddressStreetSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 172068,
+		"unique": 147,
+		"len": 9.0,
+		"freq": [
+			{ "value": null, "count": 77931 },
+			{ "value": "ST", "count": 34215 },
+			{ "value": "DR", "count": 33657 },
+			{ "value": "RD", "count": 32776 },
+			{ "value": "AVE", "count": 23576 }
+		]
+	},
+	{
+		"column_id": 104,
+		"column_name": "GranteeMailAddressStreetPostDirection",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 10025,
+		"unique": 9,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 239974 },
+			{ "value": "N", "count": 1844 },
+			{ "value": "S", "count": 1639 },
+			{ "value": "W", "count": 1376 },
+			{ "value": "E", "count": 1240 }
+		]
+	},
+	{
+		"column_id": 105,
+		"column_name": "GranteeMailAddressUnitPrefix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 18379,
+		"unique": 40,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 231620 },
+			{ "value": "STE", "count": 6710 },
+			{ "value": "#", "count": 5138 },
+			{ "value": "APT", "count": 4026 },
+			{ "value": "UNIT", "count": 2074 }
+		]
+	},
+	{
+		"column_id": 106,
+		"column_name": "GranteeMailAddressUnitValue",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 18354,
+		"unique": 2844,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 231645 },
+			{ "value": "200", "count": 807 },
+			{ "value": "100", "count": 753 },
+			{ "value": "B", "count": 454 },
+			{ "value": "A", "count": 445 }
+		]
+	},
+	{
+		"column_id": 107,
+		"column_name": "GranteeMailAddressCity",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 190785,
+		"unique": 11883,
+		"len": 30.0,
+		"freq": [
+			{ "value": null, "count": 59214 },
+			{ "value": "COLORADO SPRINGS", "count": 3240 },
+			{ "value": "HOUSTON", "count": 2749 },
+			{ "value": "LAS VEGAS", "count": 2606 },
+			{ "value": "CINCINNATI", "count": 2089 }
+		]
+	},
+	{
+		"column_id": 108,
+		"column_name": "GranteeMailAddressState",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 191104,
+		"unique": 55,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 58895 },
+			{ "value": "CA", "count": 21723 },
+			{ "value": "TX", "count": 20853 },
+			{ "value": "NY", "count": 12499 },
+			{ "value": "MI", "count": 10070 }
+		]
+	},
+	{
+		"column_id": 109,
+		"column_name": "GranteeMailAddressZIP",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 190359,
+		"unique": 20845,
+		"len": 5.0,
+		"freq": [
+			{ "value": null, "count": 59640 },
+			{ "value": "80831", "count": 254 },
+			{ "value": "80920", "count": 247 },
+			{ "value": "80906", "count": 242 },
+			{ "value": "80132", "count": 239 }
+		]
+	},
+	{
+		"column_id": 110,
+		"column_name": "GranteeMailAddressZIP4",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 183049,
+		"unique": 9874,
+		"len": 4.0,
+		"freq": [
+			{ "value": null, "count": 66950 },
+			{ "value": "4544", "count": 168 },
+			{ "value": "1117", "count": 156 },
+			{ "value": "1116", "count": 131 },
+			{ "value": "0976", "count": 125 }
+		]
+	},
+	{
+		"column_id": 111,
+		"column_name": "GranteeMailAddressCRRT",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 183093,
+		"unique": 1056,
+		"len": 4.0,
+		"freq": [
+			{ "value": null, "count": 66906 },
+			{ "value": "R001", "count": 9247 },
+			{ "value": "R002", "count": 7824 },
+			{ "value": "R003", "count": 6538 },
+			{ "value": "R004", "count": 4920 }
+		]
+	},
+	{
+		"column_id": 112,
+		"column_name": "GranteeMailAddressInfoFormat",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 180639,
+		"unique": 7,
+		"len": 1.0,
+		"freq": [
+			{ "value": "S", "count": 155350 },
+			{ "value": null, "count": 69360 },
+			{ "value": "H", "count": 17999 },
+			{ "value": "P", "count": 7255 },
+			{ "value": "R", "count": 32 }
+		]
+	},
+	{
+		"column_id": 113,
+		"column_name": "GranteeMailAddressInfoPrivacy",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 114,
+		"column_name": "GranteeGrantorOwnerRelationshipCode",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 115,
+		"column_name": "TitleCompanyStandardizedCode",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 4072,
+		"min": 0.0,
+		"max": 26120.0,
+		"sum": 4726296815.0,
+		"mean": 18905.262881051523,
+		"median": 26021.0,
+		"stdev": 10486.161097678138,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 26021.0, "count": 146029 },
+			{ "value": 0.0, "count": 25569 },
+			{ "value": 18618.0, "count": 5056 },
+			{ "value": 5421.0, "count": 4013 },
+			{ "value": 81.0, "count": 3015 }
+		]
+	},
+	{
+		"column_id": 116,
+		"column_name": "TitleCompanyStandardizedName",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 230337,
+		"unique": 4072,
+		"len": 48.0,
+		"freq": [
+			{ "value": "NONE AVAILABEL", "count": 146029 },
+			{ "value": null, "count": 19662 },
+			{ "value": "NOT AVAILABLE", "count": 5907 },
+			{ "value": "FIRST AMERICAN TITLE", "count": 5056 },
+			{ "value": "ATTORNEY ONLY", "count": 4013 }
+		]
+	},
+	{
+		"column_id": 117,
+		"column_name": "TitleCompanyRaw",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 243422,
+		"unique": 7673,
+		"len": 28.0,
+		"freq": [
+			{ "value": "NONE AVAILABLE", "count": 154660 },
+			{ "value": null, "count": 6577 },
+			{ "value": "ATTORNEY", "count": 4121 },
+			{ "value": "FIRST AMERICAN TITLE", "count": 3005 },
+			{ "value": "SERVICELINK", "count": 2638 }
+		]
+	},
+	{
+		"column_id": 118,
+		"column_name": "LegalDescriptionPart1",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 119,
+		"column_name": "LegalDescriptionPart2",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 120,
+		"column_name": "LegalDescriptionPart3",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 121,
+		"column_name": "LegalDescriptionPart4",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 122,
+		"column_name": "LegalRange",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 36376,
+		"unique": 501,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 213623 },
+			{ "value": "10E", "count": 1373 },
+			{ "value": "11E", "count": 1241 },
+			{ "value": "02", "count": 1151 },
+			{ "value": "09E", "count": 1078 }
+		]
+	},
+	{
+		"column_id": 123,
+		"column_name": "LegalTownship",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 36510,
+		"unique": 548,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 213489 },
+			{ "value": "03", "count": 889 },
+			{ "value": "02", "count": 868 },
+			{ "value": "07N", "count": 857 },
+			{ "value": "06N", "count": 840 }
+		]
+	},
+	{
+		"column_id": 124,
+		"column_name": "LegalSection",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 17069,
+		"unique": 841,
+		"len": 7.0,
+		"freq": [
+			{ "value": null, "count": 232930 },
+			{ "value": "1", "count": 2273 },
+			{ "value": "2", "count": 2048 },
+			{ "value": "3", "count": 1142 },
+			{ "value": "4", "count": 762 }
+		]
+	},
+	{
+		"column_id": 125,
+		"column_name": "LegalDistrict",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 4896,
+		"unique": 162,
+		"len": 7.0,
+		"freq": [
+			{ "value": null, "count": 245103 },
+			{ "value": "1", "count": 582 },
+			{ "value": "03", "count": 333 },
+			{ "value": "2", "count": 303 },
+			{ "value": "3", "count": 253 }
+		]
+	},
+	{
+		"column_id": 126,
+		"column_name": "LegalSubDivision",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 141840,
+		"unique": 100497,
+		"len": 50.0,
+		"freq": [
+			{ "value": null, "count": 108159 },
+			{ "value": "HOLLAND LAND COMPANYS SURVEY", "count": 913 },
+			{ "value": "THE HOLLAND LAND COMPANYS SURVEY", "count": 212 },
+			{ "value": "BUFFALO CREEK RESERVATION", "count": 178 },
+			{ "value": "SANTA FE", "count": 146 }
+		]
+	},
+	{
+		"column_id": 127,
+		"column_name": "LegalTract",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 8702,
+		"unique": 4515,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 241297 },
+			{ "value": "1", "count": 672 },
+			{ "value": "2", "count": 357 },
+			{ "value": "3", "count": 214 },
+			{ "value": "A", "count": 132 }
+		]
+	},
+	{
+		"column_id": 128,
+		"column_name": "LegalBlock",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 64380,
+		"unique": 5579,
+		"len": 7.0,
+		"freq": [
+			{ "value": null, "count": 185619 },
+			{ "value": "1", "count": 8213 },
+			{ "value": "2", "count": 5935 },
+			{ "value": "3", "count": 4240 },
+			{ "value": "4", "count": 3149 }
+		]
+	},
+	{
+		"column_id": 129,
+		"column_name": "LegalLot",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 65793,
+		"unique": 5700,
+		"len": 7.0,
+		"freq": [
+			{ "value": null, "count": 184206 },
+			{ "value": "1", "count": 8344 },
+			{ "value": "2", "count": 6037 },
+			{ "value": "3", "count": 4341 },
+			{ "value": "4", "count": 3228 }
+		]
+	},
+	{
+		"column_id": 130,
+		"column_name": "LegalUnit",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 14022,
+		"unique": 3030,
+		"len": 6.0,
+		"freq": [
+			{ "value": null, "count": 235977 },
+			{ "value": "1", "count": 1110 },
+			{ "value": "2", "count": 811 },
+			{ "value": "3", "count": 506 },
+			{ "value": "4", "count": 367 }
+		]
+	},
+	{
+		"column_id": 131,
+		"column_name": "LegalPlatMapBook",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 132,
+		"column_name": "LegalPlatMapPage",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 133,
+		"column_name": "APNFormatted",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 187482,
+		"unique": 180587,
+		"len": 33.0,
+		"freq": [
+			{ "value": null, "count": 62517 },
+			{ "value": "05263-0070", "count": 41 },
+			{ "value": "02011-0007", "count": 29 },
+			{ "value": "0420580000022", "count": 28 },
+			{ "value": "047    01300", "count": 23 }
+		]
+	},
+	{
+		"column_id": 134,
+		"column_name": "APNOriginal",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 135,
+		"column_name": "PropertyAddressFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 243894,
+		"unique": 172569,
+		"len": 48.0,
+		"freq": [
+			{ "value": "000 ADDRESS EXCEPTION", "count": 62517 },
+			{ "value": null, "count": 6105 },
+			{ "value": "3550 BIVONA ST # 3560", "count": 41 },
+			{ "value": "925 W SAHARA AVE", "count": 31 },
+			{ "value": "157 W 142ND ST", "count": 29 }
+		]
+	},
+	{
+		"column_id": 136,
+		"column_name": "PropertyAddressHouseNumber",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 237020,
+		"unique": 23365,
+		"len": 10.0,
+		"freq": [
+			{ "value": "000", "count": 62517 },
+			{ "value": null, "count": 12979 },
+			{ "value": "5", "count": 535 },
+			{ "value": "10", "count": 529 },
+			{ "value": "6", "count": 502 }
+		]
+	},
+	{
+		"column_id": 137,
+		"column_name": "PropertyAddressStreetDirection",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 30976,
+		"unique": 9,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 219023 },
+			{ "value": "W", "count": 8440 },
+			{ "value": "N", "count": 7189 },
+			{ "value": "E", "count": 6809 },
+			{ "value": "S", "count": 6718 }
+		]
+	},
+	{
+		"column_id": 138,
+		"column_name": "PropertyAddressStreetName",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 243889,
+		"unique": 53341,
+		"len": 40.0,
+		"freq": [
+			{ "value": "ADDRESS EXCEPTION", "count": 62517 },
+			{ "value": null, "count": 6110 },
+			{ "value": "MAIN", "count": 1322 },
+			{ "value": "2ND", "count": 517 },
+			{ "value": "4TH", "count": 489 }
+		]
+	},
+	{
+		"column_id": 139,
+		"column_name": "PropertyAddressStreetSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 173125,
+		"unique": 124,
+		"len": 4.0,
+		"freq": [
+			{ "value": null, "count": 76874 },
+			{ "value": "ST", "count": 37170 },
+			{ "value": "DR", "count": 33310 },
+			{ "value": "RD", "count": 32315 },
+			{ "value": "AVE", "count": 25546 }
+		]
+	},
+	{
+		"column_id": 140,
+		"column_name": "PropertyAddressStreetPostDirection",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 8500,
+		"unique": 9,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 241499 },
+			{ "value": "N", "count": 1587 },
+			{ "value": "S", "count": 1477 },
+			{ "value": "W", "count": 1223 },
+			{ "value": "E", "count": 989 }
+		]
+	},
+	{
+		"column_id": 141,
+		"column_name": "PropertyAddressUnitPrefix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 8913,
+		"unique": 49,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 241086 },
+			{ "value": "#", "count": 3132 },
+			{ "value": "APT", "count": 3071 },
+			{ "value": "UNIT", "count": 2328 },
+			{ "value": "STE", "count": 210 }
+		]
+	},
+	{
+		"column_id": 142,
+		"column_name": "PropertyAddressUnitValue",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 8903,
+		"unique": 2302,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 241096 },
+			{ "value": "A", "count": 307 },
+			{ "value": "1", "count": 219 },
+			{ "value": "B", "count": 202 },
+			{ "value": "2", "count": 190 }
+		]
+	},
+	{
+		"column_id": 143,
+		"column_name": "PropertyAddressCity",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 248805,
+		"unique": 8018,
+		"len": 25.0,
+		"freq": [
+			{ "value": "CITY EXCEPTION", "count": 62517 },
+			{ "value": "COLORADO SPRINGS", "count": 4217 },
+			{ "value": "LAS VEGAS", "count": 3316 },
+			{ "value": "CINCINNATI", "count": 3179 },
+			{ "value": "HOUSTON", "count": 1973 }
+		]
+	},
+	{
+		"column_id": 144,
+		"column_name": "PropertyAddressState",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 52,
+		"len": 2.0,
+		"freq": [
+			{ "value": "EX", "count": 62517 },
+			{ "value": "CA", "count": 20392 },
+			{ "value": "NY", "count": 20115 },
+			{ "value": "OH", "count": 10385 },
+			{ "value": "TX", "count": 10284 }
+		]
+	},
+	{
+		"column_id": 145,
+		"column_name": "PropertyAddressZIP",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 186232,
+		"unique": 12600,
+		"len": 5.0,
+		"freq": [
+			{ "value": null, "count": 63767 },
+			{ "value": "43302", "count": 527 },
+			{ "value": "80831", "count": 328 },
+			{ "value": "80906", "count": 289 },
+			{ "value": "80918", "count": 287 }
+		]
+	},
+	{
+		"column_id": 146,
+		"column_name": "PropertyAddressZIP4",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 167296,
+		"unique": 9590,
+		"len": 4.0,
+		"freq": [
+			{ "value": null, "count": 82703 },
+			{ "value": "1414", "count": 94 },
+			{ "value": "1417", "count": 83 },
+			{ "value": "1319", "count": 82 },
+			{ "value": "1202", "count": 81 }
+		]
+	},
+	{
+		"column_id": 147,
+		"column_name": "PropertyAddressCRRT",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 164057,
+		"unique": 793,
+		"len": 4.0,
+		"freq": [
+			{ "value": null, "count": 85942 },
+			{ "value": "R001", "count": 8301 },
+			{ "value": "R002", "count": 7221 },
+			{ "value": "R003", "count": 5946 },
+			{ "value": "C001", "count": 4824 }
+		]
+	},
+	{
+		"column_id": 148,
+		"column_name": "PropertyAddressInfoFormat",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 167309,
+		"unique": 4,
+		"len": 1.0,
+		"freq": [
+			{ "value": "S", "count": 157936 },
+			{ "value": null, "count": 82690 },
+			{ "value": "H", "count": 9372 },
+			{ "value": "G", "count": 1 }
+		]
+	},
+	{
+		"column_id": 149,
+		"column_name": "PropertyAddressInfoPrivacy",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 150,
+		"column_name": "RecorderMapReference",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 74879,
+		"unique": 53128,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 175120 },
+			{ "value": "DOC 20231100261", "count": 63 },
+			{ "value": "MB 4 PG 3-3E", "count": 45 },
+			{ "value": "VOL 87 PG 12-14", "count": 42 },
+			{ "value": "MB 9 PG 86-150", "count": 42 }
+		]
+	},
+	{
+		"column_id": 151,
+		"column_name": "PropertyUseGroup",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 9,
+		"len": 21.0,
+		"freq": [
+			{ "value": "Residential", "count": 167570 },
+			{ "value": "OTHER / UNKNOWN", "count": 64480 },
+			{ "value": "Commercial", "count": 5523 },
+			{ "value": "AGRICULTURE / FARMING", "count": 5125 },
+			{ "value": "VACANT LAND", "count": 3974 }
+		]
+	},
+	{
+		"column_id": 152,
+		"column_name": "PropertyUseStandardized",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 186705,
+		"unique": 250,
+		"min": 101.0,
+		"max": 471.0,
+		"sum": 68980338.0,
+		"mean": 369.46165341046037,
+		"median": 385.0,
+		"stdev": 57.761046210340545,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 385.0, "count": 120846 },
+			{ "value": null, "count": 63294 },
+			{ "value": 401.0, "count": 11572 },
+			{ "value": 366.0, "count": 9843 },
+			{ "value": 386.0, "count": 4532 }
+		]
+	},
+	{
+		"column_id": 153,
+		"column_name": "Mortgage1DocumentNumberFormatted",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 136475,
+		"unique": 111370,
+		"len": 21.0,
+		"freq": [
+			{ "value": null, "count": 113524 },
+			{ "value": "0000000000", "count": 2720 },
+			{ "value": "00000/0000", "count": 703 },
+			{ "value": "0000000659", "count": 89 },
+			{ "value": "0000083495", "count": 85 }
+		]
+	},
+	{
+		"column_id": 154,
+		"column_name": "Mortgage1DocumentNumberLegacy",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 136475,
+		"unique": 111370,
+		"len": 21.0,
+		"freq": [
+			{ "value": null, "count": 113524 },
+			{ "value": "0000000000", "count": 2720 },
+			{ "value": "00000/0000", "count": 703 },
+			{ "value": "0000000659", "count": 89 },
+			{ "value": "0000083495", "count": 85 }
+		]
+	},
+	{
+		"column_id": 155,
+		"column_name": "Mortgage1InstrumentNumber",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 125654,
+		"unique": 117361,
+		"len": 19.0,
+		"freq": [
+			{ "value": null, "count": 124345 },
+			{ "value": "2024083495", "count": 85 },
+			{ "value": "202409260659", "count": 83 },
+			{ "value": "2024000236143", "count": 72 },
+			{ "value": "2024000248257", "count": 69 }
+		]
+	},
+	{
+		"column_id": 156,
+		"column_name": "Mortgage1Book",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 35373,
+		"unique": 11248,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 214626 },
+			{ "value": "2024", "count": 1219 },
+			{ "value": "3024", "count": 554 },
+			{ "value": "373", "count": 121 },
+			{ "value": "30817", "count": 98 }
+		]
+	},
+	{
+		"column_id": 157,
+		"column_name": "Mortgage1Page",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 35373,
+		"unique": 6725,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 214626 },
+			{ "value": "1", "count": 419 },
+			{ "value": "636", "count": 98 },
+			{ "value": "605", "count": 69 },
+			{ "value": "142", "count": 60 }
+		]
+	},
+	{
+		"column_id": 158,
+		"column_name": "Mortgage1RecordingDate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 133643,
+		"unique": 198,
+		"min": "2024-04-24",
+		"max": "2024-12-12",
+		"freq": [
+			{ "value": null, "count": 116356 },
+			{ "value": "2024-06-28", "count": 1224 },
+			{ "value": "2024-07-01", "count": 1183 },
+			{ "value": "2024-09-09", "count": 1169 },
+			{ "value": "2024-06-03", "count": 1160 }
+		]
+	},
+	{
+		"column_id": 159,
+		"column_name": "Mortgage1Type",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 126725,
+		"unique": 24,
+		"min": 0.0,
+		"max": 135.0,
+		"sum": 4712426.0,
+		"mean": 37.186237916748865,
+		"median": 10.0,
+		"stdev": 48.67031336882323,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 123274 },
+			{ "value": 10.0, "count": 36635 },
+			{ "value": 6.0, "count": 30760 },
+			{ "value": 8.0, "count": 15135 },
+			{ "value": 103.0, "count": 11662 }
+		]
+	},
+	{
+		"column_id": 160,
+		"column_name": "Mortgage1Amount",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 36170,
+		"min": 0.0,
+		"max": 999999999.0,
+		"sum": 336399481049.0,
+		"mean": 1345603.3066092264,
+		"median": 16076.0,
+		"stdev": 23651476.839657947,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 117440 },
+			{ "value": 100000.0, "count": 4127 },
+			{ "value": 50000.0, "count": 3792 },
+			{ "value": 200000.0, "count": 1839 },
+			{ "value": 150000.0, "count": 1803 }
+		]
+	},
+	{
+		"column_id": 161,
+		"column_name": "Mortgage1LenderCode",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 124881,
+		"unique": 6561,
+		"min": -1.0,
+		"max": 564671.0,
+		"sum": 27711335570.0,
+		"mean": 221901.9352023126,
+		"median": 86292.0,
+		"stdev": 227178.77989997025,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 125118 },
+			{ "value": -1.0, "count": 11017 },
+			{ "value": 508376.0, "count": 5070 },
+			{ "value": 41965.0, "count": 3318 },
+			{ "value": 37677.0, "count": 1457 }
+		]
+	},
+	{
+		"column_id": 162,
+		"column_name": "Mortgage1LenderNameFullStandardized",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 133643,
+		"unique": 15150,
+		"len": 40.0,
+		"freq": [
+			{ "value": null, "count": 116356 },
+			{ "value": "ROCKET MORTGAGE LLC", "count": 5348 },
+			{ "value": "UNITED WHOLESALE MORTGAGE", "count": 3283 },
+			{ "value": "US BANK NA", "count": 1561 },
+			{ "value": "BANK OF AMERICA NA", "count": 1347 }
+		]
+	},
+	{
+		"column_id": 163,
+		"column_name": "Mortgage1LenderNameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 852,
+		"unique": 471,
+		"len": 21.0,
+		"freq": [
+			{ "value": null, "count": 249147 },
+			{ "value": "PARTY", "count": 34 },
+			{ "value": "JOHN", "count": 31 },
+			{ "value": "ROBERT", "count": 25 },
+			{ "value": "DAVID", "count": 14 }
+		]
+	},
+	{
+		"column_id": 164,
+		"column_name": "Mortgage1LenderNameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 133643,
+		"unique": 15076,
+		"len": 40.0,
+		"freq": [
+			{ "value": null, "count": 116356 },
+			{ "value": "ROCKET MORTGAGE LLC", "count": 5348 },
+			{ "value": "UNITED WHOLESALE MORTGAGE", "count": 3283 },
+			{ "value": "US BANK NA", "count": 1561 },
+			{ "value": "BANK OF AMERICA NA", "count": 1347 }
+		]
+	},
+	{
+		"column_id": 165,
+		"column_name": "Mortgage1LenderAddress",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 10346,
+		"unique": 3796,
+		"len": 50.0,
+		"freq": [
+			{ "value": null, "count": 239653 },
+			{ "value": "1050 WOODWARD AVE", "count": 363 },
+			{ "value": "13802 NORTHERN BLVD", "count": 141 },
+			{ "value": "451 7TH ST SW", "count": 137 },
+			{ "value": "5555 CLEVELAND AVE", "count": 135 }
+		]
+	},
+	{
+		"column_id": 166,
+		"column_name": "Mortgage1LenderAddressCity",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 68565,
+		"unique": 3514,
+		"len": 25.0,
+		"freq": [
+			{ "value": null, "count": 181434 },
+			{ "value": "DETROIT", "count": 3533 },
+			{ "value": "CHARLOTTE", "count": 1613 },
+			{ "value": "PONTIAC", "count": 1168 },
+			{ "value": "COLUMBUS", "count": 1122 }
+		]
+	},
+	{
+		"column_id": 167,
+		"column_name": "Mortgage1LenderAddressState",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 68560,
+		"unique": 54,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 181439 },
+			{ "value": "MI", "count": 7978 },
+			{ "value": "CA", "count": 7099 },
+			{ "value": "NY", "count": 5115 },
+			{ "value": "PA", "count": 4673 }
+		]
+	},
+	{
+		"column_id": 168,
+		"column_name": "Mortgage1LenderAddressZIP",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 68918,
+		"unique": 6919,
+		"len": 5.0,
+		"freq": [
+			{ "value": null, "count": 181081 },
+			{ "value": "48226", "count": 3508 },
+			{ "value": "48341", "count": 1161 },
+			{ "value": "33431", "count": 974 },
+			{ "value": "20410", "count": 879 }
+		]
+	},
+	{
+		"column_id": 169,
+		"column_name": "Mortgage1LenderAddressZIP4",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 170,
+		"column_name": "Mortgage1LenderInfoEntityClassification",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 121551,
+		"unique": 16,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 128448 },
+			{ "value": "B", "count": 42833 },
+			{ "value": "M", "count": 41744 },
+			{ "value": "C", "count": 20206 },
+			{ "value": "LO", "count": 5605 }
+		]
+	},
+	{
+		"column_id": 171,
+		"column_name": "Mortgage1LenderInfoSellerCarryBackFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 5159,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 244840 },
+			{ "value": true, "count": 5159 }
+		]
+	},
+	{
+		"column_id": 172,
+		"column_name": "Mortgage1Term",
+		"type": "int",
+		"nulls": true,
+		"nonnulls": 125852,
+		"unique": 676,
+		"min": 0.0,
+		"max": 3421.0,
+		"sum": 30855223.0,
+		"mean": 245.17070050535548,
+		"median": 345.0,
+		"stdev": 154.3357034873365,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 124147 },
+			{ "value": 361.0, "count": 38761 },
+			{ "value": 0.0, "count": 21586 },
+			{ "value": 360.0, "count": 16482 },
+			{ "value": 240.0, "count": 3973 }
+		]
+	},
+	{
+		"column_id": 173,
+		"column_name": "Mortgage1TermType",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 104279,
+		"unique": 2,
+		"len": 1.0,
+		"freq": [
+			{ "value": null, "count": 145720 },
+			{ "value": "M", "count": 104279 }
+		]
+	},
+	{
+		"column_id": 174,
+		"column_name": "Mortgage1TermDate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 104313,
+		"unique": 4611,
+		"min": "2000-09-12",
+		"max": "2309-07-01",
+		"freq": [
+			{ "value": null, "count": 145686 },
+			{ "value": "2054-06-01", "count": 8105 },
+			{ "value": "2054-07-01", "count": 7918 },
+			{ "value": "2054-09-01", "count": 7726 },
+			{ "value": "2054-08-01", "count": 7693 }
+		]
+	},
+	{
+		"column_id": 175,
+		"column_name": "Mortgage1InfoPrepaymentPenaltyFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 310,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 249689 },
+			{ "value": true, "count": 310 }
+		]
+	},
+	{
+		"column_id": 176,
+		"column_name": "Mortgage1InfoPrepaymentTerm",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 23031,
+		"unique": 6,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 226968 },
+			{ "value": "00", "count": 23025 },
+			{ "value": "36", "count": 2 },
+			{ "value": "60", "count": 2 },
+			{ "value": "12", "count": 1 }
+		]
+	},
+	{
+		"column_id": 177,
+		"column_name": "Mortgage1InterestRateType",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 35546,
+		"unique": 4,
+		"min": 0.0,
+		"max": 2.0,
+		"sum": 38659.0,
+		"mean": 1.087576661227705,
+		"median": 1.0,
+		"stdev": 0.36488017189152383,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 214453 },
+			{ "value": 1.0, "count": 30541 },
+			{ "value": 2.0, "count": 4059 },
+			{ "value": 0.0, "count": 946 }
+		]
+	},
+	{
+		"column_id": 178,
+		"column_name": "Mortgage1InterestRate",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 464,
+		"min": 0.0,
+		"max": 61.25,
+		"sum": 46207.64,
+		"mean": 0.1848312993251973,
+		"median": 0.0,
+		"stdev": 1.1498019595550208,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": 0.0, "count": 243272 },
+			{ "value": 6.5, "count": 308 },
+			{ "value": 6.75, "count": 299 },
+			{ "value": 6.62, "count": 273 },
+			{ "value": 6.25, "count": 271 }
+		]
+	},
+	{
+		"column_id": 179,
+		"column_name": "Mortgage1InterestTypeInitial",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 180,
+		"column_name": "Mortgage1FixedStepConversionRate",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 2681,
+		"unique": 6,
+		"min": 101.0,
+		"max": 105.0,
+		"sum": 276515.0,
+		"mean": 103.13875419619545,
+		"median": 103.0,
+		"stdev": 0.5955003662465171,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 247318 },
+			{ "value": 103.0, "count": 2375 },
+			{ "value": 105.0, "count": 223 },
+			{ "value": 102.0, "count": 65 },
+			{ "value": 104.0, "count": 9 }
+		]
+	},
+	{
+		"column_id": 181,
+		"column_name": "Mortgage1DocumentInfoRiderAdjustableRateFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 1323,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 248676 },
+			{ "value": true, "count": 1323 }
+		]
+	},
+	{
+		"column_id": 182,
+		"column_name": "Mortgage1InfoInterestTypeChangeYear",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 3197,
+		"unique": 30,
+		"min": 2005.0,
+		"max": 2064.0,
+		"sum": 6489029.0,
+		"mean": 2029.7244291523302,
+		"median": 2030.0,
+		"stdev": 3.607122616152782,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 246802 },
+			{ "value": 2031.0, "count": 1006 },
+			{ "value": 2029.0, "count": 955 },
+			{ "value": 2034.0, "count": 414 },
+			{ "value": 2024.0, "count": 198 }
+		]
+	},
+	{
+		"column_id": 183,
+		"column_name": "Mortgage1InfoInterestTypeChangeMonth",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 3197,
+		"unique": 13,
+		"min": 1.0,
+		"max": 12.0,
+		"sum": 25655.0,
+		"mean": 8.024710666249609,
+		"median": 8.0,
+		"stdev": 2.32100436923964,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 246802 },
+			{ "value": 6.0, "count": 545 },
+			{ "value": 7.0, "count": 514 },
+			{ "value": 9.0, "count": 463 },
+			{ "value": 8.0, "count": 439 }
+		]
+	},
+	{
+		"column_id": 184,
+		"column_name": "Mortgage1InfoInterestTypeChangeDay",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 3197,
+		"unique": 30,
+		"min": 1.0,
+		"max": 30.0,
+		"sum": 4811.0,
+		"mean": 1.504848295276822,
+		"median": 1.0,
+		"stdev": 2.956356235945191,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 246802 },
+			{ "value": 1.0, "count": 3067 },
+			{ "value": 5.0, "count": 24 },
+			{ "value": 10.0, "count": 16 },
+			{ "value": 8.0, "count": 9 }
+		]
+	},
+	{
+		"column_id": 185,
+		"column_name": "Mortgage1InterestRateMinFirstChangeRateConversion",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 200,
+		"min": 0.0,
+		"max": 70.0,
+		"sum": 11522.85,
+		"mean": 0.046091584366337465,
+		"median": 0.0,
+		"stdev": 0.5053999989924903,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": 0.0, "count": 247301 },
+			{ "value": 3.0, "count": 493 },
+			{ "value": 2.75, "count": 486 },
+			{ "value": 4.0, "count": 83 },
+			{ "value": 4.87, "count": 76 }
+		]
+	},
+	{
+		"column_id": 186,
+		"column_name": "Mortgage1InterestRateMaxFirstChangeRateConversion",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 293,
+		"min": 0.0,
+		"max": 18.0,
+		"sum": 27229.85,
+		"mean": 0.10891983567934271,
+		"median": 0.0,
+		"stdev": 1.0474182192081227,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": 0.0, "count": 247134 },
+			{ "value": 11.37, "count": 81 },
+			{ "value": 11.75, "count": 79 },
+			{ "value": 9.5, "count": 78 },
+			{ "value": 11.25, "count": 77 }
+		]
+	},
+	{
+		"column_id": 187,
+		"column_name": "Mortgage1InterestChangeFrequency",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 25205,
+		"unique": 12,
+		"min": 101.0,
+		"max": 111.0,
+		"sum": 2671700.0,
+		"mean": 105.99880975996825,
+		"median": 106.0,
+		"stdev": 0.7174111741275122,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 224794 },
+			{ "value": 106.0, "count": 22269 },
+			{ "value": 108.0, "count": 1304 },
+			{ "value": 104.0, "count": 1222 },
+			{ "value": 105.0, "count": 246 }
+		]
+	},
+	{
+		"column_id": 188,
+		"column_name": "Mortgage1InterestMargin",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 12,
+		"min": 0.0,
+		"max": 30.0,
+		"sum": 3790.0,
+		"mean": 0.015160060640242562,
+		"median": 0.0,
+		"stdev": 0.22924788748742106,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 248757 },
+			{ "value": 3.0, "count": 965 },
+			{ "value": 2.0, "count": 126 },
+			{ "value": 4.0, "count": 55 },
+			{ "value": 5.0, "count": 48 }
+		]
+	},
+	{
+		"column_id": 189,
+		"column_name": "Mortgage1InterestIndex",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 134,
+		"min": 0.0,
+		"max": 32.5,
+		"sum": 6530.55,
+		"mean": 0.026122304489217957,
+		"median": 0.0,
+		"stdev": 0.31003897905105415,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": 0.0, "count": 247798 },
+			{ "value": 2.75, "count": 1099 },
+			{ "value": 2.5, "count": 193 },
+			{ "value": 3.25, "count": 118 },
+			{ "value": 2.25, "count": 85 }
+		]
+	},
+	{
+		"column_id": 190,
+		"column_name": "Mortgage1InterestRateMax",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 327,
+		"min": 0.0,
+		"max": 25.0,
+		"sum": 34586.56,
+		"mean": 0.13834679338717354,
+		"median": 0.0,
+		"stdev": 1.2970405701568293,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": 0.0, "count": 247120 },
+			{ "value": 11.87, "count": 139 },
+			{ "value": 11.37, "count": 125 },
+			{ "value": 11.75, "count": 123 },
+			{ "value": 11.62, "count": 111 }
+		]
+	},
+	{
+		"column_id": 191,
+		"column_name": "Mortgage1AdjustableRateIndex",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 3603,
+		"unique": 23,
+		"min": 101.0,
+		"max": 126.0,
+		"sum": 414063.0,
+		"mean": 114.92173189009159,
+		"median": 115.0,
+		"stdev": 8.005549303689602,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 246396 },
+			{ "value": 124.0, "count": 1167 },
+			{ "value": 115.0, "count": 754 },
+			{ "value": 103.0, "count": 734 },
+			{ "value": 116.0, "count": 444 }
+		]
+	},
+	{
+		"column_id": 192,
+		"column_name": "Mortgage1InterestOnlyFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 193,
+		"column_name": "Mortgage1InterestOnlyPeriod",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 194,
+		"column_name": "Mortgage2DocumentNumberFormatted",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 2018,
+		"unique": 1996,
+		"len": 21.0,
+		"freq": [
+			{ "value": null, "count": 247981 },
+			{ "value": "0000027784", "count": 4 },
+			{ "value": "0000180897", "count": 3 },
+			{ "value": "2024004440", "count": 3 },
+			{ "value": "0000013974", "count": 2 }
+		]
+	},
+	{
+		"column_id": 195,
+		"column_name": "Mortgage2DocumentNumberLegacy",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 2018,
+		"unique": 1996,
+		"len": 21.0,
+		"freq": [
+			{ "value": null, "count": 247981 },
+			{ "value": "0000027784", "count": 4 },
+			{ "value": "0000180897", "count": 3 },
+			{ "value": "2024004440", "count": 3 },
+			{ "value": "0000013974", "count": 2 }
+		]
+	},
+	{
+		"column_id": 196,
+		"column_name": "Mortgage2InstrumentNumber",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1716,
+		"unique": 1699,
+		"len": 17.0,
+		"freq": [
+			{ "value": null, "count": 248283 },
+			{ "value": "2024K027784", "count": 4 },
+			{ "value": "2024000180897", "count": 3 },
+			{ "value": "2024004440", "count": 3 },
+			{ "value": "2024R0013974", "count": 2 }
+		]
+	},
+	{
+		"column_id": 197,
+		"column_name": "Mortgage2Book",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 844,
+		"unique": 605,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 249155 },
+			{ "value": "2024", "count": 167 },
+			{ "value": "427", "count": 8 },
+			{ "value": "3024", "count": 7 },
+			{ "value": "4362", "count": 4 }
+		]
+	},
+	{
+		"column_id": 198,
+		"column_name": "Mortgage2Page",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 844,
+		"unique": 716,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 249155 },
+			{ "value": "68", "count": 5 },
+			{ "value": "282", "count": 5 },
+			{ "value": "24", "count": 4 },
+			{ "value": "1", "count": 4 }
+		]
+	},
+	{
+		"column_id": 199,
+		"column_name": "Mortgage2RecordingDate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 2018,
+		"unique": 159,
+		"min": "2024-04-23",
+		"max": "2024-12-10",
+		"freq": [
+			{ "value": null, "count": 247981 },
+			{ "value": "2024-07-02", "count": 27 },
+			{ "value": "2024-07-29", "count": 27 },
+			{ "value": "2024-05-31", "count": 26 },
+			{ "value": "2024-07-01", "count": 26 }
+		]
+	},
+	{
+		"column_id": 200,
+		"column_name": "Mortgage2Type",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 1852,
+		"unique": 21,
+		"min": 0.0,
+		"max": 134.0,
+		"sum": 161653.0,
+		"mean": 87.28563714902808,
+		"median": 128.0,
+		"stdev": 55.17278932377464,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 248147 },
+			{ "value": 128.0, "count": 814 },
+			{ "value": 10.0, "count": 323 },
+			{ "value": 130.0, "count": 154 },
+			{ "value": 6.0, "count": 127 }
+		]
+	},
+	{
+		"column_id": 201,
+		"column_name": "Mortgage2Amount",
+		"type": "int",
+		"nulls": true,
+		"nonnulls": 158021,
+		"unique": 1263,
+		"min": 0.0,
+		"max": 15200000.0,
+		"sum": 357950173.0,
+		"mean": 2265.2063523202614,
+		"median": 0.0,
+		"stdev": 78232.7560983232,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 156012 },
+			{ "value": null, "count": 91978 },
+			{ "value": 10000.0, "count": 105 },
+			{ "value": 15000.0, "count": 69 },
+			{ "value": 16500.0, "count": 31 }
+		]
+	},
+	{
+		"column_id": 202,
+		"column_name": "Mortgage2LenderCode",
+		"type": "int",
+		"nulls": true,
+		"nonnulls": 1790,
+		"unique": 527,
+		"min": -1.0,
+		"max": 564660.0,
+		"sum": 412226563.0,
+		"mean": 230294.16927374303,
+		"median": 84791.5,
+		"stdev": 229447.41320008627,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 248209 },
+			{ "value": -1.0, "count": 178 },
+			{ "value": 41965.0, "count": 56 },
+			{ "value": 507586.0, "count": 50 },
+			{ "value": 507778.0, "count": 39 }
+		]
+	},
+	{
+		"column_id": 203,
+		"column_name": "Mortgage2LenderNameFullStandardized",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 2018,
+		"unique": 760,
+		"len": 40.0,
+		"freq": [
+			{ "value": null, "count": 247981 },
+			{ "value": "UNITED WHOLESALE MORTGAGE", "count": 69 },
+			{ "value": "COLORADO HOUSING & FINANCE AUTHORITY", "count": 52 },
+			{ "value": "TEXAS STATE AFFORDABLE HSNG CORP", "count": 40 },
+			{ "value": "GUILD MORTGAGE CO", "count": 40 }
+		]
+	},
+	{
+		"column_id": 204,
+		"column_name": "Mortgage2LenderNameFirst",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 205,
+		"column_name": "Mortgage2LenderNameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 2018,
+		"unique": 760,
+		"len": 40.0,
+		"freq": [
+			{ "value": null, "count": 247981 },
+			{ "value": "UNITED WHOLESALE MORTGAGE", "count": 69 },
+			{ "value": "COLORADO HOUSING & FINANCE AUTHORITY", "count": 52 },
+			{ "value": "TEXAS STATE AFFORDABLE HSNG CORP", "count": 40 },
+			{ "value": "GUILD MORTGAGE CO", "count": 40 }
+		]
+	},
+	{
+		"column_id": 206,
+		"column_name": "Mortgage2LenderAddress",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 125,
+		"unique": 107,
+		"len": 44.0,
+		"freq": [
+			{ "value": null, "count": 249874 },
+			{ "value": "28 LIBERTY ST", "count": 4 },
+			{ "value": "410 MONON BLVD # 44", "count": 3 },
+			{ "value": "2160 SUPERIOR AVE E", "count": 3 },
+			{ "value": "3160 CROW CANYON RD STE 400", "count": 3 }
+		]
+	},
+	{
+		"column_id": 207,
+		"column_name": "Mortgage2LenderAddressCity",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1485,
+		"unique": 385,
+		"len": 22.0,
+		"freq": [
+			{ "value": null, "count": 248514 },
+			{ "value": "PONTIAC", "count": 61 },
+			{ "value": "DENVER", "count": 61 },
+			{ "value": "AUSTIN", "count": 50 },
+			{ "value": "CHICAGO", "count": 50 }
+		]
+	},
+	{
+		"column_id": 208,
+		"column_name": "Mortgage2LenderAddressState",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1485,
+		"unique": 45,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 248514 },
+			{ "value": "CA", "count": 214 },
+			{ "value": "MI", "count": 169 },
+			{ "value": "TX", "count": 130 },
+			{ "value": "OH", "count": 102 }
+		]
+	},
+	{
+		"column_id": 209,
+		"column_name": "Mortgage2LenderAddressZIP",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1491,
+		"unique": 544,
+		"len": 5.0,
+		"freq": [
+			{ "value": null, "count": 248508 },
+			{ "value": "48341", "count": 61 },
+			{ "value": "80202", "count": 53 },
+			{ "value": "78752", "count": 43 },
+			{ "value": "58502", "count": 26 }
+		]
+	},
+	{
+		"column_id": 210,
+		"column_name": "Mortgage2LenderAddressZIP4",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 211,
+		"column_name": "Mortgage2LenderInfoEntityClassification",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1838,
+		"unique": 12,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 248161 },
+			{ "value": "M", "count": 748 },
+			{ "value": "G", "count": 416 },
+			{ "value": "B", "count": 362 },
+			{ "value": "C", "count": 101 }
+		]
+	},
+	{
+		"column_id": 212,
+		"column_name": "Mortgage2LenderInfoSellerCarryBackFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 213,
+		"column_name": "Mortgage2Term",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 2018,
+		"unique": 61,
+		"min": 0.0,
+		"max": 872.0,
+		"sum": 386893.0,
+		"mean": 191.72101090188306,
+		"median": 180.0,
+		"stdev": 165.1084557081348,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 247981 },
+			{ "value": 0.0, "count": 623 },
+			{ "value": 361.0, "count": 487 },
+			{ "value": 360.0, "count": 336 },
+			{ "value": 121.0, "count": 125 }
+		]
+	},
+	{
+		"column_id": 214,
+		"column_name": "Mortgage2TermType",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1395,
+		"unique": 2,
+		"len": 1.0,
+		"freq": [
+			{ "value": null, "count": 248604 },
+			{ "value": "M", "count": 1395 }
+		]
+	},
+	{
+		"column_id": 215,
+		"column_name": "Mortgage2TermDate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 1395,
+		"unique": 269,
+		"min": "2025-01-01",
+		"max": "2097-01-02",
+		"freq": [
+			{ "value": null, "count": 248604 },
+			{ "value": "2054-08-01", "count": 167 },
+			{ "value": "2054-09-01", "count": 148 },
+			{ "value": "2054-07-01", "count": 133 },
+			{ "value": "2054-06-01", "count": 116 }
+		]
+	},
+	{
+		"column_id": 216,
+		"column_name": "Mortgage2InfoPrepaymentPenaltyFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 3,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 249996 },
+			{ "value": true, "count": 3 }
+		]
+	},
+	{
+		"column_id": 217,
+		"column_name": "Mortgage2InfoPrepaymentTerm",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 472,
+		"unique": 2,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 249527 },
+			{ "value": "00", "count": 472 }
+		]
+	},
+	{
+		"column_id": 218,
+		"column_name": "Mortgage2InterestRateType",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 190,
+		"unique": 4,
+		"min": 0.0,
+		"max": 2.0,
+		"sum": 249.0,
+		"mean": 1.3105263157894738,
+		"median": 1.0,
+		"stdev": 0.5939685709909062,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 249809 },
+			{ "value": 1.0, "count": 105 },
+			{ "value": 2.0, "count": 72 },
+			{ "value": 0.0, "count": 13 }
+		]
+	},
+	{
+		"column_id": 219,
+		"column_name": "Mortgage2InterestRate",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 2018,
+		"unique": 29,
+		"min": 0.0,
+		"max": 16.0,
+		"sum": 261.5,
+		"mean": 0.12958374628344896,
+		"median": 0.0,
+		"stdev": 0.9879934268885857,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": null, "count": 247981 },
+			{ "value": 0.0, "count": 1978 },
+			{ "value": 5.0, "count": 6 },
+			{ "value": 7.0, "count": 3 },
+			{ "value": 7.12, "count": 3 }
+		]
+	},
+	{
+		"column_id": 220,
+		"column_name": "Mortgage2InterestTypeInitial",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 221,
+		"column_name": "Mortgage2FixedStepConversionRate",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 10,
+		"unique": 2,
+		"min": 103.0,
+		"max": 103.0,
+		"sum": 1030.0,
+		"mean": 103.0,
+		"median": 103.0,
+		"stdev": 0.0,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 249989 },
+			{ "value": 103.0, "count": 10 }
+		]
+	},
+	{
+		"column_id": 222,
+		"column_name": "Mortgage2DocumentInfoRiderAdjustableRateFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 13,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 249986 },
+			{ "value": true, "count": 13 }
+		]
+	},
+	{
+		"column_id": 223,
+		"column_name": "Mortgage2InfoInterestTypeChangeYear",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 17,
+		"unique": 6,
+		"min": 2025.0,
+		"max": 2031.0,
+		"sum": 34494.0,
+		"mean": 2029.0588235294117,
+		"median": 2029.0,
+		"stdev": 1.7489492643904123,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 249982 },
+			{ "value": 2029.0, "count": 9 },
+			{ "value": 2031.0, "count": 5 },
+			{ "value": 2026.0, "count": 1 },
+			{ "value": 2025.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 224,
+		"column_name": "Mortgage2InfoInterestTypeChangeMonth",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 17,
+		"unique": 7,
+		"min": 5.0,
+		"max": 11.0,
+		"sum": 125.0,
+		"mean": 7.352941176470588,
+		"median": 7.0,
+		"stdev": 2.059768690611528,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 249982 },
+			{ "value": 7.0, "count": 4 },
+			{ "value": 6.0, "count": 4 },
+			{ "value": 5.0, "count": 3 },
+			{ "value": 11.0, "count": 3 }
+		]
+	},
+	{
+		"column_id": 225,
+		"column_name": "Mortgage2InfoInterestTypeChangeDay",
+		"type": "int",
+		"nulls": true,
+		"nonnulls": 17,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 249982 },
+			{ "value": true, "count": 17 }
+		]
+	},
+	{
+		"column_id": 226,
+		"column_name": "Mortgage2InterestRateMinFirstChangeRateConversion",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 2018,
+		"unique": 14,
+		"min": 0.0,
+		"max": 8.57,
+		"sum": 69.79,
+		"mean": 0.03458374628344896,
+		"median": 0.0,
+		"stdev": 0.41494018799906224,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": null, "count": 247981 },
+			{ "value": 0.0, "count": 2003 },
+			{ "value": 4.0, "count": 4 },
+			{ "value": 3.62, "count": 1 },
+			{ "value": 8.57, "count": 1 }
+		]
+	},
+	{
+		"column_id": 227,
+		"column_name": "Mortgage2InterestRateMaxFirstChangeRateConversion",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 2018,
+		"unique": 16,
+		"min": 0.0,
+		"max": 12.57,
+		"sum": 141.04,
+		"mean": 0.06989098116947473,
+		"median": 0.0,
+		"stdev": 0.8184448340987883,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": null, "count": 247981 },
+			{ "value": 0.0, "count": 2003 },
+			{ "value": 8.0, "count": 2 },
+			{ "value": 7.62, "count": 1 },
+			{ "value": 12.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 228,
+		"column_name": "Mortgage2InterestChangeFrequency",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 76,
+		"unique": 6,
+		"min": 104.0,
+		"max": 110.0,
+		"sum": 8051.0,
+		"mean": 105.9342105263158,
+		"median": 106.0,
+		"stdev": 0.9568772309380756,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 249923 },
+			{ "value": 106.0, "count": 61 },
+			{ "value": 104.0, "count": 9 },
+			{ "value": 108.0, "count": 4 },
+			{ "value": 110.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 229,
+		"column_name": "Mortgage2InterestMargin",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 2018,
+		"unique": 5,
+		"min": 0.0,
+		"max": 4.0,
+		"sum": 12.0,
+		"mean": 0.005946481665014866,
+		"median": 0.0,
+		"stdev": 0.1371294388687998,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 247981 },
+			{ "value": 0.0, "count": 2014 },
+			{ "value": 3.0, "count": 2 },
+			{ "value": 2.0, "count": 1 },
+			{ "value": 4.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 230,
+		"column_name": "Mortgage2InterestIndex",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 248868,
+		"unique": 8,
+		"min": 0.0,
+		"max": 3.75,
+		"sum": 32.12,
+		"mean": 0.0001290644036195895,
+		"median": 0.0,
+		"stdev": 0.01965072656122136,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": 0.0, "count": 248857 },
+			{ "value": null, "count": 1131 },
+			{ "value": 2.75, "count": 6 },
+			{ "value": 2.25, "count": 1 },
+			{ "value": 3.75, "count": 1 }
+		]
+	},
+	{
+		"column_id": 231,
+		"column_name": "Mortgage2InterestRateMax",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 2018,
+		"unique": 16,
+		"min": 0.0,
+		"max": 15.57,
+		"sum": 180.21,
+		"mean": 0.08930128840436076,
+		"median": 0.0,
+		"stdev": 1.0381600354497769,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": null, "count": 247981 },
+			{ "value": 0.0, "count": 2003 },
+			{ "value": 11.0, "count": 2 },
+			{ "value": 10.62, "count": 1 },
+			{ "value": 12.67, "count": 1 }
+		]
+	},
+	{
+		"column_id": 232,
+		"column_name": "Mortgage2AdjustableRateIndex",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 16,
+		"unique": 7,
+		"min": 102.0,
+		"max": 124.0,
+		"sum": 1785.0,
+		"mean": 111.5625,
+		"median": 109.0,
+		"stdev": 9.444354574735815,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 249983 },
+			{ "value": 103.0, "count": 7 },
+			{ "value": 124.0, "count": 4 },
+			{ "value": 115.0, "count": 2 },
+			{ "value": 120.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 233,
+		"column_name": "Mortgage2InterestOnlyFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 234,
+		"column_name": "Mortgage2InterestOnlyPeriod",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 249999 }]
+	},
+	{
+		"column_id": 235,
+		"column_name": "TransferInfoPurchaseDownPayment",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 9466,
+		"min": 0.0,
+		"max": 609317156.0,
+		"sum": 5302627291.0,
+		"mean": 21210.594006376024,
+		"median": 0.0,
+		"stdev": 1331732.8362781669,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 223345 },
+			{ "value": 100000.0, "count": 309 },
+			{ "value": 200000.0, "count": 232 },
+			{ "value": 50000.0, "count": 217 },
+			{ "value": 300000.0, "count": 202 }
+		]
+	},
+	{
+		"column_id": 236,
+		"column_name": "TransferInfoPurchaseLoanToValue",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 10307,
+		"min": 0.0,
+		"max": 150.0,
+		"sum": 2628133.3201,
+		"mean": 10.512575330701322,
+		"median": 0.0,
+		"stdev": 28.59492715536065,
+		"maxprecision": 4,
+		"freq": [
+			{ "value": 0.0, "count": 218508 },
+			{ "value": 80.0, "count": 4135 },
+			{ "value": 95.0, "count": 2073 },
+			{ "value": 100.0, "count": 1592 },
+			{ "value": 90.0, "count": 1312 }
+		]
+	},
+	{
+		"column_id": 237,
+		"column_name": "LastUpdated",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 225,
+		"min": "2024-04-30",
+		"max": "2025-03-31",
+		"freq": [
+			{ "value": "2024-10-08", "count": 3522 },
+			{ "value": "2024-10-01", "count": 3497 },
+			{ "value": "2025-02-20", "count": 3279 },
+			{ "value": "2024-09-24", "count": 3065 },
+			{ "value": "2024-10-09", "count": 2998 }
+		]
+	},
+	{
+		"column_id": 238,
+		"column_name": "PublicationDate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 249999,
+		"unique": 1,
+		"min": "2025-03-31",
+		"max": "2025-03-31",
+		"freq": [{ "value": "2025-03-31", "count": 249999 }]
+	}
+]

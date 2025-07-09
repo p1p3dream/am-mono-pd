@@ -1,0 +1,104 @@
+name: "Servers: go-api"
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: The environment to use.
+        type: environment
+        default: testing
+        required: true
+      ABODEMINE_API_FLAGS:
+        description: Use this value for ABODEMINE_API_FLAGS.
+        type: string
+        default: ""
+        required: false
+
+permissions:
+  id-token: write
+  contents: read
+  packages: read
+  # permissions for tests
+  issues: read
+  checks: write
+  pull-requests: write
+
+jobs:
+  main:
+    runs-on: linux-default
+    environment: ${{ inputs.environment }}
+    container:
+      image: ${{ vars.ABODEMINE_BUILD_RUNNER_IMAGE }}
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Configure runner environment.
+        run: |
+          # 2025-01-15: Export HOME and USER because GitHub Actions override them.
+          #
+          # References:
+          # - https://github.com/actions/runner/issues/863.
+          # - https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#defaultsrunshell.
+
+          USER=abodeminebot
+
+          echo HOME=/home/${USER} | sudo tee -a ${GITHUB_ENV}
+          echo USER=${USER} | sudo tee -a ${GITHUB_ENV}
+
+          echo ABODEMINE_NAMESPACE=${{ vars.ABODEMINE_NAMESPACE }} | sudo tee -a ${GITHUB_ENV}
+          echo ABODEMINE_WORKSPACE=${GITHUB_WORKSPACE} | sudo tee -a ${GITHUB_ENV}
+
+      - name: Configure AWS credentials.
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_GITHUB_ACTIONS_ROLE }}
+
+      # https://github.com/actions/checkout.
+      - name: Checkout repository.
+        uses: actions/checkout@v4
+
+      - name: Build.
+        shell: zsh -eo pipefail {0}
+        run: |
+          # Ensure the docker socket is accessible.
+          sudo chmod 666 /var/run/docker.sock
+
+          source ~/.zshrc
+
+          ABODEMINE_API_FLAGS=${{ inputs.ABODEMINE_API_FLAGS }} \
+          make -C build/servers/go-api build package configure release
+
+      - name: Wait deployment.
+        shell: zsh -eo pipefail {0}
+        run: |
+          source ~/.zshrc
+          make -C build/servers/go-api wait-deployment
+
+      ##########################################################################
+      # The actions below should remain disabled
+      # until we can review them and make them work as expected.
+      ##########################################################################
+
+      # - name: Run tests
+      #   shell: zsh -eo pipefail {0}
+      #   run: |
+      #     source ~/.zshrc
+      #     make -C build/servers/go-api tests
+
+      # # show JUnit output for GitHub Actions parsed friendly
+      # - name: Show JUnit output
+      #   uses: EnricoMi/publish-unit-test-result-action@v2
+      #   if: always()
+      #   with:
+      #     files: build/servers/go-api/newman_junit_output.xml
+      #     check_name: go-api-tests
+
+      # - name: Upload HTML Test Report
+      #   uses: actions/upload-artifact@v4
+      #   if: always()
+      #   with:
+      #     name: postman-test-report
+      #     path: build/servers/go-api/newman_htmlextra_output.html
+      #     retention-days: 10

@@ -1,0 +1,10 @@
+source ${ABODEMINE_WORKSPACE}/code/sh/make.sh
+
+IMAGE_REPOSITORY=$(jq -r '.aws.ecr.repositories."'${ABODEMINE_APP_IMAGE_REPOSITORY}'"' ${ABODEMINE_BUILD_PARAMS})
+IMAGE_TAG="${IMAGE_REPOSITORY}:${ABODEMINE_BUILD_ID}"
+
+docker buildx build \
+    --tag ${IMAGE_TAG} \
+    ${ABODEMINE_BUILD_TMP}/docker
+
+echo "ABODEMINE_APP_IMAGE_TAG=${IMAGE_TAG}" >> ${ABODEMINE_BUILD_ENV}

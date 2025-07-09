@@ -1,0 +1,65 @@
+# Based on https://docs.github.com/en/actions/publishing-packages/publishing-docker-images#publishing-images-to-github-packages.
+
+name: "Tools: github-runner"
+
+on:
+  workflow_dispatch:
+    inputs:
+      image_name:
+        description: Docker image name
+        required: true
+        type: string
+        default: abodeminehq/github-runner
+
+      runs_on:
+        description: The runner to use
+        required: true
+        type: string
+        default: linux-default
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  main:
+    runs-on: ${{ inputs.runs_on }}
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      # https://github.com/actions/checkout.
+      - name: Checkout repository.
+        uses: actions/checkout@v4
+
+      - name: Build tools/github-runner.
+        id: build
+        env:
+          ABODEMINE_SECURE_DOWNLOAD_ENDPOINT: ${{ secrets.ABODEMINE_SECURE_DOWNLOAD_ENDPOINT }}
+          ABODEMINE_SECURE_DOWNLOAD_TOKEN: ${{ secrets.ABODEMINE_SECURE_DOWNLOAD_TOKEN }}
+        run: |
+          ABODEMINE_WORKSPACE=${GITHUB_WORKSPACE} \
+          make -C build/tools/github-runner build
+
+      # https://github.com/docker/login-action.
+      - name: Log in to the Container registry.
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # https://github.com/docker/metadata-action.
+      - name: Extract metadata (tags, labels) for Docker.
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ inputs.image_name }}
+
+      # https://github.com/docker/build-push-action.
+      - name: Build and push Docker image.
+        uses: docker/build-push-action@v6
+        with:
+          context: ${{ steps.build.outputs.ABODEMINE_BUILD_CONTEXT }}
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

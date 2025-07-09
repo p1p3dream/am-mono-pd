@@ -1,0 +1,5401 @@
+[
+	{
+		"column_id": 1,
+		"column_name": "[ATTOM ID]",
+		"type": "int64",
+		"nulls": false,
+		"nonnulls": 199999,
+		"unique": 199999,
+		"min": 25.0,
+		"max": 16653822.0,
+		"sum": 1564917063185.0,
+		"mean": 7824624.439047195,
+		"median": 7911342.0,
+		"stdev": 5105614.466841878,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 2862585.0, "count": 1 },
+			{ "value": 3150460.0, "count": 1 },
+			{ "value": 3973873.0, "count": 1 },
+			{ "value": 3920592.0, "count": 1 },
+			{ "value": 10288732.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 2,
+		"column_name": "SitusStateCode",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 51,
+		"len": 2.0,
+		"freq": [
+			{ "value": "FL", "count": 37517 },
+			{ "value": "CA", "count": 21444 },
+			{ "value": "TX", "count": 15513 },
+			{ "value": "GA", "count": 12601 },
+			{ "value": "OH", "count": 8114 }
+		]
+	},
+	{
+		"column_id": 3,
+		"column_name": "SitusCounty",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 917,
+		"len": 21.0,
+		"freq": [
+			{ "value": "Miami-Dade", "count": 14050 },
+			{ "value": "Dallas", "count": 6251 },
+			{ "value": "Clark", "count": 4752 },
+			{ "value": "Orange", "count": 4670 },
+			{ "value": "Wayne", "count": 3783 }
+		]
+	},
+	{
+		"column_id": 4,
+		"column_name": "PropertyJurisdictionName",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 1349,
+		"len": 21.0,
+		"freq": [
+			{ "value": "DADE", "count": 14053 },
+			{ "value": "DALLAS", "count": 6251 },
+			{ "value": "CLARK", "count": 4752 },
+			{ "value": "ORANGE", "count": 4671 },
+			{ "value": "WAYNE", "count": 3787 }
+		]
+	},
+	{
+		"column_id": 5,
+		"column_name": "SitusStateCountyFIPS",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 1295,
+		"len": 5.0,
+		"freq": [
+			{ "value": "12086", "count": 14050 },
+			{ "value": "48113", "count": 6242 },
+			{ "value": "32003", "count": 4654 },
+			{ "value": "26163", "count": 3736 },
+			{ "value": "12095", "count": 3694 }
+		]
+	},
+	{
+		"column_id": 6,
+		"column_name": "CombinedStatisticalArea",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 177962,
+		"unique": 158,
+		"len": 59.0,
+		"freq": [
+			{ "value": null, "count": 22037 },
+			{ "value": "Miami-Port St. Lucie-Fort Lauderdale, FL", "count": 16792 },
+			{
+				"value": "Atlanta--Athens-Clarke County--Sandy Springs, GA-AL",
+				"count": 11742
+			},
+			{ "value": "New York-Newark, NY-NJ-CT-PA", "count": 11048 },
+			{ "value": "Dallas-Fort Worth, TX-OK", "count": 10276 }
+		]
+	},
+	{
+		"column_id": 7,
+		"column_name": "CBSAName",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199430,
+		"unique": 588,
+		"len": 80.0,
+		"freq": [
+			{
+				"value": "MIAMI-FORT LAUDERDALE-MIAMI BEACH, FL METROPOLITAN STATISTICAL AREA",
+				"count": 15859
+			},
+			{
+				"value": "ATLANTA-SANDY SPRINGS-MARIETTA, GA METROPOLITAN STATISTICAL AREA",
+				"count": 10884
+			},
+			{
+				"value": "DALLAS-FORT WORTH-ARLINGTON, TX METROPOLITAN STATISTICAL AREA",
+				"count": 10192
+			},
+			{
+				"value": "NEW YORK-NORTHERN NEW JERSEY-LONG ISLAND, NY-NJ-PA METROPOLITAN STATISTICAL AREA",
+				"count": 9431
+			},
+			{
+				"value": "ORLANDO-KISSIMMEE, FL METROPOLITAN STATISTICAL AREA",
+				"count": 8142
+			}
+		]
+	},
+	{
+		"column_id": 8,
+		"column_name": "CBSACode",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199430,
+		"unique": 589,
+		"min": 10140.0,
+		"max": 49780.0,
+		"sum": 5832839920.0,
+		"mean": 29247.55513212656,
+		"median": 32820.0,
+		"stdev": 10821.145314033183,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 33100.0, "count": 15859 },
+			{ "value": 12060.0, "count": 10884 },
+			{ "value": 19100.0, "count": 10192 },
+			{ "value": 35620.0, "count": 9431 },
+			{ "value": 36740.0, "count": 8142 }
+		]
+	},
+	{
+		"column_id": 9,
+		"column_name": "MSAName",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199273,
+		"unique": 606,
+		"len": 50.0,
+		"freq": [
+			{ "value": "MIAMI-FORT LAUDERDALE-POMPANO BEACH, FL", "count": 15859 },
+			{ "value": "ATLANTA-SANDY SPRINGS-MARIETTA, GA", "count": 10883 },
+			{ "value": "DALLAS-FORT WORTH-ARLINGTON, TX", "count": 10192 },
+			{
+				"value": "NEW YORK-NORTHERN NEW JERSEY-LONG ISLAND, NY-NJ-PA",
+				"count": 9431
+			},
+			{ "value": "ORLANDO-KISSIMMEE, FL", "count": 8142 }
+		]
+	},
+	{
+		"column_id": 10,
+		"column_name": "MSACode",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199273,
+		"unique": 606,
+		"min": 10020.0,
+		"max": 49780.0,
+		"sum": 5820343980.0,
+		"mean": 29207.89058226654,
+		"median": 32580.0,
+		"stdev": 10829.427904132861,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 33100.0, "count": 15859 },
+			{ "value": 12060.0, "count": 10883 },
+			{ "value": 19100.0, "count": 10192 },
+			{ "value": 35620.0, "count": 9431 },
+			{ "value": 36740.0, "count": 8142 }
+		]
+	},
+	{
+		"column_id": 11,
+		"column_name": "MetropolitanDivision",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 60239,
+		"unique": 30,
+		"len": 71.0,
+		"freq": [
+			{ "value": null, "count": 139760 },
+			{
+				"value": "MIAMI-MIAMI BEACH-KENDALL, FL METROPOLITAN DIVISION",
+				"count": 14050
+			},
+			{
+				"value": "DALLAS-PLANO-IRVING, TX METROPOLITAN DIVISION",
+				"count": 7002
+			},
+			{
+				"value": "NEW YORK-WHITE PLAINS-WAYNE, NY-NJ METROPOLITAN DIVISION",
+				"count": 5796
+			},
+			{
+				"value": "DETROIT-LIVONIA-DEARBORN, MI METROPOLITAN DIVISION",
+				"count": 3736
+			}
+		]
+	},
+	{
+		"column_id": 12,
+		"column_name": "MinorCivilDivisionName",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199597,
+		"unique": 4910,
+		"len": 49.0,
+		"freq": [
+			{ "value": "MIAMI", "count": 4856 },
+			{ "value": "LAS VEGAS", "count": 4390 },
+			{ "value": "NORTHEAST DALLAS", "count": 4051 },
+			{ "value": "KENDALE LAKES-TAMIAMI", "count": 2400 },
+			{ "value": "DETROIT", "count": 2328 }
+		]
+	},
+	{
+		"column_id": 13,
+		"column_name": "MinorCivilDivisionCode",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199998,
+		"unique": 5831,
+		"min": 0.0,
+		"max": 98000.0,
+		"sum": 15371574993.0,
+		"mean": 76858.64355143551,
+		"median": 91241.0,
+		"stdev": 27136.541045836326,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 92158.0, "count": 4684 },
+			{ "value": 94504.0, "count": 4390 },
+			{ "value": 92792.0, "count": 4353 },
+			{ "value": 91705.0, "count": 2400 },
+			{ "value": 22000.0, "count": 2330 }
+		]
+	},
+	{
+		"column_id": 14,
+		"column_name": "NeighborhoodCode",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 145235,
+		"unique": 31299,
+		"len": 9.0,
+		"freq": [
+			{ "value": null, "count": 54764 },
+			{ "value": "100", "count": 6217 },
+			{ "value": "01", "count": 743 },
+			{ "value": "RESIDENTI", "count": 712 },
+			{ "value": "00", "count": 664 }
+		]
+	},
+	{
+		"column_id": 15,
+		"column_name": "CensusFIPSPlaceCode",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 164691,
+		"unique": 6676,
+		"len": 5.0,
+		"freq": [
+			{ "value": null, "count": 35308 },
+			{ "value": "51000", "count": 3708 },
+			{ "value": "19000", "count": 3706 },
+			{ "value": "22000", "count": 2400 },
+			{ "value": "65000", "count": 2371 }
+		]
+	},
+	{
+		"column_id": 16,
+		"column_name": "CensusTract",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199989,
+		"unique": 19543,
+		"min": 0.0,
+		"max": 989100.0,
+		"sum": 27438944996.0,
+		"mean": 137202.27110491076,
+		"median": 21307.0,
+		"stdev": 235471.95065553754,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 1500.0, "count": 395 },
+			{ "value": 300.0, "count": 367 },
+			{ "value": 700.0, "count": 365 },
+			{ "value": 400.0, "count": 360 },
+			{ "value": 900.0, "count": 342 }
+		]
+	},
+	{
+		"column_id": 17,
+		"column_name": "CensusBlockGroup",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199989,
+		"unique": 10,
+		"min": 1.0,
+		"max": 9.0,
+		"sum": 403437.0,
+		"mean": 2.0172959512773203,
+		"median": 2.0,
+		"stdev": 1.0255676349520253,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 1.0, "count": 75189 },
+			{ "value": 2.0, "count": 68515 },
+			{ "value": 3.0, "count": 38680 },
+			{ "value": 4.0, "count": 13803 },
+			{ "value": 5.0, "count": 3018 }
+		]
+	},
+	{
+		"column_id": 18,
+		"column_name": "CensusBlock",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199989,
+		"unique": 737,
+		"min": 1000.0,
+		"max": 9045.0,
+		"sum": 405766138.0,
+		"mean": 2028.9422818255005,
+		"median": 2005.0,
+		"stdev": 1024.7296734739448,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 2000.0, "count": 6353 },
+			{ "value": 1000.0, "count": 6307 },
+			{ "value": 1001.0, "count": 4957 },
+			{ "value": 2001.0, "count": 4543 },
+			{ "value": 1002.0, "count": 4459 }
+		]
+	},
+	{
+		"column_id": 19,
+		"column_name": "ParcelNumberRaw",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 199980,
+		"len": 31.0,
+		"freq": [
+			{ "value": "0066032", "count": 2 },
+			{ "value": "16  05701-0000-00023", "count": 2 },
+			{ "value": "05  00211-0000-00001", "count": 2 },
+			{ "value": "209408", "count": 2 },
+			{ "value": "06-21-106-017", "count": 2 }
+		]
+	},
+	{
+		"column_id": 20,
+		"column_name": "ParcelNumberFormatted",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 199999 }]
+	},
+	{
+		"column_id": 21,
+		"column_name": "ParcelNumberYearAdded",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199843,
+		"unique": 61,
+		"min": 0.0,
+		"max": 2021.0,
+		"sum": 278829904.0,
+		"mean": 1395.244787157919,
+		"median": 1997.0,
+		"stdev": 920.9911569679393,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 60648 },
+			{ "value": 2006.0, "count": 26174 },
+			{ "value": 1995.0, "count": 14636 },
+			{ "value": 2005.0, "count": 11778 },
+			{ "value": 2011.0, "count": 11193 }
+		]
+	},
+	{
+		"column_id": 22,
+		"column_name": "ParcelNumberAlternate",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 49608,
+		"unique": 49555,
+		"len": 37.0,
+		"freq": [
+			{ "value": null, "count": 150391 },
+			{ "value": "88-3-7250-00", "count": 11 },
+			{ "value": "46408C---09", "count": 6 },
+			{ "value": "221-00-00-055", "count": 5 },
+			{ "value": "12", "count": 4 }
+		]
+	},
+	{
+		"column_id": 23,
+		"column_name": "ParcelMapBook",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 2,
+		"unique": 3,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 199997 },
+			{ "value": "034", "count": 1 },
+			{ "value": "007", "count": 1 }
+		]
+	},
+	{
+		"column_id": 24,
+		"column_name": "ParcelMapPage",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 2,
+		"unique": 3,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 199997 },
+			{ "value": "021", "count": 1 },
+			{ "value": "028", "count": 1 }
+		]
+	},
+	{
+		"column_id": 25,
+		"column_name": "ParcelNumberYearChange",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199843,
+		"unique": 29,
+		"min": 0.0,
+		"max": 2021.0,
+		"sum": 163322739.0,
+		"mean": 817.2552403636855,
+		"median": 0.0,
+		"stdev": 986.569800516323,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 118515 },
+			{ "value": 2011.0, "count": 10370 },
+			{ "value": 2012.0, "count": 9787 },
+			{ "value": 2006.0, "count": 8438 },
+			{ "value": 2009.0, "count": 6268 }
+		]
+	},
+	{
+		"column_id": 26,
+		"column_name": "ParcelNumberPrevious",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 74928,
+		"unique": 74892,
+		"len": 31.0,
+		"freq": [
+			{ "value": null, "count": 125071 },
+			{ "value": "80200000N", "count": 21 },
+			{ "value": "70003000N", "count": 3 },
+			{ "value": "03635600464373", "count": 3 },
+			{ "value": "16447", "count": 2 }
+		]
+	},
+	{
+		"column_id": 27,
+		"column_name": "ParcelAccountNumber",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 100365,
+		"unique": 97843,
+		"len": 24.0,
+		"freq": [
+			{ "value": null, "count": 99634 },
+			{ "value": "0", "count": 75 },
+			{ "value": "S001", "count": 62 },
+			{ "value": "00015", "count": 38 },
+			{ "value": "00039", "count": 26 }
+		]
+	},
+	{
+		"column_id": 28,
+		"column_name": "PropertyAddressFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199881,
+		"unique": 199651,
+		"len": 41.0,
+		"freq": [
+			{ "value": null, "count": 118 },
+			{ "value": "3334 PEACHTREE RD NE", "count": 5 },
+			{ "value": "56 GREEN ST", "count": 3 },
+			{ "value": "5 OAK ST", "count": 3 },
+			{ "value": "19 HILLSIDE AVE", "count": 3 }
+		]
+	},
+	{
+		"column_id": 29,
+		"column_name": "PropertyAddressHouseNumber",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199456,
+		"unique": 22270,
+		"len": 9.0,
+		"freq": [
+			{ "value": null, "count": 543 },
+			{ "value": "10", "count": 391 },
+			{ "value": "15", "count": 363 },
+			{ "value": "11", "count": 356 },
+			{ "value": "5", "count": 354 }
+		]
+	},
+	{
+		"column_id": 30,
+		"column_name": "PropertyAddressStreetDirection",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 46248,
+		"unique": 9,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 153751 },
+			{ "value": "W", "count": 7595 },
+			{ "value": "E", "count": 7546 },
+			{ "value": "S", "count": 7404 },
+			{ "value": "SW", "count": 7266 }
+		]
+	},
+	{
+		"column_id": 31,
+		"column_name": "PropertyAddressStreetName",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199881,
+		"unique": 45712,
+		"len": 28.0,
+		"freq": [
+			{ "value": "3RD", "count": 544 },
+			{ "value": "2ND", "count": 510 },
+			{ "value": "5TH", "count": 510 },
+			{ "value": "7TH", "count": 499 },
+			{ "value": "MAIN", "count": 491 }
+		]
+	},
+	{
+		"column_id": 32,
+		"column_name": "PropertyAddressStreetSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 195848,
+		"unique": 117,
+		"len": 4.0,
+		"freq": [
+			{ "value": "ST", "count": 42363 },
+			{ "value": "DR", "count": 38872 },
+			{ "value": "AVE", "count": 35823 },
+			{ "value": "RD", "count": 18919 },
+			{ "value": "CT", "count": 14495 }
+		]
+	},
+	{
+		"column_id": 33,
+		"column_name": "PropertyAddressStreetPostDirection",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 11351,
+		"unique": 9,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 188648 },
+			{ "value": "S", "count": 2035 },
+			{ "value": "N", "count": 1917 },
+			{ "value": "NE", "count": 1718 },
+			{ "value": "NW", "count": 1431 }
+		]
+	},
+	{
+		"column_id": 34,
+		"column_name": "PropertyAddressUnitPrefix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 10911,
+		"unique": 13,
+		"len": 8.0,
+		"freq": [
+			{ "value": null, "count": 189088 },
+			{ "value": "APT", "count": 6548 },
+			{ "value": "#", "count": 2444 },
+			{ "value": "UNIT", "count": 1802 },
+			{ "value": "STE", "count": 52 }
+		]
+	},
+	{
+		"column_id": 35,
+		"column_name": "PropertyAddressUnitValue",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 10913,
+		"unique": 2787,
+		"len": 8.0,
+		"freq": [
+			{ "value": null, "count": 189086 },
+			{ "value": "A", "count": 261 },
+			{ "value": "1", "count": 243 },
+			{ "value": "B", "count": 198 },
+			{ "value": "2", "count": 174 }
+		]
+	},
+	{
+		"column_id": 36,
+		"column_name": "PropertyAddressCity",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199963,
+		"unique": 6062,
+		"len": 25.0,
+		"freq": [
+			{ "value": "MIAMI", "count": 7223 },
+			{ "value": "DALLAS", "count": 4534 },
+			{ "value": "LAS VEGAS", "count": 3219 },
+			{ "value": "ORLANDO", "count": 2790 },
+			{ "value": "INDIANAPOLIS", "count": 2422 }
+		]
+	},
+	{
+		"column_id": 37,
+		"column_name": "PropertyAddressState",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 51,
+		"len": 2.0,
+		"freq": [
+			{ "value": "FL", "count": 37517 },
+			{ "value": "CA", "count": 21444 },
+			{ "value": "TX", "count": 15513 },
+			{ "value": "GA", "count": 12601 },
+			{ "value": "OH", "count": 8114 }
+		]
+	},
+	{
+		"column_id": 38,
+		"column_name": "PropertyAddressZIP",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199959,
+		"unique": 11470,
+		"len": 5.0,
+		"freq": [
+			{ "value": "30157", "count": 597 },
+			{ "value": "33186", "count": 513 },
+			{ "value": "83686", "count": 446 },
+			{ "value": "33177", "count": 419 },
+			{ "value": "75052", "count": 418 }
+		]
+	},
+	{
+		"column_id": 39,
+		"column_name": "PropertyAddressZIP4",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 198042,
+		"unique": 9479,
+		"len": 4.0,
+		"freq": [
+			{ "value": null, "count": 1957 },
+			{ "value": "2006", "count": 89 },
+			{ "value": "2110", "count": 84 },
+			{ "value": "1711", "count": 84 },
+			{ "value": "1903", "count": 83 }
+		]
+	},
+	{
+		"column_id": 40,
+		"column_name": "PropertyAddressCRRT",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 197190,
+		"unique": 724,
+		"len": 4.0,
+		"freq": [
+			{ "value": "C002", "count": 4414 },
+			{ "value": "C003", "count": 4383 },
+			{ "value": "C001", "count": 4248 },
+			{ "value": "C004", "count": 4087 },
+			{ "value": "C007", "count": 3938 }
+		]
+	},
+	{
+		"column_id": 41,
+		"column_name": "PropertyAddressInfoPrivacy",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 199999 }]
+	},
+	{
+		"column_id": 42,
+		"column_name": "CongressionalDistrictHouse",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 193720,
+		"unique": 433,
+		"min": 1.0,
+		"max": 437.0,
+		"sum": 37684159.0,
+		"mean": 194.52900578154038,
+		"median": 160.0,
+		"stdev": 119.93926706737793,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 6279 },
+			{ "value": 105.0, "count": 4353 },
+			{ "value": 93.0, "count": 4065 },
+			{ "value": 274.0, "count": 3202 },
+			{ "value": 97.0, "count": 3038 }
+		]
+	},
+	{
+		"column_id": 43,
+		"column_name": "PropertyLatitude",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199998,
+		"unique": 193805,
+		"min": 19.427712,
+		"max": 61.665317,
+		"sum": 7188996.627882,
+		"mean": 35.94534259283593,
+		"median": 36.1877135,
+		"stdev": 5.6473646206233505,
+		"maxprecision": 6,
+		"freq": [
+			{ "value": 25.779785, "count": 28 },
+			{ "value": 25.847659, "count": 27 },
+			{ "value": 25.761799, "count": 24 },
+			{ "value": 25.760332, "count": 23 },
+			{ "value": 40.838613, "count": 22 }
+		]
+	},
+	{
+		"column_id": 44,
+		"column_name": "PropertyLongitude",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199998,
+		"unique": 194298,
+		"min": -159.423019,
+		"max": -68.223683,
+		"sum": -18319305.754001,
+		"mean": -91.59744474445245,
+		"median": -84.8183025,
+		"stdev": 15.4762502405222,
+		"maxprecision": 6,
+		"freq": [
+			{ "value": -80.277301, "count": 28 },
+			{ "value": -80.145712, "count": 27 },
+			{ "value": -80.190586, "count": 24 },
+			{ "value": -80.189341, "count": 23 },
+			{ "value": -73.856525, "count": 22 }
+		]
+	},
+	{
+		"column_id": 45,
+		"column_name": "GeoQuality",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199998,
+		"unique": 4,
+		"min": 0.0,
+		"max": 5.0,
+		"sum": 902.0,
+		"mean": 0.004510045100451004,
+		"median": 0.0,
+		"stdev": 0.0799359465004957,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 199172 },
+			{ "value": 1.0, "count": 807 },
+			{ "value": 5.0, "count": 19 },
+			{ "value": null, "count": 1 }
+		]
+	},
+	{
+		"column_id": 46,
+		"column_name": "LegalDescription",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199579,
+		"unique": 192049,
+		"len": 249.0,
+		"freq": [
+			{ "value": null, "count": 420 },
+			{ "value": "CITY/MUNI/TWP:UNINCORPORATED", "count": 376 },
+			{ "value": "CITY/MUNI/TWP:SAN RAFAEL", "count": 133 },
+			{ "value": "CITY/MUNI/TWP:NOVATO", "count": 128 },
+			{ "value": "TOWN #1 SCH DIST 002", "count": 94 }
+		]
+	},
+	{
+		"column_id": 47,
+		"column_name": "LegalRange",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 84231,
+		"unique": 183,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 115768 },
+			{ "value": "40", "count": 4012 },
+			{ "value": "41", "count": 3824 },
+			{ "value": "39", "count": 3366 },
+			{ "value": "42", "count": 2882 }
+		]
+	},
+	{
+		"column_id": 48,
+		"column_name": "LegalTownship",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 91153,
+		"unique": 203,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 108846 },
+			{ "value": "52", "count": 3563 },
+			{ "value": "54", "count": 3508 },
+			{ "value": "22", "count": 3446 },
+			{ "value": "53", "count": 2922 }
+		]
+	},
+	{
+		"column_id": 49,
+		"column_name": "LegalSection",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 88549,
+		"unique": 92,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 111450 },
+			{ "value": "01", "count": 2872 },
+			{ "value": "04", "count": 2805 },
+			{ "value": "03", "count": 2775 },
+			{ "value": "05", "count": 2631 }
+		]
+	},
+	{
+		"column_id": 50,
+		"column_name": "LegalQuarter",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 26362,
+		"unique": 28,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 173637 },
+			{ "value": "NE", "count": 6724 },
+			{ "value": "SE", "count": 6575 },
+			{ "value": "SW", "count": 6386 },
+			{ "value": "NW", "count": 6227 }
+		]
+	},
+	{
+		"column_id": 51,
+		"column_name": "LegalQuarterQuarter",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 8890,
+		"unique": 27,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 191109 },
+			{ "value": "SE", "count": 1823 },
+			{ "value": "SW", "count": 1799 },
+			{ "value": "NW", "count": 1785 },
+			{ "value": "NE", "count": 1768 }
+		]
+	},
+	{
+		"column_id": 52,
+		"column_name": "LegalSubdivision",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 175994,
+		"unique": 89062,
+		"len": 40.0,
+		"freq": [
+			{ "value": null, "count": 24005 },
+			{ "value": "ACREAGE & UNREC", "count": 335 },
+			{ "value": "CAPE CORAL", "count": 207 },
+			{ "value": "SUBDIVISION", "count": 204 },
+			{ "value": "LEHIGH ACRES", "count": 203 }
+		]
+	},
+	{
+		"column_id": 53,
+		"column_name": "LegalPhase",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 9838,
+		"unique": 250,
+		"len": 7.0,
+		"freq": [
+			{ "value": null, "count": 190161 },
+			{ "value": "1", "count": 3003 },
+			{ "value": "2", "count": 2551 },
+			{ "value": "3", "count": 1109 },
+			{ "value": "4", "count": 494 }
+		]
+	},
+	{
+		"column_id": 54,
+		"column_name": "LegalTractNumber",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199846,
+		"unique": 9167,
+		"len": 10.0,
+		"freq": [
+			{ "value": "0", "count": 170408 },
+			{ "value": "1", "count": 631 },
+			{ "value": "2", "count": 517 },
+			{ "value": "A", "count": 350 },
+			{ "value": "3", "count": 338 }
+		]
+	},
+	{
+		"column_id": 55,
+		"column_name": "LegalBlock1",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 108165,
+		"unique": 7673,
+		"len": 7.0,
+		"freq": [
+			{ "value": null, "count": 91834 },
+			{ "value": "1", "count": 11424 },
+			{ "value": "2", "count": 7842 },
+			{ "value": "3", "count": 5980 },
+			{ "value": "4", "count": 4527 }
+		]
+	},
+	{
+		"column_id": 56,
+		"column_name": "LegalBlock2",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 288,
+		"unique": 46,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 199711 },
+			{ "value": "1", "count": 73 },
+			{ "value": "2", "count": 39 },
+			{ "value": "3", "count": 20 },
+			{ "value": "4", "count": 18 }
+		]
+	},
+	{
+		"column_id": 57,
+		"column_name": "LegalLotNumber1",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 182374,
+		"unique": 9701,
+		"len": 7.0,
+		"freq": [
+			{ "value": null, "count": 17625 },
+			{ "value": "1", "count": 6570 },
+			{ "value": "2", "count": 5473 },
+			{ "value": "3", "count": 5225 },
+			{ "value": "4", "count": 5034 }
+		]
+	},
+	{
+		"column_id": 58,
+		"column_name": "LegalLotNumber2",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 13756,
+		"unique": 1851,
+		"len": 5.0,
+		"freq": [
+			{ "value": null, "count": 186243 },
+			{ "value": "2", "count": 847 },
+			{ "value": "6", "count": 399 },
+			{ "value": "8", "count": 389 },
+			{ "value": "4", "count": 385 }
+		]
+	},
+	{
+		"column_id": 59,
+		"column_name": "LegalLotNumber3",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 16,
+		"unique": 10,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 199983 },
+			{ "value": "3", "count": 5 },
+			{ "value": "7", "count": 3 },
+			{ "value": "6", "count": 2 },
+			{ "value": "1,", "count": 1 }
+		]
+	},
+	{
+		"column_id": 60,
+		"column_name": "LegalUnit",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 17335,
+		"unique": 1660,
+		"len": 6.0,
+		"freq": [
+			{ "value": null, "count": 182664 },
+			{ "value": "1", "count": 2971 },
+			{ "value": "2", "count": 2127 },
+			{ "value": "3", "count": 1313 },
+			{ "value": "4", "count": 991 }
+		]
+	},
+	{
+		"column_id": 61,
+		"column_name": "PartyOwner1NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199996,
+		"unique": 192091,
+		"len": 57.0,
+		"freq": [
+			{ "value": "NOT AVAILABLE FROM DATA SOURCE", "count": 375 },
+			{ "value": "DETROIT LAND BK AUTHORITY", "count": 285 },
+			{ "value": "DETROIT LAND BANK AUTHORITY", "count": 189 },
+			{ "value": "YAMASA CO LTD", "count": 51 },
+			{ "value": "DETROIT LANDBANK AUTHORITY", "count": 50 }
+		]
+	},
+	{
+		"column_id": 62,
+		"column_name": "PartyOwner1NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 168743,
+		"unique": 23270,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 31256 },
+			{ "value": "MICHAEL", "count": 3313 },
+			{ "value": "JOHN", "count": 2550 },
+			{ "value": "JAMES", "count": 2492 },
+			{ "value": "DAVID", "count": 2490 }
+		]
+	},
+	{
+		"column_id": 63,
+		"column_name": "PartyOwner1NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 94393,
+		"unique": 8179,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 105606 },
+			{ "value": "A", "count": 9067 },
+			{ "value": "M", "count": 7240 },
+			{ "value": "L", "count": 6799 },
+			{ "value": "J", "count": 6678 }
+		]
+	},
+	{
+		"column_id": 64,
+		"column_name": "PartyOwner1NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 197934,
+		"unique": 84480,
+		"len": 50.0,
+		"freq": [
+			{ "value": null, "count": 2065 },
+			{ "value": "SMITH", "count": 1071 },
+			{ "value": "JOHNSON", "count": 917 },
+			{ "value": "RODRIGUEZ", "count": 865 },
+			{ "value": "GARCIA", "count": 791 }
+		]
+	},
+	{
+		"column_id": 65,
+		"column_name": "PartyOwner1NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 5604,
+		"unique": 26,
+		"len": 7.0,
+		"freq": [
+			{ "value": null, "count": 194395 },
+			{ "value": "JR", "count": 2524 },
+			{ "value": "JR.", "count": 909 },
+			{ "value": "III", "count": 815 },
+			{ "value": "SR.", "count": 519 }
+		]
+	},
+	{
+		"column_id": 66,
+		"column_name": "TrustDescription",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 58038,
+		"unique": 7,
+		"len": 15.0,
+		"freq": [
+			{ "value": null, "count": 141961 },
+			{ "value": "Not a Trust", "count": 35659 },
+			{ "value": "Name is a Trust", "count": 11274 },
+			{ "value": "Unknown", "count": 10110 },
+			{ "value": "UNKNOWN", "count": 852 }
+		]
+	},
+	{
+		"column_id": 67,
+		"column_name": "CompanyFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199967,
+		"unique": 3,
+		"freq": [
+			{ "value": false, "count": 170151 },
+			{ "value": true, "count": 29816 },
+			{ "value": null, "count": 32 }
+		]
+	},
+	{
+		"column_id": 68,
+		"column_name": "PartyOwner2NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 33823,
+		"unique": 33647,
+		"len": 43.0,
+		"freq": [
+			{ "value": null, "count": 166176 },
+			{ "value": "MARIA TORRES", "count": 5 },
+			{ "value": "MARIA MARTINEZ", "count": 4 },
+			{ "value": "MARY ANN", "count": 4 },
+			{ "value": "MARIA SANCHEZ", "count": 4 }
+		]
+	},
+	{
+		"column_id": 69,
+		"column_name": "PartyOwner2NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 33786,
+		"unique": 8247,
+		"len": 18.0,
+		"freq": [
+			{ "value": null, "count": 166213 },
+			{ "value": "MARIA", "count": 604 },
+			{ "value": "MARY", "count": 413 },
+			{ "value": "JENNIFER", "count": 354 },
+			{ "value": "LINDA", "count": 283 }
+		]
+	},
+	{
+		"column_id": 70,
+		"column_name": "PartyOwner2NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 19863,
+		"unique": 2016,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 180136 },
+			{ "value": "M", "count": 2392 },
+			{ "value": "L", "count": 2165 },
+			{ "value": "A", "count": 2156 },
+			{ "value": "J", "count": 1213 }
+		]
+	},
+	{
+		"column_id": 71,
+		"column_name": "PartyOwner2NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 33822,
+		"unique": 17202,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 166177 },
+			{ "value": "SMITH", "count": 226 },
+			{ "value": "JOHNSON", "count": 168 },
+			{ "value": "RODRIGUEZ", "count": 164 },
+			{ "value": "GONZALEZ", "count": 145 }
+		]
+	},
+	{
+		"column_id": 72,
+		"column_name": "PartyOwner2NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 785,
+		"unique": 317,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 199214 },
+			{ "value": "JR", "count": 229 },
+			{ "value": "III", "count": 48 },
+			{ "value": "II", "count": 46 },
+			{ "value": "JR.", "count": 44 }
+		]
+	},
+	{
+		"column_id": 73,
+		"column_name": "OwnerTypeDescription1",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 157098,
+		"unique": 5,
+		"len": 10.0,
+		"freq": [
+			{ "value": "Individual", "count": 105120 },
+			{ "value": null, "count": 42901 },
+			{ "value": "INDIVIDUAL", "count": 24793 },
+			{ "value": "Company", "count": 22393 },
+			{ "value": "COMPANY", "count": 4792 }
+		]
+	},
+	{
+		"column_id": 74,
+		"column_name": "OwnershipVestingRelationCode",
+		"type": "integer",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 199999 }]
+	},
+	{
+		"column_id": 75,
+		"column_name": "PartyOwner3NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 54922,
+		"unique": 54624,
+		"len": 50.0,
+		"freq": [
+			{ "value": null, "count": 145077 },
+			{ "value": "SRMZ 4 ASSET COMPANY 1 LLC", "count": 5 },
+			{ "value": "LEHOV", "count": 5 },
+			{ "value": "COOK COUNTY LAND BANK AUTHORITY", "count": 4 },
+			{ "value": "THANH NGUYEN", "count": 4 }
+		]
+	},
+	{
+		"column_id": 76,
+		"column_name": "PartyOwner3NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 48772,
+		"unique": 10315,
+		"len": 22.0,
+		"freq": [
+			{ "value": null, "count": 151227 },
+			{ "value": "MARIA", "count": 665 },
+			{ "value": "JENNIFER", "count": 527 },
+			{ "value": "MARY", "count": 376 },
+			{ "value": "ELIZABETH", "count": 361 }
+		]
+	},
+	{
+		"column_id": 77,
+		"column_name": "PartyOwner3NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 25756,
+		"unique": 4598,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 174243 },
+			{ "value": "M", "count": 2227 },
+			{ "value": "A", "count": 2045 },
+			{ "value": "L", "count": 1916 },
+			{ "value": "J", "count": 1175 }
+		]
+	},
+	{
+		"column_id": 78,
+		"column_name": "PartyOwner3NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 54915,
+		"unique": 30769,
+		"len": 50.0,
+		"freq": [
+			{ "value": null, "count": 145084 },
+			{ "value": "SMITH", "count": 285 },
+			{ "value": "RODRIGUEZ", "count": 220 },
+			{ "value": "JOHNSON", "count": 204 },
+			{ "value": "GARCIA", "count": 197 }
+		]
+	},
+	{
+		"column_id": 79,
+		"column_name": "PartyOwner3NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 519,
+		"unique": 14,
+		"len": 5.0,
+		"freq": [
+			{ "value": null, "count": 199480 },
+			{ "value": "JR", "count": 324 },
+			{ "value": "III", "count": 83 },
+			{ "value": "II", "count": 39 },
+			{ "value": "SR.", "count": 38 }
+		]
+	},
+	{
+		"column_id": 80,
+		"column_name": "PartyOwner4NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 2983,
+		"unique": 2978,
+		"len": 36.0,
+		"freq": [
+			{ "value": null, "count": 197016 },
+			{ "value": "CHEN FANG FAMILY TRUST", "count": 3 },
+			{ "value": "MELISSA MARTINEZ", "count": 2 },
+			{ "value": "CHEN FAMILY TRUST", "count": 2 },
+			{ "value": "THE WANG LIVING TRUST", "count": 2 }
+		]
+	},
+	{
+		"column_id": 81,
+		"column_name": "PartyOwner4NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1749,
+		"unique": 1049,
+		"len": 16.0,
+		"freq": [
+			{ "value": null, "count": 198250 },
+			{ "value": "MARIA", "count": 24 },
+			{ "value": "JOSE", "count": 20 },
+			{ "value": "JOHN", "count": 19 },
+			{ "value": "MICHAEL", "count": 18 }
+		]
+	},
+	{
+		"column_id": 82,
+		"column_name": "PartyOwner4NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 970,
+		"unique": 423,
+		"len": 19.0,
+		"freq": [
+			{ "value": null, "count": 199029 },
+			{ "value": "A", "count": 55 },
+			{ "value": "J", "count": 54 },
+			{ "value": "M", "count": 51 },
+			{ "value": "R", "count": 33 }
+		]
+	},
+	{
+		"column_id": 83,
+		"column_name": "PartyOwner4NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 2981,
+		"unique": 2642,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 197018 },
+			{ "value": "MARTINEZ", "count": 13 },
+			{ "value": "NGUYEN", "count": 13 },
+			{ "value": "LOPEZ", "count": 11 },
+			{ "value": "RODRIGUEZ", "count": 11 }
+		]
+	},
+	{
+		"column_id": 84,
+		"column_name": "PartyOwner4NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 42,
+		"unique": 7,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 199957 },
+			{ "value": "JR", "count": 23 },
+			{ "value": "III", "count": 9 },
+			{ "value": "SR.", "count": 5 },
+			{ "value": "II", "count": 3 }
+		]
+	},
+	{
+		"column_id": 85,
+		"column_name": "OwnerTypeDescription2",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 51975,
+		"unique": 6,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 148024 },
+			{ "value": "Individual", "count": 46590 },
+			{ "value": "INDIVIDUAL", "count": 2814 },
+			{ "value": "Company", "count": 2314 },
+			{ "value": "COMPANY", "count": 254 }
+		]
+	},
+	{
+		"column_id": 86,
+		"column_name": "ContactOwnerMailingCounty",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 198177,
+		"unique": 1310,
+		"len": 22.0,
+		"freq": [
+			{ "value": "MIAMI-DADE", "count": 13237 },
+			{ "value": "DALLAS", "count": 6463 },
+			{ "value": "ORANGE", "count": 4989 },
+			{ "value": "CLARK", "count": 4007 },
+			{ "value": "WAYNE", "count": 3409 }
+		]
+	},
+	{
+		"column_id": 87,
+		"column_name": "ContactOwnerMailingFIPS",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 198177,
+		"unique": 1769,
+		"len": 5.0,
+		"freq": [
+			{ "value": "12086", "count": 13241 },
+			{ "value": "48113", "count": 6455 },
+			{ "value": "32003", "count": 3881 },
+			{ "value": "12095", "count": 3472 },
+			{ "value": "26163", "count": 3364 }
+		]
+	},
+	{
+		"column_id": 88,
+		"column_name": "ContactOwnerMailAddressFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 198867,
+		"unique": 191456,
+		"len": 57.0,
+		"freq": [
+			{ "value": null, "count": 1132 },
+			{ "value": "500 GRISWOLD ST STE 1200", "count": 545 },
+			{ "value": "PO BOX 4090", "count": 426 },
+			{ "value": "1717 MAIN ST STE 2000", "count": 346 },
+			{ "value": "5001 PLAZA ON THE LK STE 200", "count": 238 }
+		]
+	},
+	{
+		"column_id": 89,
+		"column_name": "ContactOwnerMailAddressHouseNumber",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 193564,
+		"unique": 22241,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 6435 },
+			{ "value": "500", "count": 726 },
+			{ "value": "10", "count": 421 },
+			{ "value": "1717", "count": 402 },
+			{ "value": "11", "count": 388 }
+		]
+	},
+	{
+		"column_id": 90,
+		"column_name": "ContactOwnerMailAddressStreetDirection",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 43733,
+		"unique": 9,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 156266 },
+			{ "value": "W", "count": 7264 },
+			{ "value": "S", "count": 7245 },
+			{ "value": "E", "count": 7142 },
+			{ "value": "SW", "count": 7096 }
+		]
+	},
+	{
+		"column_id": 91,
+		"column_name": "ContactOwnerMailAddressStreetName",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 198857,
+		"unique": 52124,
+		"len": 40.0,
+		"freq": [
+			{ "value": null, "count": 1142 },
+			{ "value": "MAIN", "count": 891 },
+			{ "value": "GRISWOLD", "count": 557 },
+			{ "value": "3RD", "count": 477 },
+			{ "value": "2ND", "count": 472 }
+		]
+	},
+	{
+		"column_id": 92,
+		"column_name": "ContactOwnerMailAddressStreetSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 188602,
+		"unique": 134,
+		"len": 7.0,
+		"freq": [
+			{ "value": "DR", "count": 38405 },
+			{ "value": "ST", "count": 37973 },
+			{ "value": "AVE", "count": 32277 },
+			{ "value": "RD", "count": 20483 },
+			{ "value": "CT", "count": 14089 }
+		]
+	},
+	{
+		"column_id": 93,
+		"column_name": "ContactOwnerMailAddressStreetPostDirection",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 11446,
+		"unique": 9,
+		"len": 2.0,
+		"freq": [
+			{ "value": null, "count": 188553 },
+			{ "value": "S", "count": 1941 },
+			{ "value": "N", "count": 1821 },
+			{ "value": "NE", "count": 1795 },
+			{ "value": "SE", "count": 1509 }
+		]
+	},
+	{
+		"column_id": 94,
+		"column_name": "ContactOwnerMailAddressUnitPrefix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 14551,
+		"unique": 54,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 185448 },
+			{ "value": "APT", "count": 5194 },
+			{ "value": "STE", "count": 4540 },
+			{ "value": "#", "count": 2804 },
+			{ "value": "UNIT", "count": 1539 }
+		]
+	},
+	{
+		"column_id": 95,
+		"column_name": "ContactOwnerMailAddressUnit",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 14487,
+		"unique": 2905,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 185512 },
+			{ "value": "1200", "count": 570 },
+			{ "value": "200", "count": 516 },
+			{ "value": "2000", "count": 475 },
+			{ "value": "100", "count": 392 }
+		]
+	},
+	{
+		"column_id": 96,
+		"column_name": "ContactOwnerMailAddressCity",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 198413,
+		"unique": 7224,
+		"len": 23.0,
+		"freq": [
+			{ "value": "MIAMI", "count": 6939 },
+			{ "value": "DALLAS", "count": 4562 },
+			{ "value": "LAS VEGAS", "count": 2677 },
+			{ "value": "ORLANDO", "count": 2510 },
+			{ "value": "INDIANAPOLIS", "count": 2046 }
+		]
+	},
+	{
+		"column_id": 97,
+		"column_name": "ContactOwnerMailAddressState",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 198796,
+		"unique": 65,
+		"len": 2.0,
+		"freq": [
+			{ "value": "FL", "count": 34428 },
+			{ "value": "CA", "count": 23359 },
+			{ "value": "TX", "count": 15952 },
+			{ "value": "GA", "count": 11842 },
+			{ "value": "MI", "count": 7912 }
+		]
+	},
+	{
+		"column_id": 98,
+		"column_name": "ContactOwnerMailAddressZIP",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 198317,
+		"unique": 14088,
+		"len": 5.0,
+		"freq": [
+			{ "value": null, "count": 1682 },
+			{ "value": "48226", "count": 576 },
+			{ "value": "33186", "count": 523 },
+			{ "value": "85261", "count": 492 },
+			{ "value": "30157", "count": 472 }
+		]
+	},
+	{
+		"column_id": 99,
+		"column_name": "ContactOwnerMailAddressZIP4",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 196945,
+		"unique": 9811,
+		"len": 4.0,
+		"freq": [
+			{ "value": null, "count": 3054 },
+			{ "value": "4463", "count": 564 },
+			{ "value": "4090", "count": 427 },
+			{ "value": "4657", "count": 374 },
+			{ "value": "1053", "count": 266 }
+		]
+	},
+	{
+		"column_id": 100,
+		"column_name": "ContactOwnerMailAddressCRRT",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 196974,
+		"unique": 1004,
+		"len": 4.0,
+		"freq": [
+			{ "value": "C002", "count": 4750 },
+			{ "value": "C003", "count": 3957 },
+			{ "value": "C001", "count": 3901 },
+			{ "value": "C004", "count": 3807 },
+			{ "value": "R001", "count": 3784 }
+		]
+	},
+	{
+		"column_id": 101,
+		"column_name": "ContactOwnerMailAddressInfoFormat",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 168797,
+		"unique": 6,
+		"len": 1.0,
+		"freq": [
+			{ "value": "S", "count": 152125 },
+			{ "value": null, "count": 31202 },
+			{ "value": "H", "count": 12189 },
+			{ "value": "P", "count": 4477 },
+			{ "value": "R", "count": 4 }
+		]
+	},
+	{
+		"column_id": 102,
+		"column_name": "ContactOwnerMailInfoPrivacy",
+		"type": "string",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 199999 }]
+	},
+	{
+		"column_id": 103,
+		"column_name": "StatusOwnerOccupiedFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 195403,
+		"unique": 3,
+		"freq": [
+			{ "value": true, "count": 151893 },
+			{ "value": false, "count": 43510 },
+			{ "value": null, "count": 4596 }
+		]
+	},
+	{
+		"column_id": 104,
+		"column_name": "DeedOwner1NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 198004,
+		"unique": 190170,
+		"len": 60.0,
+		"freq": [
+			{ "value": null, "count": 1995 },
+			{ "value": "NOT AVAILABLE FROM DATA SOURCE", "count": 375 },
+			{ "value": "DETROIT LAND BK AUTHORITY", "count": 285 },
+			{ "value": "DETROIT LAND BANK AUTHORITY", "count": 189 },
+			{ "value": "YAMASA CO LTD", "count": 51 }
+		]
+	},
+	{
+		"column_id": 105,
+		"column_name": "DeedOwner1NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 169523,
+		"unique": 24047,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 30476 },
+			{ "value": "MICHAEL", "count": 3274 },
+			{ "value": "JOHN", "count": 2533 },
+			{ "value": "DAVID", "count": 2471 },
+			{ "value": "JAMES", "count": 2453 }
+		]
+	},
+	{
+		"column_id": 106,
+		"column_name": "DeedOwner1NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 94967,
+		"unique": 8543,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 105032 },
+			{ "value": "A", "count": 8996 },
+			{ "value": "M", "count": 7187 },
+			{ "value": "L", "count": 6748 },
+			{ "value": "J", "count": 6618 }
+		]
+	},
+	{
+		"column_id": 107,
+		"column_name": "DeedOwner1NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 197935,
+		"unique": 84132,
+		"len": 49.0,
+		"freq": [
+			{ "value": null, "count": 2064 },
+			{ "value": "SMITH", "count": 1064 },
+			{ "value": "JOHNSON", "count": 905 },
+			{ "value": "RODRIGUEZ", "count": 856 },
+			{ "value": "GARCIA", "count": 787 }
+		]
+	},
+	{
+		"column_id": 108,
+		"column_name": "DeedOwner1NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 5619,
+		"unique": 27,
+		"len": 7.0,
+		"freq": [
+			{ "value": null, "count": 194380 },
+			{ "value": "JR", "count": 2528 },
+			{ "value": "JR.", "count": 910 },
+			{ "value": "III", "count": 820 },
+			{ "value": "SR.", "count": 521 }
+		]
+	},
+	{
+		"column_id": 109,
+		"column_name": "DeedOwner2NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 84186,
+		"unique": 83532,
+		"len": 46.0,
+		"freq": [
+			{ "value": null, "count": 115813 },
+			{ "value": "MARIA TORRES", "count": 5 },
+			{ "value": "MARIA MARTINEZ", "count": 5 },
+			{ "value": "SRMZ 4 ASSET COMPANY 1 LLC", "count": 5 },
+			{ "value": "LEHOV", "count": 5 }
+		]
+	},
+	{
+		"column_id": 110,
+		"column_name": "DeedOwner2NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 80742,
+		"unique": 15580,
+		"len": 26.0,
+		"freq": [
+			{ "value": null, "count": 119257 },
+			{ "value": "MARIA", "count": 1243 },
+			{ "value": "JENNIFER", "count": 855 },
+			{ "value": "MARY", "count": 768 },
+			{ "value": "ELIZABETH", "count": 590 }
+		]
+	},
+	{
+		"column_id": 111,
+		"column_name": "DeedOwner2NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 44679,
+		"unique": 6088,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 155320 },
+			{ "value": "M", "count": 4440 },
+			{ "value": "A", "count": 4034 },
+			{ "value": "L", "count": 3896 },
+			{ "value": "J", "count": 2295 }
+		]
+	},
+	{
+		"column_id": 112,
+		"column_name": "DeedOwner2NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 84184,
+		"unique": 39067,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 115815 },
+			{ "value": "SMITH", "count": 499 },
+			{ "value": "RODRIGUEZ", "count": 369 },
+			{ "value": "JOHNSON", "count": 355 },
+			{ "value": "GARCIA", "count": 326 }
+		]
+	},
+	{
+		"column_id": 113,
+		"column_name": "DeedOwner2NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1250,
+		"unique": 319,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 198749 },
+			{ "value": "JR", "count": 527 },
+			{ "value": "III", "count": 125 },
+			{ "value": "II", "count": 84 },
+			{ "value": "SR.", "count": 50 }
+		]
+	},
+	{
+		"column_id": 114,
+		"column_name": "DeedOwner3NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 6612,
+		"unique": 6575,
+		"len": 36.0,
+		"freq": [
+			{ "value": null, "count": 193387 },
+			{ "value": "ANDERSON FAMILY TRUST", "count": 3 },
+			{ "value": "JOHNSON FAMILY REVOCABLE TRUST", "count": 3 },
+			{ "value": "SMITH FAMILY TRUST", "count": 3 },
+			{ "value": "REYNOLDS FAMILY TRUST", "count": 3 }
+		]
+	},
+	{
+		"column_id": 115,
+		"column_name": "DeedOwner3NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 3004,
+		"unique": 1543,
+		"len": 14.0,
+		"freq": [
+			{ "value": null, "count": 196995 },
+			{ "value": "JOHN", "count": 34 },
+			{ "value": "DAVID", "count": 31 },
+			{ "value": "MARIA", "count": 29 },
+			{ "value": "MICHAEL", "count": 28 }
+		]
+	},
+	{
+		"column_id": 116,
+		"column_name": "DeedOwner3NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 1648,
+		"unique": 537,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 198351 },
+			{ "value": "M", "count": 117 },
+			{ "value": "A", "count": 111 },
+			{ "value": "L", "count": 91 },
+			{ "value": "J", "count": 88 }
+		]
+	},
+	{
+		"column_id": 117,
+		"column_name": "DeedOwner3NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 6612,
+		"unique": 5883,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 193387 },
+			{ "value": "NGUYEN", "count": 19 },
+			{ "value": "MARTINEZ", "count": 19 },
+			{ "value": "RODRIGUEZ", "count": 19 },
+			{ "value": "PEREZ", "count": 17 }
+		]
+	},
+	{
+		"column_id": 118,
+		"column_name": "DeedOwner3NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 80,
+		"unique": 9,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 199919 },
+			{ "value": "JR", "count": 42 },
+			{ "value": "III", "count": 14 },
+			{ "value": "JR.", "count": 10 },
+			{ "value": "SR.", "count": 6 }
+		]
+	},
+	{
+		"column_id": 119,
+		"column_name": "DeedOwner4NameFull",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 892,
+		"unique": 893,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 199107 },
+			{ "value": "SHARI A PETERSON", "count": 1 },
+			{ "value": "MELISSA MARTINEZ", "count": 1 },
+			{ "value": "XIN YE CHANG", "count": 1 },
+			{ "value": "HEATHER MCKINNEY", "count": 1 }
+		]
+	},
+	{
+		"column_id": 120,
+		"column_name": "DeedOwner4NameFirst",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 831,
+		"unique": 575,
+		"len": 11.0,
+		"freq": [
+			{ "value": null, "count": 199168 },
+			{ "value": "MICHAEL", "count": 17 },
+			{ "value": "MARIA", "count": 12 },
+			{ "value": "JOHN", "count": 11 },
+			{ "value": "WILLIAM", "count": 10 }
+		]
+	},
+	{
+		"column_id": 121,
+		"column_name": "DeedOwner4NameMiddle",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 493,
+		"unique": 212,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 199506 },
+			{ "value": "M", "count": 38 },
+			{ "value": "A", "count": 32 },
+			{ "value": "J", "count": 29 },
+			{ "value": "R", "count": 23 }
+		]
+	},
+	{
+		"column_id": 122,
+		"column_name": "DeedOwner4NameLast",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 892,
+		"unique": 798,
+		"len": 35.0,
+		"freq": [
+			{ "value": null, "count": 199107 },
+			{ "value": "JOHNSON", "count": 6 },
+			{ "value": "HERNANDEZ", "count": 6 },
+			{ "value": "SMITH", "count": 5 },
+			{ "value": "PEREZ", "count": 5 }
+		]
+	},
+	{
+		"column_id": 123,
+		"column_name": "DeedOwner4NameSuffix",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 16,
+		"unique": 5,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 199983 },
+			{ "value": "JR", "count": 8 },
+			{ "value": "II", "count": 4 },
+			{ "value": "III", "count": 3 },
+			{ "value": "jr", "count": 1 }
+		]
+	},
+	{
+		"column_id": 124,
+		"column_name": "TaxYearAssessed",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 13,
+		"min": 2013.0,
+		"max": 2025.0,
+		"sum": 404777925.0,
+		"mean": 2023.8997444987224,
+		"median": 2024.0,
+		"stdev": 0.4232560409210781,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 2024.0, "count": 171534 },
+			{ "value": 2023.0, "count": 22835 },
+			{ "value": 2025.0, "count": 4964 },
+			{ "value": 2022.0, "count": 462 },
+			{ "value": 2019.0, "count": 78 }
+		]
+	},
+	{
+		"column_id": 125,
+		"column_name": "TaxAssessedValueTotal",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 111108,
+		"min": 0.0,
+		"max": 102476290.0,
+		"sum": 52720970903.0,
+		"mean": 263606.17254586273,
+		"median": 165300.0,
+		"stdev": 663753.4125967842,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 1341 },
+			{ "value": 500.0, "count": 98 },
+			{ "value": 300.0, "count": 83 },
+			{ "value": 400.0, "count": 83 },
+			{ "value": 1400.0, "count": 68 }
+		]
+	},
+	{
+		"column_id": 126,
+		"column_name": "TaxAssessedValueImprovements",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 80299,
+		"min": 0.0,
+		"max": 81247180.0,
+		"sum": 27552583142.0,
+		"mean": 137763.60452802264,
+		"median": 74736.0,
+		"stdev": 446303.7446756009,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 46787 },
+			{ "value": 200000.0, "count": 45 },
+			{ "value": 165000.0, "count": 41 },
+			{ "value": 210000.0, "count": 41 },
+			{ "value": 204000.0, "count": 39 }
+		]
+	},
+	{
+		"column_id": 127,
+		"column_name": "TaxAssessedValueLand",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 40240,
+		"min": 0.0,
+		"max": 67317005.0,
+		"sum": 15892060518.0,
+		"mean": 79460.69989349946,
+		"median": 20510.0,
+		"stdev": 320015.03468019486,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 44856 },
+			{ "value": 60000.0, "count": 1599 },
+			{ "value": 12000.0, "count": 1519 },
+			{ "value": 50000.0, "count": 1468 },
+			{ "value": 30000.0, "count": 1143 }
+		]
+	},
+	{
+		"column_id": 128,
+		"column_name": "TaxAssessedImprovementsPerc",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 101,
+		"min": 0.0,
+		"max": 100.0,
+		"sum": 10952057.0,
+		"mean": 54.760558802794016,
+		"median": 70.0,
+		"stdev": 33.89229654475176,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 46944 },
+			{ "value": 80.0, "count": 5946 },
+			{ "value": 81.0, "count": 5291 },
+			{ "value": 82.0, "count": 5131 },
+			{ "value": 79.0, "count": 4994 }
+		]
+	},
+	{
+		"column_id": 129,
+		"column_name": "PreviousAssessedValue",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199626,
+		"unique": 108517,
+		"min": 0.0,
+		"max": 102476290.0,
+		"sum": 50316433543.0,
+		"mean": 252053.5077745384,
+		"median": 156224.0,
+		"stdev": 639768.2946423788,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 1379 },
+			{ "value": null, "count": 373 },
+			{ "value": 500.0, "count": 87 },
+			{ "value": 300.0, "count": 79 },
+			{ "value": 400.0, "count": 75 }
+		]
+	},
+	{
+		"column_id": 130,
+		"column_name": "TaxMarketValueYear",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 169946,
+		"unique": 34,
+		"min": 1961.0,
+		"max": 2025.0,
+		"sum": 343865076.0,
+		"mean": 2023.378461393619,
+		"median": 2024.0,
+		"stdev": 3.39534125366941,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 2024.0, "count": 127041 },
+			{ "value": 2023.0, "count": 31158 },
+			{ "value": null, "count": 30053 },
+			{ "value": 2021.0, "count": 4038 },
+			{ "value": 2025.0, "count": 2739 }
+		]
+	},
+	{
+		"column_id": 131,
+		"column_name": "TaxMarketValueTotal",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 86680,
+		"min": 0.0,
+		"max": 98380310.0,
+		"sum": 61933734218.0,
+		"mean": 309670.21944109723,
+		"median": 238660.0,
+		"stdev": 710722.8237964445,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 30053 },
+			{ "value": 1000.0, "count": 103 },
+			{ "value": 210000.0, "count": 83 },
+			{ "value": 600.0, "count": 82 },
+			{ "value": 200000.0, "count": 79 }
+		]
+	},
+	{
+		"column_id": 132,
+		"column_name": "TaxMarketValueImprovements",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 78343,
+		"min": 0.0,
+		"max": 80546480.0,
+		"sum": 38531998369.0,
+		"mean": 192660.95514977575,
+		"median": 154073.0,
+		"stdev": 491886.5354896268,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 51316 },
+			{ "value": 210000.0, "count": 55 },
+			{ "value": 165000.0, "count": 50 },
+			{ "value": 160000.0, "count": 49 },
+			{ "value": 170000.0, "count": 48 }
+		]
+	},
+	{
+		"column_id": 133,
+		"column_name": "TaxMarketValueLand",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 34338,
+		"min": 0.0,
+		"max": 67317005.0,
+		"sum": 18343829526.0,
+		"mean": 91719.60622803115,
+		"median": 40500.0,
+		"stdev": 360937.6271960168,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 49894 },
+			{ "value": 60000.0, "count": 2551 },
+			{ "value": 50000.0, "count": 2465 },
+			{ "value": 30000.0, "count": 2362 },
+			{ "value": 55000.0, "count": 2028 }
+		]
+	},
+	{
+		"column_id": 134,
+		"column_name": "TaxMarketImprovementsPerc",
+		"type": "decimal",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 101,
+		"min": 0.0,
+		"max": 100.0,
+		"sum": 10750233.0,
+		"mean": 53.75143375716878,
+		"median": 70.0,
+		"stdev": 34.82117323228646,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 51486 },
+			{ "value": 80.0, "count": 6843 },
+			{ "value": 81.0, "count": 5431 },
+			{ "value": 82.0, "count": 5267 },
+			{ "value": 83.0, "count": 5135 }
+		]
+	},
+	{
+		"column_id": 135,
+		"column_name": "TaxFiscalYear",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 198526,
+		"unique": 16,
+		"min": 2009.0,
+		"max": 2025.0,
+		"sum": 401744005.0,
+		"mean": 2023.6342091212234,
+		"median": 2024.0,
+		"stdev": 0.6847158717895955,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 2024.0, "count": 130712 },
+			{ "value": 2023.0, "count": 61403 },
+			{ "value": 2025.0, "count": 2520 },
+			{ "value": null, "count": 1473 },
+			{ "value": 2021.0, "count": 1323 }
+		]
+	},
+	{
+		"column_id": 136,
+		"column_name": "TaxRateArea",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199856,
+		"unique": 10242,
+		"len": 18.0,
+		"freq": [
+			{ "value": "0", "count": 15066 },
+			{ "value": "1", "count": 14469 },
+			{ "value": "3000", "count": 6704 },
+			{ "value": "2", "count": 3137 },
+			{ "value": "DC DA DS PH DO", "count": 2920 }
+		]
+	},
+	{
+		"column_id": 137,
+		"column_name": "TaxBilledAmount",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 193038,
+		"unique": 164408,
+		"min": 0.02,
+		"max": 1999292.71,
+		"sum": 932723380.88,
+		"mean": 4831.8122902226505,
+		"median": 3306.14,
+		"stdev": 14584.6141478586,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": null, "count": 6961 },
+			{ "value": 34.47, "count": 55 },
+			{ "value": 25.83, "count": 49 },
+			{ "value": 43.13, "count": 47 },
+			{ "value": 120.0, "count": 27 }
+		]
+	},
+	{
+		"column_id": 138,
+		"column_name": "TaxDelinquentYear",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 4435,
+		"unique": 31,
+		"min": 1986.0,
+		"max": 2024.0,
+		"sum": 8962545.0,
+		"mean": 2020.8669673055242,
+		"median": 2022.0,
+		"stdev": 3.982582475387737,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 195564 },
+			{ "value": 2023.0, "count": 1343 },
+			{ "value": 2024.0, "count": 765 },
+			{ "value": 2022.0, "count": 711 },
+			{ "value": 2021.0, "count": 328 }
+		]
+	},
+	{
+		"column_id": 139,
+		"column_name": "LastAssessorTaxRollUpdate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 199998,
+		"unique": 82,
+		"min": "2013-01-01",
+		"max": "2025-01-01",
+		"freq": [
+			{ "value": "2024-07-01", "count": 73750 },
+			{ "value": "2024-01-01", "count": 30737 },
+			{ "value": "2024-07-25", "count": 13402 },
+			{ "value": "2024-03-01", "count": 8996 },
+			{ "value": "2024-08-25", "count": 7138 }
+		]
+	},
+	{
+		"column_id": 140,
+		"column_name": "AssrLastUpdated",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 336,
+		"min": "2016-10-06",
+		"max": "2025-03-19",
+		"freq": [
+			{ "value": "2025-02-07", "count": 14524 },
+			{ "value": "2025-01-13", "count": 9393 },
+			{ "value": "2024-09-30", "count": 7612 },
+			{ "value": "2024-08-21", "count": 6468 },
+			{ "value": "2024-12-23", "count": 6085 }
+		]
+	},
+	{
+		"column_id": 141,
+		"column_name": "TaxExemptionHomeownerFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 68808,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 131191 },
+			{ "value": true, "count": 68808 }
+		]
+	},
+	{
+		"column_id": 142,
+		"column_name": "TaxExemptionDisabledFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 1753,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 198246 },
+			{ "value": true, "count": 1753 }
+		]
+	},
+	{
+		"column_id": 143,
+		"column_name": "TaxExemptionSeniorFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 5431,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 194568 },
+			{ "value": true, "count": 5431 }
+		]
+	},
+	{
+		"column_id": 144,
+		"column_name": "TaxExemptionVeteranFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 1802,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 198197 },
+			{ "value": true, "count": 1802 }
+		]
+	},
+	{
+		"column_id": 145,
+		"column_name": "TaxExemptionWidowFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 662,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 199337 },
+			{ "value": true, "count": 662 }
+		]
+	},
+	{
+		"column_id": 146,
+		"column_name": "TaxExemptionAdditional",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 6170,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 193829 },
+			{ "value": true, "count": 6170 }
+		]
+	},
+	{
+		"column_id": 147,
+		"column_name": "YearBuilt",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 194838,
+		"unique": 231,
+		"min": 1700.0,
+		"max": 2024.0,
+		"sum": 384253838.0,
+		"mean": 1972.1709214834889,
+		"median": 1978.0,
+		"stdev": 29.273498544398223,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 2005.0, "count": 5927 },
+			{ "value": null, "count": 5161 },
+			{ "value": 2004.0, "count": 5112 },
+			{ "value": 2006.0, "count": 5051 },
+			{ "value": 2003.0, "count": 4792 }
+		]
+	},
+	{
+		"column_id": 148,
+		"column_name": "YearBuiltEffective",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 45923,
+		"unique": 123,
+		"min": 1850.0,
+		"max": 2024.0,
+		"sum": 91539560.0,
+		"mean": 1993.3270910001524,
+		"median": 1996.0,
+		"stdev": 17.437978447410742,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 154076 },
+			{ "value": 2000.0, "count": 2268 },
+			{ "value": 2005.0, "count": 1971 },
+			{ "value": 1995.0, "count": 1827 },
+			{ "value": 1990.0, "count": 1627 }
+		]
+	},
+	{
+		"column_id": 149,
+		"column_name": "ZonedCodeLocal",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 118602,
+		"unique": 5427,
+		"len": 25.0,
+		"freq": [
+			{ "value": null, "count": 81397 },
+			{ "value": "R1", "count": 7877 },
+			{ "value": "0100:SINGLE FAM,GENERAL", "count": 4913 },
+			{ "value": "R2", "count": 3009 },
+			{ "value": "R-1", "count": 2584 }
+		]
+	},
+	{
+		"column_id": 150,
+		"column_name": "PropertyUseMuni",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 194336,
+		"unique": 2121,
+		"len": 5.0,
+		"freq": [
+			{ "value": "1", "count": 9459 },
+			{ "value": "101", "count": 8180 },
+			{ "value": "A1", "count": 7869 },
+			{ "value": "0101", "count": 7669 },
+			{ "value": "510", "count": 7123 }
+		]
+	},
+	{
+		"column_id": 151,
+		"column_name": "PropertyUseGroup",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 9,
+		"len": 21.0,
+		"freq": [
+			{ "value": "Residential", "count": 195663 },
+			{ "value": "Commercial", "count": 1939 },
+			{ "value": "PUBLIC WORKS", "count": 567 },
+			{ "value": "VACANT LAND", "count": 539 },
+			{ "value": "OTHER / UNKNOWN", "count": 411 }
+		]
+	},
+	{
+		"column_id": 152,
+		"column_name": "PropertyUseStandardized",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199981,
+		"unique": 202,
+		"min": 101.0,
+		"max": 471.0,
+		"sum": 75572882.0,
+		"mean": 377.9003105295003,
+		"median": 385.0,
+		"stdev": 33.315553808486165,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 385.0, "count": 155589 },
+			{ "value": 366.0, "count": 13044 },
+			{ "value": 386.0, "count": 6438 },
+			{ "value": 369.0, "count": 4934 },
+			{ "value": 401.0, "count": 3342 }
+		]
+	},
+	{
+		"column_id": 153,
+		"column_name": "AssessorLastSaleDate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 189484,
+		"unique": 10102,
+		"min": "1899-01-01",
+		"max": "2025-03-13",
+		"freq": [
+			{ "value": null, "count": 10515 },
+			{ "value": "2007-06-29", "count": 102 },
+			{ "value": "1899-01-01", "count": 90 },
+			{ "value": "2007-02-28", "count": 89 },
+			{ "value": "2006-06-30", "count": 87 }
+		]
+	},
+	{
+		"column_id": 154,
+		"column_name": "AssessorLastSaleAmount",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 191753,
+		"unique": 12384,
+		"min": -1.0,
+		"max": 161030847.0,
+		"sum": 50419554278.0,
+		"mean": 262940.10668933473,
+		"median": 164900.0,
+		"stdev": 1065662.2450764223,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 42213 },
+			{ "value": null, "count": 8246 },
+			{ "value": 250000.0, "count": 1099 },
+			{ "value": 200000.0, "count": 1082 },
+			{ "value": 150000.0, "count": 1052 }
+		]
+	},
+	{
+		"column_id": 155,
+		"column_name": "AssessorPriorSaleDate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 199998,
+		"unique": 8551,
+		"min": "1899-01-01",
+		"max": "2025-03-07",
+		"freq": [
+			{ "value": "1899-01-01", "count": 31452 },
+			{ "value": "2006-06-30", "count": 104 },
+			{ "value": "2007-07-03", "count": 91 },
+			{ "value": "2015-01-06", "count": 90 },
+			{ "value": "2005-04-29", "count": 89 }
+		]
+	},
+	{
+		"column_id": 156,
+		"column_name": "AssessorPriorSaleAmount",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199998,
+		"unique": 14319,
+		"min": -1.0,
+		"max": 422250000.0,
+		"sum": 27577077355.0,
+		"mean": 137886.76564265642,
+		"median": 32697.0,
+		"stdev": 1066332.9411028554,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 61474 },
+			{ "value": -1.0, "count": 31452 },
+			{ "value": 150000.0, "count": 766 },
+			{ "value": 200000.0, "count": 672 },
+			{ "value": 250000.0, "count": 636 }
+		]
+	},
+	{
+		"column_id": 157,
+		"column_name": "LastOwnershipTransferDate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 192121,
+		"unique": 8236,
+		"min": "1899-01-01",
+		"max": "2025-03-13",
+		"freq": [
+			{ "value": null, "count": 7878 },
+			{ "value": "2024-08-05", "count": 98 },
+			{ "value": "2024-10-15", "count": 97 },
+			{ "value": "2024-11-12", "count": 97 },
+			{ "value": "2024-09-30", "count": 96 }
+		]
+	},
+	{
+		"column_id": 158,
+		"column_name": "LastOwnershipTransferDocumentNumber",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 191623,
+		"unique": 173049,
+		"len": 20.0,
+		"freq": [
+			{ "value": null, "count": 8376 },
+			{ "value": "0000000042", "count": 17 },
+			{ "value": "0000000220", "count": 15 },
+			{ "value": "0000000194", "count": 14 },
+			{ "value": "0000000193", "count": 14 }
+		]
+	},
+	{
+		"column_id": 159,
+		"column_name": "LastOwnershipTransferTransactionID",
+		"type": "int64",
+		"nulls": true,
+		"nonnulls": 170420,
+		"unique": 170421,
+		"min": 1573920.0,
+		"max": 1052761954.0,
+		"sum": 115264445567404.0,
+		"mean": 676355155.3069123,
+		"median": 786132631.0,
+		"stdev": 315934437.48163545,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 29579 },
+			{ "value": 714260316.0, "count": 1 },
+			{ "value": 341136390.0, "count": 1 },
+			{ "value": 368896232.0, "count": 1 },
+			{ "value": 342232998.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 160,
+		"column_name": "DeedLastSaleDocumentBook",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 86159,
+		"unique": 42255,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 113840 },
+			{ "value": "2020", "count": 116 },
+			{ "value": "2021", "count": 111 },
+			{ "value": "2022", "count": 111 },
+			{ "value": "2019", "count": 109 }
+		]
+	},
+	{
+		"column_id": 161,
+		"column_name": "DeedLastSaleDocumentPage",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 84415,
+		"unique": 14103,
+		"len": 10.0,
+		"freq": [
+			{ "value": null, "count": 115584 },
+			{ "value": "1", "count": 353 },
+			{ "value": "399ROW", "count": 152 },
+			{ "value": "169", "count": 68 },
+			{ "value": "209", "count": 68 }
+		]
+	},
+	{
+		"column_id": 162,
+		"column_name": "DeedLastDocumentNumber",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 188055,
+		"unique": 184469,
+		"len": 21.0,
+		"freq": [
+			{ "value": null, "count": 11944 },
+			{ "value": "000002", "count": 24 },
+			{ "value": "WARRANTY DEED", "count": 14 },
+			{ "value": "3052766", "count": 14 },
+			{ "value": "48", "count": 8 }
+		]
+	},
+	{
+		"column_id": 163,
+		"column_name": "DeedLastSaleDate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 189393,
+		"unique": 10100,
+		"min": "1901-01-01",
+		"max": "2025-03-13",
+		"freq": [
+			{ "value": null, "count": 10606 },
+			{ "value": "2007-06-29", "count": 102 },
+			{ "value": "2007-02-28", "count": 89 },
+			{ "value": "2006-06-30", "count": 87 },
+			{ "value": "2005-08-31", "count": 86 }
+		]
+	},
+	{
+		"column_id": 164,
+		"column_name": "DeedLastSalePrice",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 191753,
+		"unique": 12384,
+		"min": -1.0,
+		"max": 161030847.0,
+		"sum": 50419554278.0,
+		"mean": 262940.10668933473,
+		"median": 164900.0,
+		"stdev": 1065662.2450764223,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 42213 },
+			{ "value": null, "count": 8246 },
+			{ "value": 250000.0, "count": 1099 },
+			{ "value": 200000.0, "count": 1082 },
+			{ "value": 150000.0, "count": 1052 }
+		]
+	},
+	{
+		"column_id": 165,
+		"column_name": "DeedLastSaleTransactionID",
+		"type": "int64",
+		"nulls": true,
+		"nonnulls": 163485,
+		"unique": 163486,
+		"min": 24187274.0,
+		"max": 1052759204.0,
+		"sum": 97403927791628.0,
+		"mean": 595797337.9308683,
+		"median": 577693553.0,
+		"stdev": 324222105.8657305,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 36514 },
+			{ "value": 714260316.0, "count": 1 },
+			{ "value": 341136390.0, "count": 1 },
+			{ "value": 342232998.0, "count": 1 },
+			{ "value": 958856642.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 166,
+		"column_name": "AreaBuilding",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 6175,
+		"min": 0.0,
+		"max": 529988.0,
+		"sum": 356233864.0,
+		"mean": 1781.1782258911294,
+		"median": 1520.0,
+		"stdev": 2955.3204492102486,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 4465 },
+			{ "value": 960.0, "count": 841 },
+			{ "value": 1200.0, "count": 823 },
+			{ "value": 1152.0, "count": 774 },
+			{ "value": 1008.0, "count": 702 }
+		]
+	},
+	{
+		"column_id": 167,
+		"column_name": "AreaBuildingDefinitionCode",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 191197,
+		"unique": 9,
+		"min": 10.0,
+		"max": 20.0,
+		"sum": 2044083.0,
+		"mean": 10.690978414933289,
+		"median": 10.0,
+		"stdev": 1.908947695005107,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 10.0, "count": 153098 },
+			{ "value": 11.0, "count": 19113 },
+			{ "value": 16.0, "count": 10754 },
+			{ "value": null, "count": 8802 },
+			{ "value": 13.0, "count": 4099 }
+		]
+	},
+	{
+		"column_id": 168,
+		"column_name": "AreaGross",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199846,
+		"unique": 7655,
+		"min": 0.0,
+		"max": 1904878.0,
+		"sum": 409969887.0,
+		"mean": 2051.429035357225,
+		"median": 1726.0,
+		"stdev": 9950.973923839863,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 25458 },
+			{ "value": 1152.0, "count": 519 },
+			{ "value": 1200.0, "count": 511 },
+			{ "value": 1440.0, "count": 499 },
+			{ "value": 1344.0, "count": 464 }
+		]
+	},
+	{
+		"column_id": 169,
+		"column_name": "Area1stFloor",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199862,
+		"unique": 4021,
+		"min": 0.0,
+		"max": 353103.0,
+		"sum": 167244181.0,
+		"mean": 836.7982958241187,
+		"median": 864.0,
+		"stdev": 1649.8338676130547,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 76920 },
+			{ "value": 960.0, "count": 787 },
+			{ "value": 864.0, "count": 711 },
+			{ "value": 720.0, "count": 655 },
+			{ "value": 1008.0, "count": 605 }
+		]
+	},
+	{
+		"column_id": 170,
+		"column_name": "Area2ndFloor",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199869,
+		"unique": 2246,
+		"min": 0.0,
+		"max": 231410.0,
+		"sum": 22942479.0,
+		"mean": 114.78758086546688,
+		"median": 0.0,
+		"stdev": 659.4130937070074,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 176049 },
+			{ "value": 720.0, "count": 189 },
+			{ "value": 672.0, "count": 178 },
+			{ "value": 624.0, "count": 159 },
+			{ "value": 480.0, "count": 145 }
+		]
+	},
+	{
+		"column_id": 171,
+		"column_name": "AreaUpperFloors",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199702,
+		"unique": 1747,
+		"min": 0.0,
+		"max": 24738.0,
+		"sum": 6727876.0,
+		"mean": 33.68957747043094,
+		"median": 0.0,
+		"stdev": 198.3177641188569,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 191471 },
+			{ "value": null, "count": 297 },
+			{ "value": 560.0, "count": 57 },
+			{ "value": 480.0, "count": 55 },
+			{ "value": 672.0, "count": 54 }
+		]
+	},
+	{
+		"column_id": 172,
+		"column_name": "AreaLotAcres",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 20638,
+		"min": 0.0,
+		"max": 750.0,
+		"sum": 107731.0256642,
+		"mean": 0.538657821610108,
+		"median": 0.1721763,
+		"stdev": 4.175316794257442,
+		"maxprecision": 7,
+		"freq": [
+			{ "value": 0.0, "count": 21717 },
+			{ "value": 0.1399908, "count": 2607 },
+			{ "value": 0.1699954, "count": 2516 },
+			{ "value": 0.1199954, "count": 2249 },
+			{ "value": 0.15, "count": 2138 }
+		]
+	},
+	{
+		"column_id": 173,
+		"column_name": "AreaLotSF",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 23462,
+		"min": 0.0,
+		"max": 999999999.0,
+		"sum": 6576077800.95,
+		"mean": 32880.553407517036,
+		"median": 7800.0,
+		"stdev": 2290828.81166996,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": 0.0, "count": 12670 },
+			{ "value": 6098.0, "count": 2630 },
+			{ "value": 7405.0, "count": 2607 },
+			{ "value": 5227.0, "count": 2257 },
+			{ "value": 6534.0, "count": 2150 }
+		]
+	},
+	{
+		"column_id": 174,
+		"column_name": "AreaLotDepth",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2375,
+		"min": 0.0,
+		"max": 19981.0,
+		"sum": 11949229.9,
+		"mean": 59.746448232241164,
+		"median": 0.0,
+		"stdev": 189.83668438276067,
+		"maxprecision": 1,
+		"freq": [
+			{ "value": 0.0, "count": 117578 },
+			{ "value": 100.0, "count": 9297 },
+			{ "value": 125.0, "count": 5520 },
+			{ "value": 120.0, "count": 4547 },
+			{ "value": 150.0, "count": 3324 }
+		]
+	},
+	{
+		"column_id": 175,
+		"column_name": "AreaLotWidth",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199877,
+		"unique": 2001,
+		"min": 0.0,
+		"max": 20000.0,
+		"sum": 7688518.8,
+		"mean": 38.466250744207684,
+		"median": 0.0,
+		"stdev": 270.5948449021018,
+		"maxprecision": 1,
+		"freq": [
+			{ "value": 0.0, "count": 113604 },
+			{ "value": 50.0, "count": 9290 },
+			{ "value": 60.0, "count": 5506 },
+			{ "value": 40.0, "count": 5028 },
+			{ "value": 75.0, "count": 4573 }
+		]
+	},
+	{
+		"column_id": 176,
+		"column_name": "RoomsAtticArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199824,
+		"unique": 1069,
+		"min": 0.0,
+		"max": 12320.0,
+		"sum": 2700508.0,
+		"mean": 13.514432700776684,
+		"median": 0.0,
+		"stdev": 115.59837452529842,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 195305 },
+			{ "value": null, "count": 175 },
+			{ "value": 400.0, "count": 132 },
+			{ "value": 720.0, "count": 81 },
+			{ "value": 420.0, "count": 65 }
+		]
+	},
+	{
+		"column_id": 177,
+		"column_name": "RoomsAtticFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 1328,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 198671 },
+			{ "value": true, "count": 1328 }
+		]
+	},
+	{
+		"column_id": 178,
+		"column_name": "RoomsBasementArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2697,
+		"min": 0.0,
+		"max": 70129.0,
+		"sum": 36515823.0,
+		"mean": 182.5800279001395,
+		"median": 0.0,
+		"stdev": 485.70760240402615,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 161402 },
+			{ "value": 720.0, "count": 448 },
+			{ "value": 864.0, "count": 429 },
+			{ "value": 960.0, "count": 384 },
+			{ "value": 768.0, "count": 334 }
+		]
+	},
+	{
+		"column_id": 179,
+		"column_name": "RoomsBasementAreaFinished",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 14400,
+		"unique": 1910,
+		"min": 0.0,
+		"max": 6353.0,
+		"sum": 10705710.0,
+		"mean": 743.4520833333333,
+		"median": 660.0,
+		"stdev": 455.56498304541805,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 185599 },
+			{ "value": 400.0, "count": 317 },
+			{ "value": 500.0, "count": 296 },
+			{ "value": 600.0, "count": 293 },
+			{ "value": 800.0, "count": 207 }
+		]
+	},
+	{
+		"column_id": 180,
+		"column_name": "RoomsBasementAreaUnfinished",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 6351,
+		"unique": 1727,
+		"min": 0.0,
+		"max": 70129.0,
+		"sum": 5744151.0,
+		"mean": 904.448275862069,
+		"median": 828.0,
+		"stdev": 1223.4558248645753,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 193648 },
+			{ "value": 576.0, "count": 83 },
+			{ "value": 624.0, "count": 66 },
+			{ "value": 768.0, "count": 61 },
+			{ "value": 816.0, "count": 56 }
+		]
+	},
+	{
+		"column_id": 181,
+		"column_name": "ParkingGarage",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 143350,
+		"unique": 21,
+		"min": 0.0,
+		"max": 999.0,
+		"sum": 66520331.0,
+		"mean": 464.04137425880714,
+		"median": 53.0,
+		"stdev": 487.71104007339477,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 999.0, "count": 65045 },
+			{ "value": null, "count": 56649 },
+			{ "value": 11.0, "count": 37709 },
+			{ "value": 12.0, "count": 16105 },
+			{ "value": 30.0, "count": 9235 }
+		]
+	},
+	{
+		"column_id": 182,
+		"column_name": "ParkingGarageArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199889,
+		"unique": 1797,
+		"min": 0.0,
+		"max": 54432.0,
+		"sum": 51307186.0,
+		"mean": 256.67838650451,
+		"median": 240.0,
+		"stdev": 388.0844027260101,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 90818 },
+			{ "value": 400.0, "count": 7660 },
+			{ "value": 420.0, "count": 5082 },
+			{ "value": 440.0, "count": 5039 },
+			{ "value": 462.0, "count": 2779 }
+		]
+	},
+	{
+		"column_id": 183,
+		"column_name": "ParkingCarport",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 189286 },
+			{ "value": true, "count": 10713 }
+		]
+	},
+	{
+		"column_id": 184,
+		"column_name": "ParkingCarportArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 7051,
+		"unique": 737,
+		"min": 1.0,
+		"max": 11450.0,
+		"sum": 2786219.0,
+		"mean": 395.1523188200255,
+		"median": 340.0,
+		"stdev": 396.1707523564006,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 192948 },
+			{ "value": 400.0, "count": 461 },
+			{ "value": 240.0, "count": 355 },
+			{ "value": 200.0, "count": 274 },
+			{ "value": 360.0, "count": 205 }
+		]
+	},
+	{
+		"column_id": 185,
+		"column_name": "HVACCoolingDetail",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 135006,
+		"unique": 16,
+		"min": 101.0,
+		"max": 138.0,
+		"sum": 14317019.0,
+		"mean": 106.0472793801757,
+		"median": 103.0,
+		"stdev": 4.953347194144065,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 103.0, "count": 86891 },
+			{ "value": null, "count": 64993 },
+			{ "value": 112.0, "count": 34735 },
+			{ "value": 109.0, "count": 4432 },
+			{ "value": 123.0, "count": 3172 }
+		]
+	},
+	{
+		"column_id": 186,
+		"column_name": "HVACHeatingDetail",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199907,
+		"unique": 31,
+		"min": 101.0,
+		"max": 244.0,
+		"sum": 28706092.0,
+		"mean": 143.59723271321164,
+		"median": 108.0,
+		"stdev": 55.359333650091116,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 102.0, "count": 59455 },
+			{ "value": 108.0, "count": 55739 },
+			{ "value": 219.0, "count": 48427 },
+			{ "value": 236.0, "count": 14272 },
+			{ "value": 105.0, "count": 6445 }
+		]
+	},
+	{
+		"column_id": 187,
+		"column_name": "HVACHeatingFuel",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 55868,
+		"unique": 14,
+		"min": 0.0,
+		"max": 400.0,
+		"sum": 6106770.0,
+		"mean": 109.30711677525596,
+		"median": 90.0,
+		"stdev": 74.70917576028684,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 144131 },
+			{ "value": 90.0, "count": 30883 },
+			{ "value": 80.0, "count": 17734 },
+			{ "value": 320.0, "count": 5374 },
+			{ "value": 0.0, "count": 1225 }
+		]
+	},
+	{
+		"column_id": 188,
+		"column_name": "UtilitiesSewageUsage",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 42755,
+		"unique": 6,
+		"min": 101.0,
+		"max": 113.0,
+		"sum": 4553548.0,
+		"mean": 106.50328616536078,
+		"median": 102.0,
+		"stdev": 5.1003685986610945,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 157244 },
+			{ "value": 102.0, "count": 20739 },
+			{ "value": 113.0, "count": 14575 },
+			{ "value": 108.0, "count": 4242 },
+			{ "value": 101.0, "count": 1954 }
+		]
+	},
+	{
+		"column_id": 189,
+		"column_name": "UtilitiesWaterSource",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 41634,
+		"unique": 8,
+		"min": 101.0,
+		"max": 110.0,
+		"sum": 4317333.0,
+		"mean": 103.6972906758899,
+		"median": 102.0,
+		"stdev": 2.1049834006595747,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 158365 },
+			{ "value": 102.0, "count": 19794 },
+			{ "value": 105.0, "count": 18165 },
+			{ "value": 110.0, "count": 2157 },
+			{ "value": 101.0, "count": 1433 }
+		]
+	},
+	{
+		"column_id": 190,
+		"column_name": "UtilitiesMobileHomeHookupFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199933 },
+			{ "value": true, "count": 66 }
+		]
+	},
+	{
+		"column_id": 191,
+		"column_name": "Foundation",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 67168,
+		"unique": 19,
+		"min": 100.0,
+		"max": 999.0,
+		"sum": 22289085.0,
+		"mean": 331.84083194378275,
+		"median": 200.0,
+		"stdev": 300.83905080734155,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 132831 },
+			{ "value": 100.0, "count": 18966 },
+			{ "value": 105.0, "count": 13666 },
+			{ "value": 501.0, "count": 10565 },
+			{ "value": 200.0, "count": 7829 }
+		]
+	},
+	{
+		"column_id": 192,
+		"column_name": "Construction",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199864,
+		"unique": 21,
+		"min": 0.0,
+		"max": 99.0,
+		"sum": 1265843.0,
+		"mean": 6.333521794820478,
+		"median": 2.0,
+		"stdev": 10.090538134355686,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 89742 },
+			{ "value": 2.0, "count": 49170 },
+			{ "value": 10.0, "count": 23787 },
+			{ "value": 31.0, "count": 9526 },
+			{ "value": 23.0, "count": 8560 }
+		]
+	},
+	{
+		"column_id": 193,
+		"column_name": "InteriorStructure",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 42546,
+		"unique": 19,
+		"min": 101.0,
+		"max": 999.0,
+		"sum": 10261221.0,
+		"mean": 241.17945282752785,
+		"median": 201.0,
+		"stdev": 143.68438261332682,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 157453 },
+			{ "value": 201.0, "count": 37395 },
+			{ "value": 701.0, "count": 3161 },
+			{ "value": 110.0, "count": 678 },
+			{ "value": 102.0, "count": 315 }
+		]
+	},
+	{
+		"column_id": 194,
+		"column_name": "PlumbingFixturesCount",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199911,
+		"unique": 63,
+		"min": 0.0,
+		"max": 180.0,
+		"sum": 379316.0,
+		"mean": 1.8974243538374578,
+		"median": 0.0,
+		"stdev": 4.0967530365459,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 156437 },
+			{ "value": 8.0, "count": 6976 },
+			{ "value": 5.0, "count": 6540 },
+			{ "value": 6.0, "count": 5679 },
+			{ "value": 10.0, "count": 5100 }
+		]
+	},
+	{
+		"column_id": 195,
+		"column_name": "ConstructionFireResistanceClass",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 624,
+		"unique": 6,
+		"min": 101.0,
+		"max": 105.0,
+		"sum": 64517.0,
+		"mean": 103.3926282051282,
+		"median": 103.0,
+		"stdev": 0.8140086583671041,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199375 },
+			{ "value": 104.0, "count": 284 },
+			{ "value": 103.0, "count": 268 },
+			{ "value": 101.0, "count": 30 },
+			{ "value": 102.0, "count": 21 }
+		]
+	},
+	{
+		"column_id": 196,
+		"column_name": "SafetyFireSprinklersFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 198478 },
+			{ "value": true, "count": 1521 }
+		]
+	},
+	{
+		"column_id": 197,
+		"column_name": "FlooringMaterialPrimary",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 46784,
+		"unique": 28,
+		"min": 1.0,
+		"max": 64.0,
+		"sum": 1004875.0,
+		"mean": 21.479031292749657,
+		"median": 14.0,
+		"stdev": 19.937795999869472,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 153215 },
+			{ "value": 37.0, "count": 13625 },
+			{ "value": 2.0, "count": 12245 },
+			{ "value": 3.0, "count": 8149 },
+			{ "value": 13.0, "count": 1875 }
+		]
+	},
+	{
+		"column_id": 198,
+		"column_name": "BathCount",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 61,
+		"min": 0.0,
+		"max": 512.0,
+		"sum": 389268.25,
+		"mean": 1.9463509817549087,
+		"median": 2.0,
+		"stdev": 2.430782656219112,
+		"maxprecision": 2,
+		"freq": [
+			{ "value": 2.0, "count": 85975 },
+			{ "value": 1.0, "count": 39738 },
+			{ "value": 3.0, "count": 39150 },
+			{ "value": 0.0, "count": 22263 },
+			{ "value": 4.0, "count": 9432 }
+		]
+	},
+	{
+		"column_id": 199,
+		"column_name": "BathPartialCount",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 9,
+		"min": 0.0,
+		"max": 8.0,
+		"sum": 43236.0,
+		"mean": 0.21618108090540453,
+		"median": 0.0,
+		"stdev": 0.4444636648921526,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 159147 },
+			{ "value": 1.0, "count": 38752 },
+			{ "value": 2.0, "count": 1906 },
+			{ "value": 3.0, "count": 138 },
+			{ "value": 4.0, "count": 33 }
+		]
+	},
+	{
+		"column_id": 200,
+		"column_name": "BedroomsCount",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 44,
+		"min": 0.0,
+		"max": 3848.0,
+		"sum": 491424.0,
+		"mean": 2.4571322856614284,
+		"median": 3.0,
+		"stdev": 9.03353514222573,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 3.0, "count": 80329 },
+			{ "value": 0.0, "count": 46189 },
+			{ "value": 4.0, "count": 34188 },
+			{ "value": 2.0, "count": 27087 },
+			{ "value": 5.0, "count": 6699 }
+		]
+	},
+	{
+		"column_id": 201,
+		"column_name": "RoomsCount",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 45,
+		"min": 0.0,
+		"max": 5714.0,
+		"sum": 573404.0,
+		"mean": 2.867034335171676,
+		"median": 0.0,
+		"stdev": 13.920889092723476,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 112722 },
+			{ "value": 6.0, "count": 22270 },
+			{ "value": 5.0, "count": 20337 },
+			{ "value": 7.0, "count": 13972 },
+			{ "value": 8.0, "count": 10205 }
+		]
+	},
+	{
+		"column_id": 202,
+		"column_name": "StoriesCount",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199987,
+		"unique": 42,
+		"min": 0.0,
+		"max": 344.0,
+		"sum": 260694.0,
+		"mean": 1.3035547310575188,
+		"median": 1.0,
+		"stdev": 1.1755901733029013,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 1.0, "count": 109919 },
+			{ "value": 2.0, "count": 66341 },
+			{ "value": 0.0, "count": 18941 },
+			{ "value": 3.0, "count": 4049 },
+			{ "value": 4.0, "count": 325 }
+		]
+	},
+	{
+		"column_id": 203,
+		"column_name": "UnitsCount",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 116,
+		"min": 0.0,
+		"max": 9149.0,
+		"sum": 120001.0,
+		"mean": 0.6000080000400002,
+		"median": 0.0,
+		"stdev": 41.00133081122147,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 157575 },
+			{ "value": 1.0, "count": 37264 },
+			{ "value": 2.0, "count": 3305 },
+			{ "value": 3.0, "count": 796 },
+			{ "value": 4.0, "count": 497 }
+		]
+	},
+	{
+		"column_id": 204,
+		"column_name": "RoomsBonusRoomFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199706 },
+			{ "value": true, "count": 293 }
+		]
+	},
+	{
+		"column_id": 205,
+		"column_name": "RoomsBreakfastNookFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199998 },
+			{ "value": true, "count": 1 }
+		]
+	},
+	{
+		"column_id": 206,
+		"column_name": "RoomsCellarFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199990 },
+			{ "value": true, "count": 9 }
+		]
+	},
+	{
+		"column_id": 207,
+		"column_name": "RoomsCellarWineFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199996 },
+			{ "value": true, "count": 3 }
+		]
+	},
+	{
+		"column_id": 208,
+		"column_name": "RoomsExerciseFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199991 },
+			{ "value": true, "count": 8 }
+		]
+	},
+	{
+		"column_id": 209,
+		"column_name": "RoomsFamilyCode",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 189426 },
+			{ "value": true, "count": 10573 }
+		]
+	},
+	{
+		"column_id": 210,
+		"column_name": "RoomsGameFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 195939 },
+			{ "value": true, "count": 4060 }
+		]
+	},
+	{
+		"column_id": 211,
+		"column_name": "RoomsGreatFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199987 },
+			{ "value": true, "count": 12 }
+		]
+	},
+	{
+		"column_id": 212,
+		"column_name": "RoomsHobbyFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 1,
+		"freq": [{ "value": false, "count": 199999 }]
+	},
+	{
+		"column_id": 213,
+		"column_name": "RoomsLaundryFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 198264 },
+			{ "value": true, "count": 1735 }
+		]
+	},
+	{
+		"column_id": 214,
+		"column_name": "RoomsMediaFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199998 },
+			{ "value": true, "count": 1 }
+		]
+	},
+	{
+		"column_id": 215,
+		"column_name": "RoomsMudFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 1,
+		"freq": [{ "value": false, "count": 199999 }]
+	},
+	{
+		"column_id": 216,
+		"column_name": "RoomsOfficeArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 91,
+		"unique": 90,
+		"min": 140.0,
+		"max": 190120.0,
+		"sum": 525388.0,
+		"mean": 5773.494505494506,
+		"median": 1936.0,
+		"stdev": 20309.682664173113,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199908 },
+			{ "value": 1680.0, "count": 2 },
+			{ "value": 1280.0, "count": 2 },
+			{ "value": 2553.0, "count": 1 },
+			{ "value": 28049.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 217,
+		"column_name": "RoomsOfficeFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199908 },
+			{ "value": true, "count": 91 }
+		]
+	},
+	{
+		"column_id": 218,
+		"column_name": "RoomsSafeRoomFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199989 },
+			{ "value": true, "count": 10 }
+		]
+	},
+	{
+		"column_id": 219,
+		"column_name": "RoomsSittingFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 1,
+		"freq": [{ "value": false, "count": 199999 }]
+	},
+	{
+		"column_id": 220,
+		"column_name": "RoomsStormShelter",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199830 },
+			{ "value": true, "count": 169 }
+		]
+	},
+	{
+		"column_id": 221,
+		"column_name": "RoomsStudyFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199988 },
+			{ "value": true, "count": 11 }
+		]
+	},
+	{
+		"column_id": 222,
+		"column_name": "RoomsSunroomFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199879 },
+			{ "value": true, "count": 120 }
+		]
+	},
+	{
+		"column_id": 223,
+		"column_name": "RoomsUtilityArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 2602,
+		"unique": 245,
+		"min": 1.0,
+		"max": 4227.0,
+		"sum": 241666.0,
+		"mean": 92.87701767870868,
+		"median": 66.0,
+		"stdev": 135.9672239346288,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 197397 },
+			{ "value": 40.0, "count": 103 },
+			{ "value": 80.0, "count": 99 },
+			{ "value": 48.0, "count": 95 },
+			{ "value": 32.0, "count": 95 }
+		]
+	},
+	{
+		"column_id": 224,
+		"column_name": "RoomsUtilityCode",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 197397 },
+			{ "value": true, "count": 2602 }
+		]
+	},
+	{
+		"column_id": 225,
+		"column_name": "Fireplace",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 83840,
+		"unique": 10,
+		"min": 1.0,
+		"max": 18.0,
+		"sum": 90955.0,
+		"mean": 1.0848640267175573,
+		"median": 1.0,
+		"stdev": 0.9532118582169499,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 116159 },
+			{ "value": 1.0, "count": 82693 },
+			{ "value": 2.0, "count": 513 },
+			{ "value": 13.0, "count": 382 },
+			{ "value": 7.0, "count": 149 }
+		]
+	},
+	{
+		"column_id": 226,
+		"column_name": "FireplaceCount",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199772,
+		"unique": 11,
+		"min": 0.0,
+		"max": 9.0,
+		"sum": 78078.0,
+		"mean": 0.39083555252988406,
+		"median": 0.0,
+		"stdev": 0.5850672152179596,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 130277 },
+			{ "value": 1.0, "count": 62154 },
+			{ "value": 2.0, "count": 6456 },
+			{ "value": 3.0, "count": 653 },
+			{ "value": null, "count": 227 }
+		]
+	},
+	{
+		"column_id": 227,
+		"column_name": "AccessabilityElevatorFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 2578,
+		"unique": 3,
+		"freq": [
+			{ "value": null, "count": 197421 },
+			{ "value": true, "count": 2272 },
+			{ "value": false, "count": 306 }
+		]
+	},
+	{
+		"column_id": 228,
+		"column_name": "AccessabilityHandicapFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199996 },
+			{ "value": true, "count": 3 }
+		]
+	},
+	{
+		"column_id": 229,
+		"column_name": "EscalatorFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199996 },
+			{ "value": true, "count": 3 }
+		]
+	},
+	{
+		"column_id": 230,
+		"column_name": "CentralVacuumFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 430,
+		"unique": 3,
+		"freq": [
+			{ "value": null, "count": 199569 },
+			{ "value": false, "count": 304 },
+			{ "value": true, "count": 126 }
+		]
+	},
+	{
+		"column_id": 231,
+		"column_name": "ContentIntercomFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 512,
+		"unique": 3,
+		"freq": [
+			{ "value": null, "count": 199487 },
+			{ "value": false, "count": 304 },
+			{ "value": true, "count": 208 }
+		]
+	},
+	{
+		"column_id": 232,
+		"column_name": "ContentSoundSystemFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199998 },
+			{ "value": true, "count": 1 }
+		]
+	},
+	{
+		"column_id": 233,
+		"column_name": "WetBarFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199413 },
+			{ "value": true, "count": 586 }
+		]
+	},
+	{
+		"column_id": 234,
+		"column_name": "SecurityAlarmFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 362,
+		"unique": 3,
+		"freq": [
+			{ "value": null, "count": 199637 },
+			{ "value": false, "count": 304 },
+			{ "value": true, "count": 58 }
+		]
+	},
+	{
+		"column_id": 235,
+		"column_name": "StructureStyle",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 92184,
+		"unique": 61,
+		"min": 1.0,
+		"max": 152.0,
+		"sum": 1897890.0,
+		"mean": 20.58806300442593,
+		"median": 12.0,
+		"stdev": 26.754611146189895,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 107815 },
+			{ "value": 11.0, "count": 19580 },
+			{ "value": 12.0, "count": 18693 },
+			{ "value": 1.0, "count": 11913 },
+			{ "value": 17.0, "count": 6726 }
+		]
+	},
+	{
+		"column_id": 236,
+		"column_name": "Exterior1Code",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199955,
+		"unique": 67,
+		"len": 3.0,
+		"freq": [
+			{ "value": "0A", "count": 54706 },
+			{ "value": "91A", "count": 25039 },
+			{ "value": "1L", "count": 23629 },
+			{ "value": "3B", "count": 15781 },
+			{ "value": "7Q", "count": 15266 }
+		]
+	},
+	{
+		"column_id": 237,
+		"column_name": "RoofMaterial",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 107011,
+		"unique": 27,
+		"min": 102.0,
+		"max": 372.0,
+		"sum": 12060631.0,
+		"mean": 112.70459111680108,
+		"median": 105.0,
+		"stdev": 22.737015770025398,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 92988 },
+			{ "value": 105.0, "count": 55710 },
+			{ "value": 109.0, "count": 23993 },
+			{ "value": 158.0, "count": 8833 },
+			{ "value": 104.0, "count": 7326 }
+		]
+	},
+	{
+		"column_id": 238,
+		"column_name": "RoofConstruction",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 68479,
+		"unique": 16,
+		"min": 197.0,
+		"max": 346.0,
+		"sum": 17483826.0,
+		"mean": 255.31660801121512,
+		"median": 253.0,
+		"stdev": 16.073879047377854,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 131520 },
+			{ "value": 251.0, "count": 30866 },
+			{ "value": 253.0, "count": 21268 },
+			{ "value": 258.0, "count": 9503 },
+			{ "value": 283.0, "count": 1840 }
+		]
+	},
+	{
+		"column_id": 239,
+		"column_name": "ContentStormShutterFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199996 },
+			{ "value": true, "count": 3 }
+		]
+	},
+	{
+		"column_id": 240,
+		"column_name": "ContentOverheadDoorFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199989 },
+			{ "value": true, "count": 10 }
+		]
+	},
+	{
+		"column_id": 241,
+		"column_name": "ViewDescription",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 199868,
+		"unique": 18,
+		"len": 3.0,
+		"freq": [
+			{ "value": "0", "count": 195222 },
+			{ "value": "VAV", "count": 1851 },
+			{ "value": "V01", "count": 1288 },
+			{ "value": "VWR", "count": 536 },
+			{ "value": "VGC", "count": 219 }
+		]
+	},
+	{
+		"column_id": 242,
+		"column_name": "PorchCode",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 66882,
+		"unique": 8,
+		"len": 3.0,
+		"freq": [
+			{ "value": null, "count": 133117 },
+			{ "value": "PO0", "count": 34183 },
+			{ "value": "P00", "count": 17334 },
+			{ "value": "PC0", "count": 6663 },
+			{ "value": "PE0", "count": 6177 }
+		]
+	},
+	{
+		"column_id": 243,
+		"column_name": "PorchArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199870,
+		"unique": 1557,
+		"min": 0.0,
+		"max": 19743.0,
+		"sum": 17779801.0,
+		"mean": 88.95682693750938,
+		"median": 0.0,
+		"stdev": 191.90908347545218,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 108281 },
+			{ "value": 24.0, "count": 2289 },
+			{ "value": 40.0, "count": 1582 },
+			{ "value": 20.0, "count": 1488 },
+			{ "value": 60.0, "count": 1355 }
+		]
+	},
+	{
+		"column_id": 244,
+		"column_name": "PatioArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199720,
+		"unique": 1852,
+		"min": 0.0,
+		"max": 67200.0,
+		"sum": 17464137.0,
+		"mean": 87.44310534748648,
+		"median": 0.0,
+		"stdev": 390.4539694409504,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 141100 },
+			{ "value": 120.0, "count": 2942 },
+			{ "value": 100.0, "count": 1815 },
+			{ "value": 144.0, "count": 1544 },
+			{ "value": 200.0, "count": 1227 }
+		]
+	},
+	{
+		"column_id": 245,
+		"column_name": "DeckFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 172427 },
+			{ "value": true, "count": 27572 }
+		]
+	},
+	{
+		"column_id": 246,
+		"column_name": "DeckArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199792,
+		"unique": 1254,
+		"min": 0.0,
+		"max": 10728.0,
+		"sum": 7496926.0,
+		"mean": 37.523654600784816,
+		"median": 0.0,
+		"stdev": 130.05746071089982,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 169555 },
+			{ "value": 120.0, "count": 1960 },
+			{ "value": 144.0, "count": 1139 },
+			{ "value": 192.0, "count": 962 },
+			{ "value": 100.0, "count": 819 }
+		]
+	},
+	{
+		"column_id": 247,
+		"column_name": "FeatureBalconyFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 1924,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 198075 },
+			{ "value": true, "count": 1924 }
+		]
+	},
+	{
+		"column_id": 248,
+		"column_name": "BalconyArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 1924,
+		"unique": 346,
+		"min": 2.0,
+		"max": 3474.0,
+		"sum": 231102.0,
+		"mean": 120.11538461538461,
+		"median": 67.0,
+		"stdev": 169.843420571715,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 198075 },
+			{ "value": 40.0, "count": 68 },
+			{ "value": 16.0, "count": 50 },
+			{ "value": 24.0, "count": 50 },
+			{ "value": 12.0, "count": 43 }
+		]
+	},
+	{
+		"column_id": 249,
+		"column_name": "BreezewayFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 374,
+		"unique": 3,
+		"freq": [
+			{ "value": null, "count": 199625 },
+			{ "value": false, "count": 304 },
+			{ "value": true, "count": 70 }
+		]
+	},
+	{
+		"column_id": 250,
+		"column_name": "ParkingRVParkingFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199997 },
+			{ "value": true, "count": 2 }
+		]
+	},
+	{
+		"column_id": 251,
+		"column_name": "ParkingSpaceCount",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 45,
+		"min": 0.0,
+		"max": 480.0,
+		"sum": 204515.0,
+		"mean": 1.0225801129005645,
+		"median": 1.0,
+		"stdev": 1.7991032512826475,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 92202 },
+			{ "value": 2.0, "count": 67153 },
+			{ "value": 1.0, "count": 30568 },
+			{ "value": 3.0, "count": 6037 },
+			{ "value": 4.0, "count": 2536 }
+		]
+	},
+	{
+		"column_id": 252,
+		"column_name": "DrivewayArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199699,
+		"unique": 855,
+		"min": 0.0,
+		"max": 58050.0,
+		"sum": 2730604.0,
+		"mean": 13.673598766143046,
+		"median": 0.0,
+		"stdev": 214.33258588746466,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 195117 },
+			{ "value": 2.0, "count": 534 },
+			{ "value": 1.0, "count": 332 },
+			{ "value": null, "count": 300 },
+			{ "value": 3.0, "count": 166 }
+		]
+	},
+	{
+		"column_id": 253,
+		"column_name": "DrivewayMaterial",
+		"type": "Text",
+		"nulls": true,
+		"nonnulls": 0,
+		"unique": 1,
+		"freq": [{ "value": null, "count": 199999 }]
+	},
+	{
+		"column_id": 254,
+		"column_name": "Pool",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199565,
+		"unique": 17,
+		"min": 0.0,
+		"max": 999.0,
+		"sum": 17747609.0,
+		"mean": 88.93147094931476,
+		"median": 0.0,
+		"stdev": 277.8781207814015,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 179419 },
+			{ "value": 999.0, "count": 15780 },
+			{ "value": 502.0, "count": 1943 },
+			{ "value": 904.0, "count": 872 },
+			{ "value": 121.0, "count": 469 }
+		]
+	},
+	{
+		"column_id": 255,
+		"column_name": "PoolArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199702,
+		"unique": 975,
+		"min": 0.0,
+		"max": 30000.0,
+		"sum": 5049162.0,
+		"mean": 25.28348238875925,
+		"median": 0.0,
+		"stdev": 267.3027190268662,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 189859 },
+			{ "value": 450.0, "count": 857 },
+			{ "value": 1.0, "count": 784 },
+			{ "value": 512.0, "count": 701 },
+			{ "value": 648.0, "count": 395 }
+		]
+	},
+	{
+		"column_id": 256,
+		"column_name": "ContentSaunaFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 371,
+		"unique": 3,
+		"freq": [
+			{ "value": null, "count": 199628 },
+			{ "value": false, "count": 304 },
+			{ "value": true, "count": 67 }
+		]
+	},
+	{
+		"column_id": 257,
+		"column_name": "TopographyCode",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 40606,
+		"unique": 17,
+		"min": 101.0,
+		"max": 126.0,
+		"sum": 4185863.0,
+		"mean": 103.0848396788652,
+		"median": 102.0,
+		"stdev": 3.460405366782634,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 159393 },
+			{ "value": 102.0, "count": 32265 },
+			{ "value": 103.0, "count": 4167 },
+			{ "value": 109.0, "count": 1062 },
+			{ "value": 117.0, "count": 987 }
+		]
+	},
+	{
+		"column_id": 258,
+		"column_name": "FenceCode",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 23535,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 176464 },
+			{ "value": false, "count": 23535 }
+		]
+	},
+	{
+		"column_id": 259,
+		"column_name": "FenceArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 199694,
+		"unique": 35,
+		"min": 0.0,
+		"max": 4200.0,
+		"sum": 62347.0,
+		"mean": 0.31221268540867525,
+		"median": 0.0,
+		"stdev": 25.193425833757885,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 0.0, "count": 199652 },
+			{ "value": null, "count": 305 },
+			{ "value": 1200.0, "count": 4 },
+			{ "value": 1500.0, "count": 4 },
+			{ "value": 180.0, "count": 2 }
+		]
+	},
+	{
+		"column_id": 260,
+		"column_name": "CourtyardFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199974 },
+			{ "value": true, "count": 25 }
+		]
+	},
+	{
+		"column_id": 261,
+		"column_name": "CourtyardArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 25,
+		"unique": 24,
+		"min": 19.0,
+		"max": 1340.0,
+		"sum": 6159.0,
+		"mean": 246.36,
+		"median": 150.0,
+		"stdev": 279.9856960632096,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199974 },
+			{ "value": 150.0, "count": 2 },
+			{ "value": 250.0, "count": 2 },
+			{ "value": 50.0, "count": 1 },
+			{ "value": 98.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 262,
+		"column_name": "ArborPergolaFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199949 },
+			{ "value": true, "count": 50 }
+		]
+	},
+	{
+		"column_id": 263,
+		"column_name": "SprinklersFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 6956,
+		"unique": 3,
+		"freq": [
+			{ "value": null, "count": 193043 },
+			{ "value": true, "count": 6652 },
+			{ "value": false, "count": 304 }
+		]
+	},
+	{
+		"column_id": 264,
+		"column_name": "GolfCourseGreenFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199910 },
+			{ "value": true, "count": 89 }
+		]
+	},
+	{
+		"column_id": 265,
+		"column_name": "TennisCourtFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199941 },
+			{ "value": true, "count": 58 }
+		]
+	},
+	{
+		"column_id": 266,
+		"column_name": "SportsCourtFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199985 },
+			{ "value": true, "count": 14 }
+		]
+	},
+	{
+		"column_id": 267,
+		"column_name": "ArenaFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 1,
+		"freq": [{ "value": false, "count": 199999 }]
+	},
+	{
+		"column_id": 268,
+		"column_name": "WaterFeatureFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199906 },
+			{ "value": true, "count": 93 }
+		]
+	},
+	{
+		"column_id": 269,
+		"column_name": "PondFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 1,
+		"freq": [{ "value": false, "count": 199999 }]
+	},
+	{
+		"column_id": 270,
+		"column_name": "BoatLiftFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199706 },
+			{ "value": true, "count": 293 }
+		]
+	},
+	{
+		"column_id": 271,
+		"column_name": "BuildingsCount",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 20704,
+		"unique": 20,
+		"min": 1.0,
+		"max": 32.0,
+		"sum": 23343.0,
+		"mean": 1.1274632921174652,
+		"median": 1.0,
+		"stdev": 0.6289104829013142,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 179295 },
+			{ "value": 1.0, "count": 18710 },
+			{ "value": 2.0, "count": 1719 },
+			{ "value": 3.0, "count": 170 },
+			{ "value": 4.0, "count": 52 }
+		]
+	},
+	{
+		"column_id": 272,
+		"column_name": "BathHouseArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 43,
+		"unique": 31,
+		"min": 0.0,
+		"max": 1803.0,
+		"sum": 13616.0,
+		"mean": 316.6511627906977,
+		"median": 224.0,
+		"stdev": 357.2714643304251,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199956 },
+			{ "value": 0.0, "count": 6 },
+			{ "value": 100.0, "count": 3 },
+			{ "value": 144.0, "count": 3 },
+			{ "value": 320.0, "count": 2 }
+		]
+	},
+	{
+		"column_id": 273,
+		"column_name": "BathHouseFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199952 },
+			{ "value": true, "count": 47 }
+		]
+	},
+	{
+		"column_id": 274,
+		"column_name": "BoatAccessFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199140 },
+			{ "value": true, "count": 859 }
+		]
+	},
+	{
+		"column_id": 275,
+		"column_name": "BoatHouseArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 55,
+		"unique": 40,
+		"min": 0.0,
+		"max": 1425.0,
+		"sum": 19562.0,
+		"mean": 355.6727272727273,
+		"median": 340.0,
+		"stdev": 280.8993529089137,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199944 },
+			{ "value": 0.0, "count": 7 },
+			{ "value": 1.0, "count": 4 },
+			{ "value": 576.0, "count": 2 },
+			{ "value": 528.0, "count": 2 }
+		]
+	},
+	{
+		"column_id": 276,
+		"column_name": "BoatHouseFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199940 },
+			{ "value": true, "count": 59 }
+		]
+	},
+	{
+		"column_id": 277,
+		"column_name": "CabinArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 15,
+		"unique": 13,
+		"min": 0.0,
+		"max": 1684.0,
+		"sum": 5428.0,
+		"mean": 361.8666666666667,
+		"median": 160.0,
+		"stdev": 468.04790149645805,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199984 },
+			{ "value": 0.0, "count": 4 },
+			{ "value": 160.0, "count": 1 },
+			{ "value": 864.0, "count": 1 },
+			{ "value": 1684.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 278,
+		"column_name": "CabinFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199982 },
+			{ "value": true, "count": 17 }
+		]
+	},
+	{
+		"column_id": 279,
+		"column_name": "CanopyArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 1526,
+		"unique": 373,
+		"min": 1.0,
+		"max": 12508.0,
+		"sum": 428406.0,
+		"mean": 280.737876802097,
+		"median": 186.5,
+		"stdev": 513.3222342392809,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 198473 },
+			{ "value": 240.0, "count": 53 },
+			{ "value": 120.0, "count": 49 },
+			{ "value": 200.0, "count": 43 },
+			{ "value": 160.0, "count": 42 }
+		]
+	},
+	{
+		"column_id": 280,
+		"column_name": "CanopyFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 1526,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 198473 },
+			{ "value": true, "count": 1526 }
+		]
+	},
+	{
+		"column_id": 281,
+		"column_name": "GazeboArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 389,
+		"unique": 136,
+		"min": 0.0,
+		"max": 2200.0,
+		"sum": 63577.0,
+		"mean": 163.43701799485862,
+		"median": 121.0,
+		"stdev": 188.7902869338602,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199610 },
+			{ "value": 0.0, "count": 58 },
+			{ "value": 144.0, "count": 25 },
+			{ "value": 100.0, "count": 23 },
+			{ "value": 120.0, "count": 20 }
+		]
+	},
+	{
+		"column_id": 282,
+		"column_name": "GazeboFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 694,
+		"unique": 3,
+		"freq": [
+			{ "value": null, "count": 199305 },
+			{ "value": true, "count": 390 },
+			{ "value": false, "count": 304 }
+		]
+	},
+	{
+		"column_id": 283,
+		"column_name": "GraineryArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 5,
+		"unique": 6,
+		"min": 0.0,
+		"max": 168.0,
+		"sum": 541.0,
+		"mean": 108.2,
+		"median": 113.0,
+		"stdev": 67.18779651097363,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199994 },
+			{ "value": 168.0, "count": 1 },
+			{ "value": 100.0, "count": 1 },
+			{ "value": 0.0, "count": 1 },
+			{ "value": 113.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 284,
+		"column_name": "GraineryFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 310,
+		"unique": 3,
+		"freq": [
+			{ "value": null, "count": 199689 },
+			{ "value": false, "count": 303 },
+			{ "value": true, "count": 7 }
+		]
+	},
+	{
+		"column_id": 285,
+		"column_name": "GreenHouseArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 242,
+		"unique": 94,
+		"min": 0.0,
+		"max": 6400.0,
+		"sum": 70255.0,
+		"mean": 290.3099173553719,
+		"median": 189.0,
+		"stdev": 507.04737089622427,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199757 },
+			{ "value": 0.0, "count": 73 },
+			{ "value": 528.0, "count": 9 },
+			{ "value": 189.0, "count": 7 },
+			{ "value": 210.0, "count": 6 }
+		]
+	},
+	{
+		"column_id": 286,
+		"column_name": "GreenHouseFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199742 },
+			{ "value": true, "count": 257 }
+		]
+	},
+	{
+		"column_id": 287,
+		"column_name": "GuestHouseArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 24,
+		"unique": 21,
+		"min": 0.0,
+		"max": 1293.0,
+		"sum": 16589.0,
+		"mean": 691.2083333333334,
+		"median": 720.0,
+		"stdev": 324.0037545631447,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199975 },
+			{ "value": 720.0, "count": 4 },
+			{ "value": 576.0, "count": 2 },
+			{ "value": 432.0, "count": 1 },
+			{ "value": 1000.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 288,
+		"column_name": "GuestHouseFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199975 },
+			{ "value": true, "count": 24 }
+		]
+	},
+	{
+		"column_id": 289,
+		"column_name": "KennelArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 19,
+		"unique": 9,
+		"min": 0.0,
+		"max": 3000.0,
+		"sum": 6177.0,
+		"mean": 325.10526315789474,
+		"median": 0.0,
+		"stdev": 755.4999003409628,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199980 },
+			{ "value": 0.0, "count": 12 },
+			{ "value": 1.0, "count": 1 },
+			{ "value": 1450.0, "count": 1 },
+			{ "value": 3000.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 290,
+		"column_name": "KennelFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199980 },
+			{ "value": true, "count": 19 }
+		]
+	},
+	{
+		"column_id": 291,
+		"column_name": "LeanToArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 342,
+		"unique": 114,
+		"min": 0.0,
+		"max": 1392.0,
+		"sum": 81970.0,
+		"mean": 239.6783625730994,
+		"median": 175.5,
+		"stdev": 231.17093636060488,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199657 },
+			{ "value": 0.0, "count": 42 },
+			{ "value": 160.0, "count": 16 },
+			{ "value": 240.0, "count": 13 },
+			{ "value": 120.0, "count": 12 }
+		]
+	},
+	{
+		"column_id": 292,
+		"column_name": "LeanToFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 673,
+		"unique": 3,
+		"freq": [
+			{ "value": null, "count": 199326 },
+			{ "value": true, "count": 370 },
+			{ "value": false, "count": 303 }
+		]
+	},
+	{
+		"column_id": 293,
+		"column_name": "LoadingPlatformArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 178,
+		"unique": 85,
+		"min": 0.0,
+		"max": 17265.0,
+		"sum": 56813.0,
+		"mean": 319.1741573033708,
+		"median": 105.0,
+		"stdev": 1376.179156648141,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199821 },
+			{ "value": 1.0, "count": 62 },
+			{ "value": 0.0, "count": 8 },
+			{ "value": 80.0, "count": 5 },
+			{ "value": 105.0, "count": 4 }
+		]
+	},
+	{
+		"column_id": 294,
+		"column_name": "LoadingPlatformFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199821 },
+			{ "value": true, "count": 178 }
+		]
+	},
+	{
+		"column_id": 295,
+		"column_name": "MilkHouseArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 2,
+		"unique": 3,
+		"min": 187.0,
+		"max": 3456.0,
+		"sum": 3643.0,
+		"mean": 1821.5,
+		"median": 1821.5,
+		"stdev": 2311.532067698824,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199997 },
+			{ "value": 187.0, "count": 1 },
+			{ "value": 3456.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 296,
+		"column_name": "MilkHouseFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199996 },
+			{ "value": true, "count": 3 }
+		]
+	},
+	{
+		"column_id": 297,
+		"column_name": "OutdoorKitchenFireplaceFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 198273 },
+			{ "value": true, "count": 1726 }
+		]
+	},
+	{
+		"column_id": 298,
+		"column_name": "PoolHouseArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 101,
+		"unique": 62,
+		"min": 0.0,
+		"max": 1104.0,
+		"sum": 28270.0,
+		"mean": 279.9009900990099,
+		"median": 242.0,
+		"stdev": 247.34249553808965,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199898 },
+			{ "value": 0.0, "count": 22 },
+			{ "value": 200.0, "count": 4 },
+			{ "value": 300.0, "count": 4 },
+			{ "value": 100.0, "count": 3 }
+		]
+	},
+	{
+		"column_id": 299,
+		"column_name": "PoolHouseFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199893 },
+			{ "value": true, "count": 106 }
+		]
+	},
+	{
+		"column_id": 300,
+		"column_name": "PoultryHouseArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 123,
+		"unique": 49,
+		"min": 0.0,
+		"max": 21500.0,
+		"sum": 77566.0,
+		"mean": 630.6178861788618,
+		"median": 35.0,
+		"stdev": 3073.5330221160984,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199876 },
+			{ "value": 0.0, "count": 38 },
+			{ "value": 40.0, "count": 7 },
+			{ "value": 48.0, "count": 6 },
+			{ "value": 28.0, "count": 6 }
+		]
+	},
+	{
+		"column_id": 301,
+		"column_name": "PoultryHouseFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199874 },
+			{ "value": true, "count": 125 }
+		]
+	},
+	{
+		"column_id": 302,
+		"column_name": "QuonsetArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 13,
+		"unique": 11,
+		"min": 0.0,
+		"max": 4000.0,
+		"sum": 18006.0,
+		"mean": 1385.076923076923,
+		"median": 936.0,
+		"stdev": 1404.6400761724492,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199986 },
+			{ "value": 0.0, "count": 4 },
+			{ "value": 936.0, "count": 1 },
+			{ "value": 2100.0, "count": 1 },
+			{ "value": 3300.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 303,
+		"column_name": "QuonsetFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199986 },
+			{ "value": true, "count": 13 }
+		]
+	},
+	{
+		"column_id": 304,
+		"column_name": "ShedArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 8423,
+		"unique": 336,
+		"min": 0.0,
+		"max": 67200.0,
+		"sum": 1150511.0,
+		"mean": 136.59159444378489,
+		"median": 96.0,
+		"stdev": 796.0856305489843,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 191576 },
+			{ "value": 0.0, "count": 1858 },
+			{ "value": 80.0, "count": 761 },
+			{ "value": 120.0, "count": 728 },
+			{ "value": 100.0, "count": 404 }
+		]
+	},
+	{
+		"column_id": 305,
+		"column_name": "ShedCode",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 191081 },
+			{ "value": true, "count": 8918 }
+		]
+	},
+	{
+		"column_id": 306,
+		"column_name": "SiloArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 5,
+		"unique": 4,
+		"min": 0.0,
+		"max": 1507.0,
+		"sum": 1585.0,
+		"mean": 317.0,
+		"median": 0.0,
+		"stdev": 666.0870813940171,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199994 },
+			{ "value": 0.0, "count": 3 },
+			{ "value": 78.0, "count": 1 },
+			{ "value": 1507.0, "count": 1 }
+		]
+	},
+	{
+		"column_id": 307,
+		"column_name": "SiloFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199994 },
+			{ "value": true, "count": 5 }
+		]
+	},
+	{
+		"column_id": 308,
+		"column_name": "StableArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 57,
+		"unique": 43,
+		"min": 0.0,
+		"max": 10800.0,
+		"sum": 78259.0,
+		"mean": 1372.9649122807018,
+		"median": 864.0,
+		"stdev": 1722.7940238887722,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199942 },
+			{ "value": 0.0, "count": 7 },
+			{ "value": 1.0, "count": 3 },
+			{ "value": 864.0, "count": 3 },
+			{ "value": 1764.0, "count": 2 }
+		]
+	},
+	{
+		"column_id": 309,
+		"column_name": "StableFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199942 },
+			{ "value": true, "count": 57 }
+		]
+	},
+	{
+		"column_id": 310,
+		"column_name": "StorageBuildingArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 3682,
+		"unique": 306,
+		"min": 0.0,
+		"max": 10800.0,
+		"sum": 598949.0,
+		"mean": 162.66947311243888,
+		"median": 108.0,
+		"stdev": 303.4286024786841,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 196317 },
+			{ "value": 120.0, "count": 304 },
+			{ "value": 80.0, "count": 204 },
+			{ "value": 192.0, "count": 167 },
+			{ "value": 0.0, "count": 137 }
+		]
+	},
+	{
+		"column_id": 311,
+		"column_name": "StorageBuildingFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 196311 },
+			{ "value": true, "count": 3688 }
+		]
+	},
+	{
+		"column_id": 312,
+		"column_name": "UtilityBuildingArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 9546,
+		"unique": 413,
+		"min": 0.0,
+		"max": 7742.0,
+		"sum": 1088487.0,
+		"mean": 114.02545568824638,
+		"median": 0.0,
+		"stdev": 362.75636953319787,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 190453 },
+			{ "value": 0.0, "count": 5175 },
+			{ "value": 120.0, "count": 387 },
+			{ "value": 80.0, "count": 363 },
+			{ "value": 192.0, "count": 181 }
+		]
+	},
+	{
+		"column_id": 313,
+		"column_name": "UtilityBuildingFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 4371,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 195628 },
+			{ "value": true, "count": 4371 }
+		]
+	},
+	{
+		"column_id": 314,
+		"column_name": "PoleStructureArea",
+		"type": "Number",
+		"nulls": true,
+		"nonnulls": 373,
+		"unique": 132,
+		"min": 0.0,
+		"max": 6000.0,
+		"sum": 293712.0,
+		"mean": 787.4316353887399,
+		"median": 576.0,
+		"stdev": 885.6321651833026,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": null, "count": 199626 },
+			{ "value": 0.0, "count": 90 },
+			{ "value": 1200.0, "count": 19 },
+			{ "value": 720.0, "count": 13 },
+			{ "value": 576.0, "count": 13 }
+		]
+	},
+	{
+		"column_id": 315,
+		"column_name": "PoleStructureFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 2,
+		"freq": [
+			{ "value": false, "count": 199573 },
+			{ "value": true, "count": 426 }
+		]
+	},
+	{
+		"column_id": 316,
+		"column_name": "CommunityRecRoomFlag",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 508,
+		"unique": 2,
+		"freq": [
+			{ "value": null, "count": 199491 },
+			{ "value": true, "count": 508 }
+		]
+	},
+	{
+		"column_id": 317,
+		"column_name": "PublicationDate",
+		"type": "Date",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 1,
+		"min": "2025-03-21",
+		"max": "2025-03-21",
+		"freq": [{ "value": "2025-03-21", "count": 199999 }]
+	},
+	{
+		"column_id": 318,
+		"column_name": "ParcelShellRecord",
+		"type": "Boolean",
+		"nulls": true,
+		"nonnulls": 199999,
+		"unique": 1,
+		"freq": [{ "value": false, "count": 199999 }]
+	}
+]

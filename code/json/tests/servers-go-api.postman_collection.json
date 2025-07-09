@@ -1,0 +1,1775 @@
+{
+	"info": {
+		"_postman_id": "80a3055f-b9c1-4ef2-bc36-da8d5c69c038",
+		"name": "Testing - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42796619",
+		"_collection_link": "https://abodemine.postman.co/workspace/AbodeMine~6458a2c4-817e-4998-8dcb-571be98a5ee8/collection/42796619-80a3055f-b9c1-4ef2-bc36-da8d5c69c038?action=share&source=collection_link&creator=42796619"
+	},
+	"item": [
+		{
+			"name": "v3",
+			"item": [
+				{
+					"name": "listings",
+					"item": [
+						{
+							"name": "valid GeoFilter",
+							"item": [
+								{
+									"name": "All Filter Params",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});",
+													"",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"limit\": 10,\n    \"page\": 1,\n    \"statuses\": [\n        \"Active\",\n        \"Pending\",\n        \"Sold\"\n    ],\n    \"minBeds\": 1,\n    \"maxBeds\": 4,\n    \"minBaths\": 2,\n    \"maxBaths\": 3,\n    \"minPrice\": 300000,\n    \"maxPrice\": 800000,\n    \"minSqFt\": 150,\n    \"maxSqFt\": 3000\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "MinMax - MinBeds 1",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"minBeds\": 1    \n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "MinMax - MaxBeds",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"maxBeds\": 4\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "MinMax - MinBaths 1",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"minBaths\": 1\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "MinMax - MaxBaths",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"maxBaths\": 20.0\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "MinMax - MinPrice 1K",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"minPrice\": 1000\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "MinMax - MaxPrice",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"maxPrice\": 100000\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "MinMax - MinSqFt 1K",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"minSqFt\": 1000\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "MinMax - MaxSqFt 1K",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"maxSqFt\": 2000\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Valid - MlsPropertyType",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"mlsPropertyType\": \"Residential\"\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Valid - MlsPropertySubType",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"mlsPropertySubType\": \"Single Family Residence\"\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Valid - Statuses",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"statuses\": [\"Active\", \"Pending\"]\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"packages": {},
+										"exec": [""]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"packages": {},
+										"exec": [
+											"pm.test(\"Response status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Data object is present in the response\", function () {",
+											"    const responseData = pm.response.json();",
+											"    pm.expect(responseData).to.have.property('data');",
+											"});"
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "valid GeoPolygon",
+							"item": [
+								{
+									"name": "GeoPolygon",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [""],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {\n        \"geoPolygon\": {\n            \"points\": [\n                {\"lat\": 34.002235, \"lon\": -118.243683},\n                {\"lat\": 34.002235, \"lon\": -118.233683},\n                {\"lat\": 34.012235, \"lon\": -118.233683},\n                {\"lat\": 34.012235, \"lon\": -118.243683},\n                {\"lat\": 34.002235, \"lon\": -118.243683}\n            ]\n        }\n    },\n    \"minBeds\": 2\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GeoPolygon with Property Type",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {\n        \"geoPolygon\": {\n            \"points\": [\n                {\"lat\": 34.002235, \"lon\": -118.243683},\n                {\"lat\": 34.002235, \"lon\": -118.233683},\n                {\"lat\": 34.012235, \"lon\": -118.233683},\n                {\"lat\": 34.012235, \"lon\": -118.243683},\n                {\"lat\": 34.002235, \"lon\": -118.243683}\n            ]\n        }\n    },\n    \"mlsPropertyType\": \"Residential\",\n    \"minBeds\": 2\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "valid AUPID",
+							"item": [
+								{
+									"name": "AUPID simple",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [""],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {\n        \"aupid\": \"002126ba-1b7f-4353-8f73-8859a7a6d9cf\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "AUPID with Status",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {\n        \"aupid\": \"002126ba-1b7f-4353-8f73-8859a7a6d9cf\"\n    },\n    \"statuses\": [\"Active\"]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "AUPID with Property Type",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {\n        \"aupid\": \"002126ba-1b7f-4353-8f73-8859a7a6d9cf\"\n    },\n    \"mlsPropertyType\": \"Residential\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "valid Address",
+							"item": [
+								{
+									"name": "Address search",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [""],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {\n        \"address\": {\n            \"houseNumber\": \"1225\",\n            \"streetName\": \"Hauser\",\n            \"zip5\": \"90019\"\n        }\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Address with Status",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {\n        \"address\": {\n            \"houseNumber\": \"1225\",\n            \"streetName\": \"Hauser\",\n            \"zip5\": \"90019\"\n        }\n    },\n    \"statuses\": [\n        \"Active\",\n        \"Pending\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Address with Property Type",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.have.property('propertyListing');",
+													"    pm.expect(responseData.data.propertyListing).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {\n        \"address\": {\n            \"houseNumber\": \"1225\",\n            \"streetName\": \"Hauser\",\n            \"zip5\": \"90019\"\n        }\n    },\n    \"mlsPropertyType\": \"Residential\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "invalid",
+							"item": [
+								{
+									"name": "No auth",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [""],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Verify the error response structure\", function () {",
+													"    const response = pm.response.json();",
+													"    pm.expect(response.errors).to.be.an('array');",
+													"    pm.expect(response.errors[0].detail).to.equal('Missing auth header.');",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"minSqFt\": 900000\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Invalid beds filter range",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Verify the error response structure\", function () {",
+													"    const response = pm.response.json();",
+													"    pm.expect(response.errors).to.be.an('array');",
+													"    pm.expect(response.errors[0].label).to.equal('invalid_bedroom_range');",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [""],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n     \"geoFilter\": {\n        \"geoDistance\": {\n            \"location\": {\n                \"lat\": 34.052235,\n                \"lon\": -118.243683\n            },\n            \"radius\": 1\n        }\n    },\n    \"minBeds\": 5,\n    \"maxBeds\": 1\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Invalid baths filter range",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Verify the error response structure\", function () {",
+													"    const response = pm.response.json();",
+													"    pm.expect(response.errors).to.be.an('array');",
+													"    pm.expect(response.errors[0].label).to.equal('invalid_bathroom_range');",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [""],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n     \"geoFilter\": {\n        \"geoDistance\": {\n            \"location\": {\n                \"lat\": 34.052235,\n                \"lon\": -118.243683\n            },\n            \"radius\": 1\n        }\n    },\n    \"minBaths\": 5,\n    \"maxBaths\": 1\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Invalid price filter range",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Verify the error response structure\", function () {",
+													"    const response = pm.response.json();",
+													"    pm.expect(response.errors).to.be.an('array');",
+													"    pm.expect(response.errors[0].label).to.equal('invalid_price_range');",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [""],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n     \"geoFilter\": {\n        \"geoDistance\": {\n            \"location\": {\n                \"lat\": 34.052235,\n                \"lon\": -118.243683\n            },\n            \"radius\": 1\n        }\n    },\n    \"minPrice\": 90000,\n    \"maxPrice\": 500\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Invalid SqFt filter range",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Verify the error response structure\", function () {",
+													"    const response = pm.response.json();",
+													"    pm.expect(response.errors).to.be.an('array');",
+													"    pm.expect(response.errors[0].label).to.equal('invalid_square_footage_range');",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [""],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n     \"geoFilter\": {\n        \"geoDistance\": {\n            \"location\": {\n                \"lat\": 34.052235,\n                \"lon\": -118.243683\n            },\n            \"radius\": 1\n        }\n    },\n    \"minSqFt\": 900,\n    \"maxSqFt\": 500\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GeoPolygon Large",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"// pm.test(\"Verify the error response structure\", function () {",
+													"//     const response = pm.response.json();",
+													"//     pm.expect(response.errors).to.be.an('array');",
+													"//     pm.expect(response.errors[0].label).to.equal('invalid_square_footage_range');",
+													"// });"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [""],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {\n        \"geoPolygon\": {\n            \"points\": [\n                {\n                    \"lat\": 42.0104292,\n                    \"lon\": -120.0388787\n                },\n                {\n                    \"lat\": 38.3772307,\n                    \"lon\": -119.1706104\n                },\n                {\n                    \"lat\": 36.3866232,\n                    \"lon\": -116.4892933\n                },\n                {\n                    \"lat\": 38.2392761,\n                    \"lon\": -113.0058108\n                },\n                {\n                    \"lat\": 42.0267862,\n                    \"lon\": -112.9397818\n                },\n                {\n                    \"lat\": 42.0104292,\n                    \"lon\": -120.0388787\n                }\n            ]\n        }\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"packages": {},
+										"exec": [""]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"packages": {},
+										"exec": [
+											"pm.test(\"Response status code is 400\", function () {",
+											"    pm.expect(pm.response.code).to.equal(400);",
+											"});",
+											"",
+											"",
+											"pm.test(\"ID is a non-empty string\", function () {",
+											"    const responseData = pm.response.json();",
+											"    ",
+											"    pm.expect(responseData.errors).to.be.an('array');",
+											"    responseData.errors.forEach(function(error) {",
+											"        pm.expect(error.id).to.be.a('string').and.to.have.lengthOf.at.least(1);",
+											"    });",
+											"});",
+											"",
+											"pm.test(\"Validate the errors array\", function () {",
+											"  const responseData = pm.response.json();",
+											"  ",
+											"  pm.expect(responseData.errors).to.exist.and.to.be.an('array');",
+											"  responseData.errors.forEach(function(error) {",
+											"    pm.expect(error).to.be.an('object');",
+											"    pm.expect(error.id).to.be.a('string');",
+											"    pm.expect(error.code).to.be.a('number');",
+											"    pm.expect(error.detail).to.be.a('string');",
+											"  });",
+											"});",
+											"",
+											"pm.test(\"Detail is a non-empty string\", function () {",
+											"  const responseData = pm.response.json();",
+											"  ",
+											"  pm.expect(responseData).to.be.an('object');",
+											"  pm.expect(responseData.errors).to.be.an('array');",
+											"  responseData.errors.forEach((error) => {",
+											"    pm.expect(error.detail).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Detail should not be empty\");",
+											"  });",
+											"});"
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "valid - not found",
+							"item": [
+								{
+									"name": "MinMax - MinBeds 1K",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [""],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"minBeds\": 1000 \n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "MinMax - MinBaths 100",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [""],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"minBaths\": 100\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "MinMax - MinPrice 1B",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [""],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"minPrice\": 1000000000\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "MinMax - MinSqFt 100M",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [""],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"minSqFt\": 100000000\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Zero results",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [""],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n     \"geoFilter\": {{commonGeoFilter}},\n    \"minSqFt\": 90000000\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Invalid - MlsPropertyType",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Response status code is 404\", function () {",
+													"    pm.response.to.have.status(404);",
+													"});",
+													"",
+													"pm.test(\"Verify the error response structure\", function () {",
+													"    const response = pm.response.json();",
+													"    pm.expect(response.errors).to.be.an('array');",
+													"    pm.expect(response.errors[0].label).to.equal('no_listings_found');",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"mlsPropertyType\": \"InvalidType\"\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Invalid - MlsPropertySubType",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Response status code is 404\", function () {",
+													"    pm.response.to.have.status(404);",
+													"});",
+													"",
+													"pm.test(\"Verify the error response structure\", function () {",
+													"    const response = pm.response.json();",
+													"    pm.expect(response.errors).to.be.an('array');",
+													"    pm.expect(response.errors[0].label).to.equal('no_listings_found');",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"mlsPropertySubType\": \"InvalidSubType\"\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Invalid - Statuses",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Response status code is 404\", function () {",
+													"    pm.response.to.have.status(404);",
+													"});",
+													"",
+													"pm.test(\"Verify the error response structure\", function () {",
+													"    const response = pm.response.json();",
+													"    pm.expect(response.errors).to.be.an('array');",
+													"    pm.expect(response.errors[0].label).to.equal('no_listings_found');",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"geoFilter\": {{commonGeoFilter}},\n    \"statuses\": [\"InvalidStatus\", \"AnotherInvalidStatus\"]\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/listings",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "listings"]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"packages": {},
+										"exec": [""]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"packages": {},
+										"exec": [
+											"pm.test(\"Response status code is 404\", function () {",
+											"    pm.response.to.have.status(404);",
+											"});",
+											"",
+											"pm.test(\"Verify the error response structure\", function () {",
+											"    const response = pm.response.json();",
+											"    pm.expect(response.errors).to.be.an('array');",
+											"    pm.expect(response.errors[0].label).to.equal('no_listings_found');",
+											"});"
+										]
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "search",
+					"item": [
+						{
+							"name": "valid",
+							"item": [
+								{
+									"name": "Simple match search",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"PropertyListing array is present and contains at least one element\", function () {",
+													"    const responseData = pm.response.json();",
+													"    ",
+													"    pm.expect(responseData).to.have.property('data');",
+													"    pm.expect(responseData.data).to.be.an('array').that.is.not.empty;",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n   \"houseNumber\": \"1225\",\n   \"streetName\": \"Hauser\",\n   \"zip5\": \"90019\",\n\n    \"layouts\": [\n        \"address\"\n       \n    ]\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{projectApiBaseUrl}}/api/v3/search",
+											"host": ["{{projectApiBaseUrl}}"],
+											"path": ["api", "v3", "search"]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"packages": {},
+										"exec": [""]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"packages": {},
+										"exec": [
+											"pm.test(\"Response status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Data object is present in the response\", function () {",
+											"    const responseData = pm.response.json();",
+											"    ",
+											"    pm.expect(responseData).to.have.property('data');",
+											"});",
+											""
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{projectApiBearerToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [""]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"pm.test(\"Content-Type is application/json\", function () {",
+					"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+					"});",
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "commonGeoFilter",
+			"value": "{\"geoDistance\":{\"location\":{\"lat\":34.052235,\"lon\":-118.243683},\"radius\":5}}",
+			"type": "string"
+		}
+	]
+}

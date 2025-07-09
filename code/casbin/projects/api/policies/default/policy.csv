@@ -1,0 +1,28 @@
+################################################################################
+# Roles.
+################################################################################
+
+# Root.
+g, root, wheel
+
+# Api.
+g, api_user, api
+
+# Api whitelabel.
+g, api_whitelabel_user, api
+g, api_whitelabel_user, token_exchange
+
+# System auth check.
+g, system_auth_check_user, system_auth_check
+
+################################################################################
+# Permissions.
+################################################################################
+
+# System auth check.
+p, system_auth_check, /auth/session, read
+p, system_auth_check, /auth/session, write
+
+# Token exchange.
+p, token_exchange, /auth/token/exchange, write
+p, token_exchange, /clients, read

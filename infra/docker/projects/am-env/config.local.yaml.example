@@ -1,0 +1,16 @@
+# DO NOT COPY the contents of this file if you don't need/want
+# to override the default values. This is just an example.
+
+services:
+  shell:
+    container:
+      user:
+        user: myusername
+    vars:
+      ssh:
+        profiles:
+          default:
+            name: id_rsa
+user:
+  name: Firstname Lastname
+  email: myusername@abodemine.com

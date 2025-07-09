@@ -1,0 +1,214 @@
+endpoints:
+  # internal: access from the docker network.
+  # external: access from the host network, after port/address translation.
+
+  clients-admin:
+    internal:
+      address: clients-admin.abodemine.local
+      ports:
+        http:
+          name: rpmmfz5ax5la
+          port: 23862
+
+  clients-react-saas:
+    internal:
+      address: clients-react-saas.abodemine.local
+      ports:
+        http:
+          name: tohmohngeiwu
+          port: 31235
+
+  clients-react-saas-whitelabel:
+    internal:
+      address: clients-react-saas-whitelabel.abodemine.local
+      ports:
+        http:
+          name: tqyqzqyqyqyq
+          port: 31236
+
+  nginx:
+    internal:
+      address: nginx.abodemine.local
+      ports:
+        http:
+          name: pnxvvtqcusli
+          port: 22749
+
+  opensearch:
+    internal:
+      address: opensearch.abodemine.local
+      ports:
+        http:
+          name: lukaegauqueu
+          port: 9200
+
+  opensearch-dashboards:
+    internal:
+      address: opensearch-dashboards.abodemine.local
+      ports:
+        http:
+          name: sjjpxbtcryhr
+          port: 5601
+
+  postgres:
+    internal:
+      address: postgres.abodemine.local
+      ports:
+        tcp:
+          name: djayebdcwqez
+          port: 5432
+
+  servers-go-api:
+    internal:
+      address: servers-go-api.abodemine.local
+      ports:
+        http:
+          name: luchochouvae
+          port: 23861
+
+  servers-go-saas:
+    internal:
+      address: servers-go-saas.abodemine.local
+      ports:
+        http:
+          name: exayuasheluz
+          port: 33995
+
+  valkey:
+    internal:
+      address: valkey.abodemine.local
+      ports:
+        tcp:
+          name: fccxwgjixawl
+          port: 6379
+
+services:
+  clients-admin:
+    enabled: true
+
+  clients-react-saas:
+    enabled: true
+
+  clients-react-saas-whitelabel:
+    enabled: true
+
+  dc-go:
+    container:
+      image: am-env-shell
+      maintainer: "Rodrigo Bahiense <rbahiense@abodemine.com>"
+
+    enabled: true
+
+  dc-python:
+    container:
+      image: am-env-shell
+      maintainer: "Rodrigo Bahiense <rbahiense@abodemine.com>"
+
+    enabled: false
+
+  dc-root:
+    container:
+      image: am-env-shell
+      maintainer: "Rodrigo Bahiense <rbahiense@abodemine.com>"
+
+    enabled: true
+
+  dc-typescript:
+    container:
+      image: am-env-shell
+      maintainer: "Rodrigo Bahiense <rbahiense@abodemine.com>"
+
+    enabled: true
+
+  envoy:
+    container:
+      # https://hub.docker.com/r/envoyproxy/envoy
+      image: docker.io/envoyproxy/envoy:v1.33-latest
+
+    enabled: true
+
+  nginx:
+    container:
+      # https://hub.docker.com/_/nginx
+      image: docker.io/nginx:1.27
+
+    enabled: true
+
+  opensearch:
+    container:
+      # https://hub.docker.com/r/opensearchproject/opensearch
+      # https://docs.aws.amazon.com/opensearch-service/latest/developerguide/release-notes.html
+      image: docker.io/opensearchproject/opensearch:2.17.0
+      maintainer: "Rodrigo Bahiense <rbahiense@abodemine.com>"
+
+    enabled: true
+
+  opensearch-dashboards:
+    container:
+      # https://hub.docker.com/r/opensearchproject/opensearch-dashboards
+      image: docker.io/opensearchproject/opensearch-dashboards:2.17.0
+
+    enabled: true
+
+  postgres:
+    container:
+      # https://hub.docker.com/_/postgres
+      # https://docs.aws.amazon.com/AmazonRDS/latest/PostgreSQLReleaseNotes/postgresql-versions.html
+      image: docker.io/postgres:16.8
+      maintainer: "Rodrigo Bahiense <rbahiense@abodemine.com>"
+
+      packages:
+        - postgresql-16-pgvector
+        - postgresql-16-postgis-3
+
+    enabled: true
+
+  servers-go-api:
+    enabled: true
+    environment: {}
+
+  servers-go-saas:
+    enabled: true
+    environment: {}
+
+  valkey:
+    container:
+      # https://hub.docker.com/r/valkey/valkey
+      image: docker.io/valkey/valkey:8.0
+
+      user:
+        user: valkey
+
+    enabled: true
+
+values:
+  "servers-go-api":
+    string:
+      "os-addresses-index": "addresses_8j5cmwnm"
+
+vars:
+  dirs:
+    cache: /works/cache
+    opt: /opt/abodemine
+    src: /works/src
+    tmp: /tmp/abodemine
+    works: /works
+    # Default workspace is mono.
+    workspace: /works/src/mono
+
+  docker:
+    images:
+      abodemine-shell: am-env-shell
+    network:
+      name: abodemine.local
+    volumes:
+      abodemine-src:
+        name: am_src
+      abodemine-works:
+        name: am_works
+
+  abodemine:
+    admin:
+      domain: admin.abodemine.test
+
+    arch: arm64

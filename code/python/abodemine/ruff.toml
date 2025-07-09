@@ -1,0 +1,52 @@
+# Configuration based on https://docs.astral.sh/ruff/tutorial/#configuration.
+
+# Support Python 3.11+.
+target-version = "py311"
+
+# Set the maximum line length to 79, the recommended value from PEP 8.
+line-length = 79
+
+[lint]
+
+# https://docs.astral.sh/ruff/rules/.
+extend-select = [
+	# flake8-annotations.
+	"ANN",
+
+	# pydocstyle.
+	"D",
+
+	# pycodestyle: Error.
+	"E",
+
+	# Pyflakes.
+	"F",
+
+	# isort.
+	"I",
+
+	# pep8-naming.
+	"N",
+
+	# PyLint.
+	"PL",
+
+	# Ruff.
+	"RUF",
+
+	# pyupgrade.
+	"UP",
+
+	# pycodestyle: Warning.
+	"W",
+]
+
+ignore = [
+	# Ignore one-blank-line-before-class (D203)
+	# in favor of no-blank-line-before-class (D211).
+	"D203",
+
+	# Ignore multi-line-summary-second-line (D213)
+	# in favor of multi-line-summary-first-line (D212).
+	"D213",
+]

@@ -1,0 +1,14 @@
+/config.*.yaml
+
+/user_data.bash
+/user_data.bash.gz
+
+/files/etc.tar.zst
+/files/etc/systemd/system/*.service
+/files/home.tar.zst
+/files/home/.gitconfig
+/files/home/.zshrc
+/files/home/.cargo/config.toml
+/files/home/.abodemine/**/*.zsh
+/files/home/.ssh/*
+!/files/home/.ssh/config.gotmpl

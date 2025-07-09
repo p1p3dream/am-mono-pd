@@ -1,0 +1,16 @@
+containers:
+  main:
+    # https://hub.docker.com/_/debian/tags
+    image: "docker.io/debian:12.10-slim"
+    maintainer: "Rodrigo Bahiense <rbahiense@abodemine.com>"
+
+    user:
+      user: abodemineapp
+      group: abodemine
+      uid: 5046
+      gid: 5046
+
+    vars:
+      rclone:
+        # https://rclone.org/downloads/
+        deb: https://downloads.rclone.org/v1.69.1/rclone-v1.69.1-linux-arm64.deb

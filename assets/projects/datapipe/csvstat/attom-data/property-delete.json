@@ -1,0 +1,24 @@
+[
+	{
+		"column_id": 1,
+		"column_name": "[ATTOM ID]",
+		"type": "int64",
+		"nulls": false,
+		"nonnulls": 199999,
+		"unique": 199999,
+		"min": 25.0,
+		"max": 16653822.0,
+		"sum": 1564917063185.0,
+		"mean": 7824624.439047195,
+		"median": 7911342.0,
+		"stdev": 5105614.466841878,
+		"maxprecision": 0,
+		"freq": [
+			{ "value": 2862585.0, "count": 1 },
+			{ "value": 3150460.0, "count": 1 },
+			{ "value": 3973873.0, "count": 1 },
+			{ "value": 3920592.0, "count": 1 },
+			{ "value": 10288732.0, "count": 1 }
+		]
+	}
+]

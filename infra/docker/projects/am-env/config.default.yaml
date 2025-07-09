@@ -1,0 +1,98 @@
+services:
+  shell:
+    container:
+      # https://hub.docker.com/_/debian/tags
+      # Use the regular, non-slim, image to have docs and language packs.
+      image: "docker.io/debian:12.10"
+
+      maintainer: "Rodrigo Bahiense <rbahiense@abodemine.com>"
+
+      python:
+        version: "3.11"
+
+      user:
+        user: abodemine
+        group: abodemine
+        uid: 5046
+        gid: 5046
+
+      vars:
+        arch: arm64
+
+        packer:
+          profiles: default,am-env
+          target: linux-aarch64
+
+    flags:
+      # TODO: Forward the GPG agent socket to the container's host.
+      GNUPG_AGENT_FORWARD: false
+      # Copy gnupg configuration from the host to the container.
+      GNUPG_ENABLED: true
+
+      # Run an NFS server in the container listening on port $vars.nfs.port.
+      NFS_SERVER_ENABLED: true
+
+      # TODO: Forward the SSH agent socket to the container's host.
+      SSH_AGENT_FORWARD: false
+      # Copy SSH configuration from the host to the container.
+      SSH_ENABLED: true
+      # Run a SSH server in the container listening on port $vars.ssh.port.
+      SSH_SERVER_ENABLED: true
+
+    vars:
+      docker:
+        group: docker
+        gid: 1024
+
+      git:
+        protocol: ssh
+
+      gnupg:
+        profiles: {}
+
+      nfs:
+        port: 18741
+
+      ssh:
+        # Host port for SSH access to the shell container.
+        port: 32533
+        profiles: {}
+
+vars:
+  dirs:
+    cache: /works/cache
+    opt: /opt/abodemine
+    src: /works/src
+    tmp: /tmp/abodemine
+    works: /works
+    # Default workspace is mono.
+    workspace: /works/src/mono
+
+  docker:
+    host:
+      sock_path: /var/run/docker.sock
+    images:
+      abodemine-shell: am-env-shell
+    network:
+      name: abodemine.local
+    volumes:
+      abodemine-src:
+        name: am_src
+      abodemine-works:
+        name: am_works
+
+  gnupg:
+    agent:
+      # One week in seconds.
+      default-cache-ttl: 604800
+      max-cache-ttl: 604800
+
+  namespace: local
+
+  # Options: alacritty, wezterm
+  terminal: alacritty
+
+  works:
+    # Default to internal volumes for best performance.
+    # Requires checking out repositories from the shell container.
+    src_mode: volume
