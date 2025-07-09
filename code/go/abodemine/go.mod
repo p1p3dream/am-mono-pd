@@ -36,7 +36,7 @@ require (
 	github.com/spf13/cobra v1.9.1
 	github.com/spf13/viper v1.20.1
 	github.com/stretchr/testify v1.10.0
-	github.com/valkey-io/valkey-go v1.0.60
+	github.com/valkey-io/valkey-go v1.0.62
 	github.com/zeebo/xxh3 v1.0.2
 	go.katupy.org/fixture v0.6.0
 	golang.org/x/sync v0.15.0
