@@ -32,7 +32,7 @@ require (
 	github.com/rs/zerolog v1.34.0
 	github.com/sergi/go-diff v1.3.1
 	github.com/shopspring/decimal v1.4.0
-	github.com/smartystreets/smartystreets-go-sdk v1.21.1
+	github.com/smartystreets/smartystreets-go-sdk v1.22.0
 	github.com/spf13/cobra v1.9.1
 	github.com/spf13/viper v1.20.1
 	github.com/stretchr/testify v1.10.0
