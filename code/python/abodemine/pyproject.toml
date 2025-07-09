@@ -5,7 +5,7 @@ requires-python = "==3.11.*"
 dependencies = ["PyYAML==6.0.2"]
 
 [project.optional-dependencies]
-dev = ["bcrypt==4.3.0", "pydantic==2.11.5"]
+dev = ["bcrypt==4.3.0", "pydantic==2.11.7"]
 
 [dependency-groups]
 dev = [
